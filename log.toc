@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Uvod}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definicija logaritma}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Grafik funkcije}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Antilogaritam}{2}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Jednakosti}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Logaritam stepena osnove}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Logaritam proizvoda}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Logaritam koli{{\v c}}nika}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Logaritam stepena broja}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Promena osnove logaritma}{4}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Naj{{\v c}}e{{\v s}}{{\'c}}e logaritamske osnove}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Osnova 10}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Osnova 2}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Osnova ${\bf e}$}{6}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Brojna vrednost}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Formula}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Veri{{\v z}}ni razlomak}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Logaritamske tablice}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Logaritmar}{8}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Razno}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Kompleksni logaritam}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Izvod}{10}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Limes}{10}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Teorema prostih brojeva}{10}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Zadaci}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Jedna{{\v c}}ina~1}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Jedna{{\v c}}ina~2}{11}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Jedna{{\v c}}ina~3}{12}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Geometrijski niz}{12}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Poluraspad joda}{12}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Beskona{{\v c}}ni koren}{13}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Decimalne cifre}{13}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Izvod}{13}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}{{\v C}}etiri {{\v c}}etvorke}{14}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}ln 3}{14}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Analogni kvadratni koren}{15}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Analogni stepen}{15}{subsection.6.12}%
+\contentsline {section}{\numberline {7}Reference}{16}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Literatura}{16}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Linkovi}{16}{subsection.7.2}%
