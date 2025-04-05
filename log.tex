@@ -9,13 +9,6 @@
 \usepackage{mathtools}
 \usepackage{pdflscape}
 \usepackage{rotating}
-%\usepackage{upgreek}
-%\usepackage{newtxmath}
-%\usepackage[upright]{fourier}
-
-%\usepackage[backend=bibtex]{biblatex}
-%\usepackage[style=verbose, backend=bibtex]{biblatex}
-%\bibliography{literatura.bib} 
 
 \usepackage[dvipsnames]{xcolor}
 
@@ -25,6 +18,8 @@
   urlcolor = darkblue,
   linkcolor = black
 ]{hyperref}
+
+\usepackage{qrcode}
 
 %\usepackage[answerdelayed,lastexercise]{exercise}
 
@@ -1356,16 +1351,6 @@ $$
 \eqno{\square}$$
 \endgroup
 
-\iffalse
-\subsection{$\textbf{\textit{i}}^\textbf{\textit{i}}$}
-\zad Izra{\cv}unaj vrednost $z=i^i$.
-\ans Kako $i$ ima polarne koordinate $\rho=1$ i $\theta=\pi/2$, ako ga predstavimo Ojlerovom formulom kao
-$i=\e^{i\pi/2}$, sledi
-$$
-z=i^i=\e^{i\ln i} = \e^{i\ln \e^{i\pi/2}}=\e^{i^2\pi/2}=\ram{\e^{-\pi/2}\approx0.20788}. 
-$$
-\clearpage
-\fi
 
 \subsection{ln 3}\label{sssec:ln3}
  
@@ -1531,10 +1516,19 @@ zadataka za prijemni ispit}{Matematika}(2011)
 %\link{https://github.com/Nasumica/Wirth}{GitHub --- Srbislav D. Ne{\sv}i{\cc} --- Numerical recipes in Pascal}
 \end{enumerate}
 
-%\href{mailto:srbislav.nesic@gmail.com}{\tt srbislav.nesic@gmail.com}
 
-%$$
-%\naplog(x)=-10^7\ln(x / 10^7)
-%$$
+\clearpage
+
+\thispagestyle{empty}
+
+
+\leavevmode\hbox{}
+
+\vfill
+
+\begin{center}
+%\qrcode{https://docs.google.com/viewer?url=$https://github.com/Nasumica/LukaMaturski/blob/main/log.pdf}
+\qrcode{https://github.com/Nasumica/LukaMaturski/blob/main/log.pdf}
+\end{center}
 
 \end{document}
