@@ -1,0 +1,45 @@
+\subsubsection{ln 3}\label{sssec:ln3}
+ 
+\zadatak
+Pomo{\cc}u postupka \eqref{eq:alg} sa 
+strane~\pageref{eq:alg},
+izra{\cv}unati {\sl pe{\sv}ke\/} pribli{\zv}nu vrednost $\ln 3$, 
+u~5 koraka. Za upore{\dj}iva{\nj}e, ta{\cv}na vrednost je
+$$
+\ln3=1\.
+0986122886\,
+6810969139\,
+5245236922\,
+5257046475\,\ldots
+%1639157/1492025=1.098612288668
+$$
+
+\def\step#1{\par\smallskip\indent\leavevmode
+  Korak~{\it#1}.\kern2em\relax}
+
+\resenje
+Za $x=3$, izraz $r=(x-1)/(x+1)=1/2$. U nultom koraku postav{\lj}amo po{\cv}etne vrednosti:
+\step0 $k=1,\quad p=2r=1,\quad q=r^2=1/4,\quad a=p=1,\quad y=a=1$.
+
+\smallskip
+\noindent Slede koraci iteracije --- pove{\cc}amo $k$ za 2, pomno{\zv}imo $p$ sa $q$,
+{\cv}lan sume $a$ postaje $p/k$, koga dodajemo u rezultat $y$:
+
+\step1 $k=3,\quad p=1/4,\quad a=1/12,\quad y=13/12$;
+\step2 $k=5,\quad p=1/16,\quad a=1/80,\quad y=263/240$;
+\step3 $k=7,\quad p=1/64,\quad a=1/448,\quad y=7379/6720$;
+\step4 $k=9,\quad p=1/256,\quad a=1/2304,\quad y=88583/80640$;
+\step5 $k=11,\quad p=1/1024,\quad a=1/11264,\quad y=3897967/3548160$.
+
+\medskip
+\noindent Rezultat je
+$$
+\ln3\approx{3897967\over3548160}\approx \ram{1\.0986},
+$$
+
+\smallskip\noindent
+{\sv}to je prili{\cv}no ta{\cv}no za samo 5 koraka, jer je apsolutna gre{\sv}ka oko $2\.4\puta10^{-5}$.
+%Kada bi smo ra{\cv}unali u 20 koraka, 
+%dobili bi smo $y={636083906982236368109838473\over578988523561291667944243200}$, 
+%gre{\sv}ka bi bila oko $7\puta10^{-15}$, {\sv}to je preciznost s kojom je 1617.\ godine Brigs (Henry Briggs)
+%izra{\cv}unao svoje {\sl logaritamske tablice}.

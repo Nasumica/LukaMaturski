@@ -9,6 +9,7 @@
 \usepackage{mathtools}
 \usepackage{pdflscape}
 \usepackage{rotating}
+%\usepackage{texlogos}
 
 \usepackage[dvipsnames]{xcolor}
 
@@ -68,7 +69,7 @@
   \llap{$\vartriangleright\>$}\zabox{Zadatak:}}
 \newcommand{\rsinfty}{{\,\widetilde{\!\infty\!}\,}}
 
-\def\footnote#1{\relax}
+%\def\footnote#1{\relax}
 
 
 \begin{document}
@@ -651,36 +652,12 @@ p_n\sim n\ln n.
 $$
 
 
-\section{Zadaci}
+\section{Zadaci i re{\sv}e{\nj}a}
 
 \subsection{Jedna{\cv}ine}
+\def\jed{Jedna{\cv}ina~}
 
-\def\jed#1{Jedna{\cv}ina~#1}
-
-\subsubsection{FIT-prijemni}
-
-\zadatak Na{\dj}i re{\sv}e{\nj}e jedna{\cv}ne
-$$
-\log_2(x-2)+\log_4(x-2)+\log_{16}(x-2)=7.
-$$
-(Zadatak sa mog prijemnog ispita na FIT.)
-
-\resenje
-Vidimo da su osnove logaritama stepeni broja 2, 
-pa iz jednakosti za logaritam stepena osnove \eqref{eq:powbase} sledi
-\begin{align*}
-\log_2(x-2)+\log_{2^2}(x-2)+\log_{2^4}(x-2)&=\\
-\log_2(x-2)+{1\over2}\log_2(x-2)+{1\over 4}\log_2(x-2)&=\\
-\noalign{\smallskip}
-{7\over4}\log_2(x-2)&=7,
-\intertext{odnosno, posle skra{\cc}iva{\nj}a,}
-\log_2(x-2)&=4.
-\end{align*}
-Odavde je
-$$
-x-2=2^4=16\sledi
-x=\ram{18}.
-$$
+\input zadaci/fit-prijemni
 
 \subsubsection{\jed2}
 
@@ -740,251 +717,28 @@ x=\ram{3}.
 $$
 
 
-\subsubsection{Beskona{\cv}ni koren}
-
-\zadatak
-Odredi vrednost
-$$
-x=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}}}\right)
-$$
-gde je $\e$ osnova prirodnog logaritma.
-
-\resenje 
-Kako je $\ln \e=1$, a koriste{\cc}i jednakost za logaritam proizvoda \eqref{eq:lnmul} 
-i jednakost za logaritam korena \eqref{eq:lnroot},  mo{\zv}emo pisati
-\begin{align*}
-x
-&=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}}}\right)\\
-&=1+\frac12\ln\left(\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}} \right)\\
-&=1+\frac12\left(1+\frac13\ln\left(\e\sqrt[4]{\e\sqrt[5]{\cdots}} \right)\right)\\
-&=1+\frac12\left(1+\frac13\left(1+\frac14\ln\left(\e\sqrt[5]{\cdots} \right) \right)\right)\\
-&=1+\frac12\left(1+\frac13\left(1+\frac14\left(1+\frac15\ln(\cdots)\right) \right) \right)\\
-&=1+\frac12+\frac12\mul\frac13+\frac12\mul\frac13\mul\frac14+\frac12\mul\frac13\mul\frac14\mul\frac15+\cdots\\
-&=\rf1!+\rf2!+\rf3!+\rf4!+\rf5!+\cdots
-\intertext{Ako pogledamo formulu \eqref{eq:e} na strani \pageref{eq:e}, mo{\zv}emo videti da je ovaj zbir jednak}
-x&=\ram{\e-1},
-\end{align*}
-jer iz sume za izra{\cv}unava{\nj}e $\e$ nedostaje {\sl nulti\/} {\cv}lan $1/0!=1$.
-
-\subsection{Nejedna{\cv}ine}
-
-\subsection{Odabrani primeri}
-
-\subsubsection{Geometrijski niz}
-
-\zadatak
-Za $0\le x<1$, uprostiti izraz
-$$
-y=\log(1+x+x^2+x^3+x^4+\cdots).
-$$
-
-\resenje
-Kako je zbir\footnote{{\bf Dokaz:} Ako je $s=1+x+x^2+x^3+x^4+\cdots=1+x\cdot(1+x+x^2+x^3+x^4+\cdots)
-=1+x\cdot s$, onda sledi $s=1/(1-x)$. \QED} beskona{\cv}nog geometrijskog niza
-$$
-1+x+x^2+x^3+x^4+\cdots = {1\over 1-x},
-$$
-mo{\zv}e se pisati
-\begin{align*}
-\noalign{\vskip-12pt}
-y&=\log\left({1\over 1-x}\right),
-\intertext{gde iz jednakosti za recipro{\cv}nu vrednost \eqref{eq:recip}, sledi}
-&=\ram{-\log(1-x)}.
-\end{align*}
-
-\subsubsection{Poluraspad joda}
-
-\zadatak \def\iso#1-#2{\vphantom{\rm#2}^{#1}{\rm#2}}
-Ako imamo $63\um g$ izotopa joda $\iso 131-I$, a znamo da smo pre 11 dana imali $163\um g$, koje je vreme
-poluraspada ovog izotopa? (Koristi prirodni logaritam.)
-
-\resenje
-Iz formule \eqref{eq:halftime} na strani \pageref{eq:halftime}, sledi da se vreme poluraspada
-mo{\zv}e izra{\cv}unati
-$$
-\th
-={t\over \logtwo(m_0 / m_t)}
-={t\ln2\over \ln(m_0 / m_t)}
-%={11\over\logtwo(163/63)}
-={11\ln2\over\ln(163/63)}
-\approx\ram{8.02\um{dana}}.
-$$
-
-
-\subsubsection{Decimalne cifre}
-\zadatak Koliko decimalnih cifara ima 128-bitna promen{\lj}iva?
-\resenje $d=\lfloor\logten 2^{128}\rfloor+1=\lfloor 128\logten 2\rfloor+1=\lfloor 38.5318\rfloor+1=38+1=\ram{39}.$
-
-
-\subsubsection{Izvod}
-\zadatak Odredi izvod funkcije $f(\alpha)=\log_3(\cos\alpha)$.
-\resenje Kako je izvod $\cos\alpha$ jednak $-\sin\alpha$ i iz jednakosti 
-za izvod logaritma funkcije \eqref{eq:izvod}, sledi da je
-$$
-f'(\alpha)
-={-\sin\alpha\over\cos\alpha\ln3}
-%\noalign{\smallskip}
-=\ram{-{\tan\alpha\over\ln3}}.
-$$
+\input zadaci/44
+\input zadaci/inf-root
 
 \clearpage
 
-\subsubsection{{\Cv}etiri {\cv}etvorke}
+\subsection{Nejedna{\cv}ine}
 
-\def\4{{\color{red}\bf4}}
+\clearpage
 
-\zadatak
-Dokazati da svaki prirodan broj $n\in{\mathbb N}$, mo{\zv}e biti predstav{\lj}en sa \4 broja \4,
-pomo{\cc}u logaritamske funkcije i kvadratnog korena
-$$
-n=\log_{\sqrt\4/\4}\left(\log_\4 \underbrace{\sqrt{\sqrt{\cdots\sqrt\4}}}_{\text{$n$ korena}}\right).
-$$
+\subsection{Odabrani primeri}
 
-\resenje
-Kako je
-$$
-{\sqrt \4\over \4}={1\over2}
-\qquad\text{i}\qquad
-\underbrace{\sqrt{\sqrt{\cdots\sqrt \4}}}_{\text{$n$ korena}}=\4^{(1/2)^n},
-$$
-izraz mo{\zv}e biti upro{\sv}{\cc}en
-\begin{align*}
-\noalign{\vskip-9pt}
-\log_{\sqrt\4/\4}\left(\log_\4 \underbrace{\sqrt{\sqrt{\cdots\sqrt\4}}}_{\text{$n$ korena}} \right)
-&=\log_{1/2}\left(\log_\4 \4^{(1/2)^n}\right),\\
-\intertext{gde iz jednakosti za logaritam stepena osnove \eqref{eq:powb}, sledi}
-&=\log_{1/2}(1/2)^n\\
-&=\ram{n}.
-\end{align*}
+\input zadaci/geom-serie
+\input zadaci/131-I
+\input zadaci/128-bit
+\input zadaci/izvod
 
-\def\2{{\it2}}
-\def\dlog{\mathop{\it\ell og}\nolimits_\2}
-\begingroup\it
-Davno je u jednom {\cv}asopisu postav{\lj}en sli{\cv}an zadatak: 
-da se sa {\sv}to ma{\nj}e istih brojeva,
-koriste{\cc}i bilo koju matemati{\cv}ku funkciju, predstavi 
-svaki prirodan broj $n$.
-Re{\sv}io ga je nobelovac Pol Dirak (Paul Dirac) 
-sa~3~broja~\2, {\cv}ije originalno
-re{\sv}e{\nj}e izgleda
-$$
--\dlog\dlog\sqrt{\cdots n\cdots\sqrt\2}
-=-\dlog\dlog\2^{\2^{-n}}
-=-\dlog\2^{-n}=n.
-\eqno{\square}$$
-\endgroup
-
+\clearpage
 
 \subsection{Ru{\cv}ni rad}
-
-\subsubsection{Analogni kvadratni koren}\label{sssec:sibersqrt}
-
-\zadatak
-Objasni na{\cv}in za odre{\dj}iva{\nj}e vrednosti $\sqrt x$ logaritmarom.
-
-\resenje Kvadratni koren se mo{\zv}e direktno {\cv}itati sa logaritmara ako {\sl u glavi\/} izvr{\sv}imo 
-de{\lj}enje sa 2, i po potrebi, sabira{\nj}e sa $0\.5$, 
-{\sv}to je vrlo jednostavno, jer se radi o brojevima izme{\dj}u 0 i 1 sa najvi{\sv}e 3 decimale. 
-Kako je
-$$
-\sqrt x=10^{{1\over2}\log x},
-$$
-potrebno je odrediti vrednost $\log x$, a onda za dvostruko ma{\nj}u vred\-nost od {\nj}e, pro{\cv}itati vrednost $10^y$. Na primer,
-za izra{\cv}unava{\nj}e $\sqrt{5\.3}$,
-{\cv}itamo da je $\log 5\.3\approx0\.724$, a onda {\cv}itamo vrednost $10^y$ za 
-$y=0\.724/2=0\.362$ i
-dobijamo $\sqrt{5\.3}\approx 2\.3$.
-$$
-\def\hair{\nit{0.36213793480039452281649614581363}\nit{0.72427586960078904563299229162726}\nit{0.86213793480039452281649614581363}}
-\def\extra{\ruler{0.36213793480039452281649614581363}{$\uparrow$}\ruler{0.72427586960078904563299229162726}{$\downarrow$}\ruler{0.86213793480039452281649614581363}{$\uparrow$}}
-\logaritmar0
-$$
-Za $\sqrt{53}$ treba u $y$ dodati jo{\sv} $0\.5$ tako da je $y=0\.362+0\.5=0\.862$, odakle je $\sqrt{53}\approx7\.28$.
-%(Dodava{\nj}e $0\.5$ u eksponent predstav{\lj}a mno{\zv}e{\nj}e celog izraza sa $\sqrt{10}$.)
-Naravno, $\sqrt{530}$ se ra{\cv}una kao $10\sqrt{5\.3}$, ili $\sqrt{0\.53}={1\over10}\sqrt{53}$.
-
-\subsubsection{Analogni stepen}\label{sssec:siberpower}
-
-\zadatak
-Odredi logaritmarom pribli{\zv}nu vrednost
-$z=2\.3^{1\.7}$.
-
-\resenje
-Pomo{\cc}u jednakosti \eqref{eq:power} predstavimo
-$$
-z=2\.3^{1\.7}=10^{1\.7\cdot\log(2\.3)}.
-$$
-Prvo odre{\dj}ujemo vrednost $\log(2\.3)$ tako {\sv}to nalazimo
-$x=2\.3$ i {\cv}itamo ispod {\nj}ega vred\-nost $\log x$ (vidi nit obele{\zv}enu sa `{\color{red}
-$\updownarrow$}').
-$$
-\def\hair{\nit{0.36172783601759287886777711225119}}
-\def\extra{\ruler{0.36172783601759287886777711225119}{$\updownarrow$}}
-\logaritmar0
-$$
-Nalazimo da je $\log(2\.3)\approx0\.362$. Nakon toga, tu vrednost na kliza{\cv}u poravnavamo sa $x=1$.
-Kako na kliza{\cv}u ne postoji $0\.362$, postavi{\cc}emo na $3\.62$, s tim {\sv}to {\cc}emo rezultat
-podeliti sa 10. Sada, za $x=1\.7$ {\cv}itamo vrednost na kliza{\cv}u ispod
-$$
-\def\hair{\nit{0.55838193028134245441924844418993}\nit{0.78883085165961638295941833851827}\nit{1.173319251511250348494469535017}}
-\def\extra{\ruler{0.55838193028134245441924844418993}{$\uparrow$}\ruler{1.173319251511250348494469535017}{$z$}%
-\ruler{0.78883085165961638295941833851827}{$\uparrow$}}
-\logaritmar{-0.55838193028134245441924844418993}
-$$
-i nalazimo da je oko $6\.15$, {\sv}to zna{\cv}i da je $1\.7\cdot\log(2\.3)\approx0\.615$.
-Nakon toga, za $y=0\.615$ {\cv}itamo vrednost $10^y$ i
-nalazimo da je oko $4\.12$ {\sv}to je i re{\sv}e{\nj}e
-$$
-z=2\.3^{1\.7} \approx \ram{4\.12},
-$$
-a ta{\cv}na vrednost je $z=4\.120380\ldots$
-
-\subsubsection{ln 3}\label{sssec:ln3}
- 
-\zadatak
-Pomo{\cc}u postupka \eqref{eq:alg} sa 
-strane~\pageref{eq:alg},
-izra{\cv}unati {\sl pe{\sv}ke\/} pribli{\zv}nu vrednost $\ln 3$, 
-u~5 koraka. Za upore{\dj}iva{\nj}e, ta{\cv}na vrednost je
-$$
-\ln3=1\.
-0986122886\,
-6810969139\,
-5245236922\,
-5257046475\,\ldots
-%1639157/1492025=1.098612288668
-$$
-
-\def\step#1{\par\smallskip\indent\leavevmode
-  Korak {\it#1}.\kern2em\relax}
-
-\resenje
-Za $x=3$, izraz $r=(x-1)/(x+1)=1/2$. U nultom koraku postav{\lj}amo po{\cv}etne vrednosti:
-\step0 $k=1,\quad p=2r=1,\quad q=r^2=1/4,\quad a=p=1,\quad y=a=1$.
-
-\smallskip
-\noindent Slede koraci iteracije --- pove{\cc}amo $k$ za 2, pomno{\zv}imo $p$ sa $q$,
-{\cv}lan sume $a$ postaje $p/k$, koga dodajemo u rezultat $y$:
-
-\step1 $k=3,\quad p=1/4,\quad a=1/12,\quad y=13/12$;
-\step2 $k=5,\quad p=1/16,\quad a=1/80,\quad y=263/240$;
-\step3 $k=7,\quad p=1/64,\quad a=1/448,\quad y=7379/6720$;
-\step4 $k=9,\quad p=1/256,\quad a=1/2304,\quad y=88583/80640$;
-\step5 $k=11,\quad p=1/1024,\quad a=1/11264,\quad y=3897967/3548160$.
-
-\medskip
-\noindent Rezultat je
-$$
-\ln3\approx{3897967\over3548160}\approx \ram{1\.0986},
-$$
-
-\smallskip\noindent
-{\sv}to je prili{\cv}no ta{\cv}no za samo 5 koraka, jer je apsolutna gre{\sv}ka oko $2\.4\puta10^{-5}$.
-%Kada bi smo ra{\cv}unali u 20 koraka, 
-%dobili bi smo $y={636083906982236368109838473\over578988523561291667944243200}$, 
-%gre{\sv}ka bi bila oko $7\puta10^{-15}$, {\sv}to je preciznost s kojom je 1617.\ godine Brigs (Henry Briggs)
-%izra{\cv}unao svoje {\sl logaritamske tablice}.
-
+\input zadaci/siber-sqrt
+\input zadaci/siber-power
+\input zadaci/ln3
 
 
 \section{Reference}
@@ -1025,6 +779,9 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \link{https://www.youtube.com/watch?v=Noo4lN-vSvw}{{\sf YouTube} --- The Four 4s --- Numberphile}
 %\link{https://github.com/Nasumica/Wirth}{GitHub --- Srbislav D. Ne{\sv}i{\cc} --- Numerical recipes in Pascal}
 \end{enumerate}
+
+
+
 
 
 \iffalse
