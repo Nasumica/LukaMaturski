@@ -73,48 +73,12 @@
 
 \begin{document}
 
-\begin{titlepage}
-\setcounter{page}{0}
-\thispagestyle{empty}
-\begin{center}
-\large
-Gimnazija \navod{Bora Stankovi{\cc}}\\
-Ni{\sv}, Srbija\\
-\vfill
-\LARGE
-\textbf{MATURSKI RAD}\\
-\Large
-\bigskip
-Predmet: Matematika\\
-\smallskip
-Tema: Logaritam\\
-\large
-{\it jedna{\cv}ine i nejedna{\cv}ine}\\
-%(jedna{\cv}ine i nejedna{\cv}ine)\\
-\vfill\vfill
-\begingroup
-\large
-\setbox0=\hbox{Luka Ne{\sv}i{\cc}, IV/\,6}%
-\begin{tabularx}{\textwidth}{lXl}
-\rule{\wd0}{0pt}&&\rule{\wd0}{0pt}\\
-U{\cv}enik:&&Profesor:\\
-\copy0&&Nenad Toti{\cc}\\
-%\noalign{\bigskip}
-%\rule{\wd0}{0.2pt}&&\rule{\wd0}{0.2pt}\\
-\end{tabularx}
-\endgroup
-\vskip 2truecm
-\normalsize
-\the\year.
-\end{center}
-\end{titlepage}
-
+\input titlepage
 
 \tableofcontents
 
 
 \section{Uvod}
-
 
 \subsection{Definicija logaritma}
 
@@ -141,10 +105,8 @@ sa zna{\cv}e{\nj}em \navod{broj kojim se ra{\cv}una}.
 \subsection{Grafik funkcije}
 
 \newcounter{figno}
-\def\slika#1#2{\stepcounter{figno}%
-\displaylines{
-\hbox{#1}\cr
-\hbox{{\bf Slika \thefigno:\/~}#2}}}
+\def\slika#1#2{\stepcounter{figno}\displaylines{
+  \hbox{#1}\cr\hbox{{\bf Slika \thefigno:\/~}#2}}}
 
 
 Funkcija je u skupu realnih brojeva ${\mathbb R}$ definisana za $x>0$ i $b>0\land b\ne1$.
@@ -418,10 +380,12 @@ Ova formula se koristi i za odre{\dj}iva{\nj}e starosti stena ili fosila.
 \subsection{Osnova \e}
 
 Ovu logaritamsku osnovu je otkrio Jakob Bernuli (Jacob Bernoulli) kada je
-prou{\cv}avao {\sl slo{\zv}enu kamatu}, ali je Ojler (Leonhard Euler) dokazao da je
+prou{\cv}avao {\sl slo{\zv}enu kamatu\/} i dokazao da {\sl kontinualna\/} slo{\zv}ena kamata
+te{\zv}i konstanti
 $$
 \e=\lim_{n\to\infty}\left(1+{1\over n}\right)^{\!n}\!,
 $$
+ali je Ojler (Leonhard Euler)
 odredio {\nj}enu vrednosti i dao joj ime.
 Logaritam za ovu osnovu se zove {\sl prirodni\/} logaritam ({\sl logarithmus naturalis\/})
 i pi{\sv}e se
@@ -523,11 +487,11 @@ veri{\zv}nih (lan{\cv}anih) razlomaka,
 gde simbol `K' poti{\cv}e od nema{\cv}ke re{\cv}i za {\sl prekinuti lanac\/} ({\sl Kettenbruch\/}). 
 Izraz iza ovog simbola pokazuje kako izgleda {\sl op{\sv}ti {\cv}lan\/} veri{\zv}nog razlomka.
 
-\def\ff#1/#2/{\frac{#1}{#2}}
+\def\ff#1/#2,{\frac{#1}{#2},}
 Ako pomo{\cc}u ove formule izra{\cv}unamo prvih 11 {\sl konvergenata} $\ln2$ kao $-\ln(1-1/2)$, dobi{\cc}emo
 $$
-\ln2\approx\ff1/2/, \ff5/8/, \ff2/3/, \ff131/192/, \ff661/960/, \ff1327/1920/, \ff1163/1680/, \ff148969/215040/, 
-\ff447047/645120/, \ff44711/64512/, \ff983705/1419264/, \dots
+\ln2\approx\ff1/2, \ff5/8, \ff2/3, \ff131/192, \ff661/960, \ff1327/1920, \ff1163/1680, \ff148969/215040, 
+\ff447047/645120, \ff44711/64512, \ff983705/1419264, \dots
 $$
 gde je posled{\nj}i razlomak ta{\cv}an na 5 decimala.
 
@@ -613,7 +577,7 @@ $$
 gde se $\ln z$ i $\ln w$ ra{\cv}unaju pomo{\cc}u formule \eqref{eq:cln}, odnosno, \eqref{eq:clncart}.
 Na primer,
 $$
-\log_{2+i}(3+4i)=2, \qquad \log_i\e=-\frac{2i}{\pi}.
+\log_{2+i}(3+4i)=2, \qquad \log_i\e=\frac{2}{i\pi}.
 $$
 
 \medskip
@@ -689,10 +653,11 @@ $$
 
 \section{Zadaci}
 
+\subsection{Jedna{\cv}ine}
+
 \def\jed#1{Jedna{\cv}ina~#1}
 
-
-\subsection{\jed1}
+\subsubsection{FIT-prijemni}
 
 \zadatak Na{\dj}i re{\sv}e{\nj}e jedna{\cv}ne
 $$
@@ -717,7 +682,7 @@ x-2=2^4=16\sledi
 x=\ram{18}.
 $$
 
-\subsection{\jed2}
+\subsubsection{\jed2}
 
 \zadatak
 Re{\sv}i jedna{\cv}inu
@@ -746,7 +711,7 @@ x_{1,2}&={-1\pm\sqrt{1^2+4\cdot1\cdot6}\over2\cdot1}\\
 x&=\ram{2}.
 \end{align*}
 
-\subsection{\jed3}
+\subsubsection{JJJJ} % još jedna jebena jednačina
 
 \zadatak
 Re{\sv}i jedna{\cv}inu
@@ -775,51 +740,7 @@ x=\ram{3}.
 $$
 
 
-\subsection{Geometrijski niz}
-
-\zadatak
-Za $0\le x<1$, uprostiti izraz
-$$
-y=\log(1+x+x^2+x^3+x^4+\cdots).
-$$
-
-\resenje
-Kako je zbir\footnote{{\bf Dokaz:} Ako je $s=1+x+x^2+x^3+x^4+\cdots=1+x\cdot(1+x+x^2+x^3+x^4+\cdots)
-=1+x\cdot s$, onda sledi $s=1/(1-x)$. \QED} beskona{\cv}nog geometrijskog niza
-$$
-1+x+x^2+x^3+x^4+\cdots = {1\over 1-x},
-$$
-mo{\zv}e se pisati
-\begin{align*}
-\noalign{\vskip-12pt}
-y&=\log\left({1\over 1-x}\right),
-\intertext{gde iz jednakosti za recipro{\cv}nu vrednost \eqref{eq:recip}, sledi}
-&=\ram{-\log(1-x)}.
-\end{align*}
-
-\subsection{Poluraspad joda}
-
-\zadatak \def\iso#1-#2{\vphantom{\rm#2}^{#1}{\rm#2}}
-Ako imamo $63\um g$ izotopa joda $\iso 131-I$, a znamo da smo pre 11 dana imali $163\um g$, koje je vreme
-poluraspada ovog izotopa? (Koristi prirodni logaritam.)
-
-\resenje
-Iz formule \eqref{eq:halftime} na strani \pageref{eq:halftime}, sledi da se vreme poluraspada
-mo{\zv}e izra{\cv}unati
-$$
-\th
-={t\over \logtwo(m_0 / m_t)}
-={t\ln2\over \ln(m_0 / m_t)}
-%={11\over\logtwo(163/63)}
-={11\ln2\over\ln(163/63)}
-\approx\ram{8.02\um{dana}}.
-$$
-
-
-
-%\clearpage
-
-\subsection{Beskona{\cv}ni koren}
+\subsubsection{Beskona{\cv}ni koren}
 
 \zadatak
 Odredi vrednost
@@ -845,13 +766,57 @@ x&=\ram{\e-1},
 \end{align*}
 jer iz sume za izra{\cv}unava{\nj}e $\e$ nedostaje {\sl nulti\/} {\cv}lan $1/0!=1$.
 
+\subsection{Nejedna{\cv}ine}
 
-\subsection{Decimalne cifre}
+\subsection{Odabrani primeri}
+
+\subsubsection{Geometrijski niz}
+
+\zadatak
+Za $0\le x<1$, uprostiti izraz
+$$
+y=\log(1+x+x^2+x^3+x^4+\cdots).
+$$
+
+\resenje
+Kako je zbir\footnote{{\bf Dokaz:} Ako je $s=1+x+x^2+x^3+x^4+\cdots=1+x\cdot(1+x+x^2+x^3+x^4+\cdots)
+=1+x\cdot s$, onda sledi $s=1/(1-x)$. \QED} beskona{\cv}nog geometrijskog niza
+$$
+1+x+x^2+x^3+x^4+\cdots = {1\over 1-x},
+$$
+mo{\zv}e se pisati
+\begin{align*}
+\noalign{\vskip-12pt}
+y&=\log\left({1\over 1-x}\right),
+\intertext{gde iz jednakosti za recipro{\cv}nu vrednost \eqref{eq:recip}, sledi}
+&=\ram{-\log(1-x)}.
+\end{align*}
+
+\subsubsection{Poluraspad joda}
+
+\zadatak \def\iso#1-#2{\vphantom{\rm#2}^{#1}{\rm#2}}
+Ako imamo $63\um g$ izotopa joda $\iso 131-I$, a znamo da smo pre 11 dana imali $163\um g$, koje je vreme
+poluraspada ovog izotopa? (Koristi prirodni logaritam.)
+
+\resenje
+Iz formule \eqref{eq:halftime} na strani \pageref{eq:halftime}, sledi da se vreme poluraspada
+mo{\zv}e izra{\cv}unati
+$$
+\th
+={t\over \logtwo(m_0 / m_t)}
+={t\ln2\over \ln(m_0 / m_t)}
+%={11\over\logtwo(163/63)}
+={11\ln2\over\ln(163/63)}
+\approx\ram{8.02\um{dana}}.
+$$
+
+
+\subsubsection{Decimalne cifre}
 \zadatak Koliko decimalnih cifara ima 128-bitna promen{\lj}iva?
 \resenje $d=\lfloor\logten 2^{128}\rfloor+1=\lfloor 128\logten 2\rfloor+1=\lfloor 38.5318\rfloor+1=38+1=\ram{39}.$
 
 
-\subsection{Izvod}
+\subsubsection{Izvod}
 \zadatak Odredi izvod funkcije $f(\alpha)=\log_3(\cos\alpha)$.
 \resenje Kako je izvod $\cos\alpha$ jednak $-\sin\alpha$ i iz jednakosti 
 za izvod logaritma funkcije \eqref{eq:izvod}, sledi da je
@@ -864,7 +829,7 @@ $$
 
 \clearpage
 
-\subsection{{\Cv}etiri {\cv}etvorke}
+\subsubsection{{\Cv}etiri {\cv}etvorke}
 
 \def\4{{\color{red}\bf4}}
 
@@ -910,7 +875,71 @@ $$
 \endgroup
 
 
-\subsection{ln 3}\label{sssec:ln3}
+\subsection{Ru{\cv}ni rad}
+
+\subsubsection{Analogni kvadratni koren}\label{sssec:sibersqrt}
+
+\zadatak
+Objasni na{\cv}in za odre{\dj}iva{\nj}e vrednosti $\sqrt x$ logaritmarom.
+
+\resenje Kvadratni koren se mo{\zv}e direktno {\cv}itati sa logaritmara ako {\sl u glavi\/} izvr{\sv}imo 
+de{\lj}enje sa 2, i po potrebi, sabira{\nj}e sa $0\.5$, 
+{\sv}to je vrlo jednostavno, jer se radi o brojevima izme{\dj}u 0 i 1 sa najvi{\sv}e 3 decimale. 
+Kako je
+$$
+\sqrt x=10^{{1\over2}\log x},
+$$
+potrebno je odrediti vrednost $\log x$, a onda za dvostruko ma{\nj}u vred\-nost od {\nj}e, pro{\cv}itati vrednost $10^y$. Na primer,
+za izra{\cv}unava{\nj}e $\sqrt{5\.3}$,
+{\cv}itamo da je $\log 5\.3\approx0\.724$, a onda {\cv}itamo vrednost $10^y$ za 
+$y=0\.724/2=0\.362$ i
+dobijamo $\sqrt{5\.3}\approx 2\.3$.
+$$
+\def\hair{\nit{0.36213793480039452281649614581363}\nit{0.72427586960078904563299229162726}\nit{0.86213793480039452281649614581363}}
+\def\extra{\ruler{0.36213793480039452281649614581363}{$\uparrow$}\ruler{0.72427586960078904563299229162726}{$\downarrow$}\ruler{0.86213793480039452281649614581363}{$\uparrow$}}
+\logaritmar0
+$$
+Za $\sqrt{53}$ treba u $y$ dodati jo{\sv} $0\.5$ tako da je $y=0\.362+0\.5=0\.862$, odakle je $\sqrt{53}\approx7\.28$.
+%(Dodava{\nj}e $0\.5$ u eksponent predstav{\lj}a mno{\zv}e{\nj}e celog izraza sa $\sqrt{10}$.)
+Naravno, $\sqrt{530}$ se ra{\cv}una kao $10\sqrt{5\.3}$, ili $\sqrt{0\.53}={1\over10}\sqrt{53}$.
+
+\subsubsection{Analogni stepen}\label{sssec:siberpower}
+
+\zadatak
+Odredi logaritmarom pribli{\zv}nu vrednost
+$z=2\.3^{1\.7}$.
+
+\resenje
+Pomo{\cc}u jednakosti \eqref{eq:power} predstavimo
+$$
+z=2\.3^{1\.7}=10^{1\.7\cdot\log(2\.3)}.
+$$
+Prvo odre{\dj}ujemo vrednost $\log(2\.3)$ tako {\sv}to nalazimo
+$x=2\.3$ i {\cv}itamo ispod {\nj}ega vred\-nost $\log x$ (vidi nit obele{\zv}enu sa `{\color{red}
+$\updownarrow$}').
+$$
+\def\hair{\nit{0.36172783601759287886777711225119}}
+\def\extra{\ruler{0.36172783601759287886777711225119}{$\updownarrow$}}
+\logaritmar0
+$$
+Nalazimo da je $\log(2\.3)\approx0\.362$. Nakon toga, tu vrednost na kliza{\cv}u poravnavamo sa $x=1$.
+Kako na kliza{\cv}u ne postoji $0\.362$, postavi{\cc}emo na $3\.62$, s tim {\sv}to {\cc}emo rezultat
+podeliti sa 10. Sada, za $x=1\.7$ {\cv}itamo vrednost na kliza{\cv}u ispod
+$$
+\def\hair{\nit{0.55838193028134245441924844418993}\nit{0.78883085165961638295941833851827}\nit{1.173319251511250348494469535017}}
+\def\extra{\ruler{0.55838193028134245441924844418993}{$\uparrow$}\ruler{1.173319251511250348494469535017}{$z$}%
+\ruler{0.78883085165961638295941833851827}{$\uparrow$}}
+\logaritmar{-0.55838193028134245441924844418993}
+$$
+i nalazimo da je oko $6\.15$, {\sv}to zna{\cv}i da je $1\.7\cdot\log(2\.3)\approx0\.615$.
+Nakon toga, za $y=0\.615$ {\cv}itamo vrednost $10^y$ i
+nalazimo da je oko $4\.12$ {\sv}to je i re{\sv}e{\nj}e
+$$
+z=2\.3^{1\.7} \approx \ram{4\.12},
+$$
+a ta{\cv}na vrednost je $z=4\.120380\ldots$
+
+\subsubsection{ln 3}\label{sssec:ln3}
  
 \zadatak
 Pomo{\cc}u postupka \eqref{eq:alg} sa 
@@ -956,68 +985,6 @@ $$
 %gre{\sv}ka bi bila oko $7\puta10^{-15}$, {\sv}to je preciznost s kojom je 1617.\ godine Brigs (Henry Briggs)
 %izra{\cv}unao svoje {\sl logaritamske tablice}.
 
-
-\subsection{Analogni kvadratni koren}\label{sssec:sibersqrt}
-
-\zadatak
-Objasni na{\cv}in za odre{\dj}iva{\nj}e vrednosti $\sqrt x$ logaritmarom.
-
-\resenje Kvadratni koren se mo{\zv}e direktno {\cv}itati sa logaritmara ako {\sl u glavi\/} izvr{\sv}imo 
-de{\lj}enje sa 2, i po potrebi, sabira{\nj}e sa $0\.5$, 
-{\sv}to je vrlo jednostavno, jer se radi o brojevima izme{\dj}u 0 i 1 sa najvi{\sv}e 3 decimale. 
-Kako je
-$$
-\sqrt x=10^{{1\over2}\log x},
-$$
-potrebno je odrediti vrednost $\log x$, a onda za dvostruko ma{\nj}u vred\-nost od {\nj}e, pro{\cv}itati vrednost $10^y$. Na primer,
-za izra{\cv}unava{\nj}e $\sqrt{5\.3}$,
-{\cv}itamo da je $\log 5\.3\approx0\.724$, a onda {\cv}itamo vrednost $10^y$ za 
-$y=0\.724/2=0\.362$ i
-dobijamo $\sqrt{5\.3}\approx 2\.3$.
-$$
-\def\hair{\nit{0.36213793480039452281649614581363}\nit{0.72427586960078904563299229162726}\nit{0.86213793480039452281649614581363}}
-\def\extra{\ruler{0.36213793480039452281649614581363}{$\uparrow$}\ruler{0.72427586960078904563299229162726}{$\downarrow$}\ruler{0.86213793480039452281649614581363}{$\uparrow$}}
-\logaritmar0
-$$
-Za $\sqrt{53}$ treba u $y$ dodati jo{\sv} $0\.5$ tako da je $y=0\.362+0\.5=0\.862$, odakle je $\sqrt{53}\approx7\.28$.
-%(Dodava{\nj}e $0\.5$ u eksponent predstav{\lj}a mno{\zv}e{\nj}e celog izraza sa $\sqrt{10}$.)
-Naravno, $\sqrt{530}$ se ra{\cv}una kao $10\sqrt{5\.3}$, ili $\sqrt{0\.53}={1\over10}\sqrt{53}$.
-
-\subsection{Analogni stepen}\label{sssec:siberpower}
-
-\zadatak
-Odredi logaritmarom pribli{\zv}nu vrednost
-$z=2\.3^{1\.7}$.
-
-\resenje
-Pomo{\cc}u jednakosti \eqref{eq:power} predstavimo
-$$
-z=2\.3^{1\.7}=10^{1\.7\cdot\log(2\.3)}.
-$$
-Prvo odre{\dj}ujemo vrednost $\log(2\.3)$ tako {\sv}to nalazimo
-$x=2\.3$ i {\cv}itamo ispod {\nj}ega vred\-nost $\log x$ (vidi nit obele{\zv}enu sa `{\color{red}
-$\updownarrow$}').
-$$
-\def\hair{\nit{0.36172783601759287886777711225119}}
-\def\extra{\ruler{0.36172783601759287886777711225119}{$\updownarrow$}}
-\logaritmar0
-$$
-Nalazimo da je $\log(2\.3)\approx0\.362$. Nakon toga, tu vrednost na kliza{\cv}u poravnavamo sa $x=1$.
-Kako na kliza{\cv}u ne postoji $0\.362$, postavi{\cc}emo na $3\.62$, s tim {\sv}to {\cc}emo rezultat
-podeliti sa 10. Sada, za $x=1\.7$ {\cv}itamo vrednost na kliza{\cv}u ispod
-$$
-\def\hair{\nit{0.55838193028134245441924844418993}\nit{0.78883085165961638295941833851827}\nit{1.173319251511250348494469535017}}
-\def\extra{\ruler{0.55838193028134245441924844418993}{$\uparrow$}\ruler{1.173319251511250348494469535017}{$z$}%
-\ruler{0.78883085165961638295941833851827}{$\uparrow$}}
-\logaritmar{-0.55838193028134245441924844418993}
-$$
-i nalazimo da je oko $6\.15$, {\sv}to zna{\cv}i da je $1\.7\cdot\log(2\.3)\approx0\.615$.
-Nakon toga, za $y=0\.615$ {\cv}itamo vrednost $10^y$ i
-nalazimo da je oko $4\.12$ {\sv}to je i re{\sv}e{\nj}e
-$$
-z=2\.3^{1\.7} \approx \ram{4\.12},
-$$
-a ta{\cv}na vrednost je $z=4\.120380\ldots$
 
 
 \section{Reference}

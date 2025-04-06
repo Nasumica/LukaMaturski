@@ -1,3 +1,6 @@
+prologues := 3;
+outputtemplate := "%j%c.mps";
+
 vardef inv(expr x) =
 	(x, 1/x){1, -x*x}
 enddef;
