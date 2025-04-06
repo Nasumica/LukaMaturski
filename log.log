@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  6 APR 2025 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  7 APR 2025 00:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -407,24 +407,24 @@ File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 ) (log.aux)
 \openout1 = `log.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -484,7 +484,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: `rotating' package detected.
-Package hyperref Info: Link coloring ON on input line 75.
+Package hyperref Info: Link coloring ON on input line 76.
  (log.out) (log.out)
 \@outlinefile=\write3
 \openout3 = `log.out'.
@@ -508,7 +508,7 @@ File: log.1 Graphic file (type mps)
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 220.
+(amsmath)                 on input line 221.
 
 [5] [6
 
@@ -518,15 +518,15 @@ Package amsmath Warning: Foreign command \over;
 \px=\dimen199
 \u=\dimen256
 )
-<siber2.jpg, id=311, 439.8834pt x 122.859pt>
+<siber2.jpg, id=326, 439.8834pt x 122.859pt>
 File: siber2.jpg Graphic file (type jpg)
 <use siber2.jpg>
-Package pdftex.def Info: siber2.jpg  used on input line 524.
+Package pdftex.def Info: siber2.jpg  used on input line 525.
 (pdftex.def)             Requested size: 421.25682pt x 117.65833pt.
-<sahat.jpg, id=314, 320.19624pt x 392.46625pt>
+<sahat.jpg, id=329, 320.19624pt x 392.46625pt>
 File: sahat.jpg Graphic file (type jpg)
 <use sahat.jpg>
-Package pdftex.def Info: sahat.jpg  used on input line 535.
+Package pdftex.def Info: sahat.jpg  used on input line 536.
 (pdftex.def)             Requested size: 142.26303pt x 174.37444pt.
  [9 <./siber2.jpg> <./sahat.jpg>]
 File: log.2 Graphic file (type mps)
@@ -534,11 +534,29 @@ File: log.2 Graphic file (type mps)
 
 ]
 File: izvod.3 Graphic file (type mps)
- [MP to PDF] (izvod.3) [11] (zadaci/fit-prijemni.tex) [12
+ [MP to PDF] (izvod.3) [11] (zadaci/fit-prijemni.tex) (zadaci/jed2.tex) (zadaci/jjjj.tex [12
 
-] (zadaci/44.tex) (zadaci/inf-root.tex [13]) [14] [15
+]) (zadaci/44.tex) (zadaci/sveska-1.tex [13]) (zadaci/inf-root.tex) [14] (zadaci/sveska-11.tex
+Package epstopdf Info: Source file: <eps/11.eps>
+(epstopdf)                    date: 2025-04-06 18:31:29
+(epstopdf)                    size: 36602 bytes
+(epstopdf)             Output file: <eps/11-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-04-06 18:31:53
+(epstopdf)                    size: 10076 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=eps/11-eps-converted-to.pdf eps/11.eps>
+(epstopdf)             \includegraphics on input line 23.
+Package epstopdf Info: Output file is already uptodate.
 
-] (zadaci/geom-serie.tex) (zadaci/131-I.tex) (zadaci/128-bit.tex) (zadaci/izvod.tex) [16
+
+pdfTeX warning: pdflatex (file ./eps/11-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<eps/11-eps-converted-to.pdf, id=383, 260.975pt x 160.6pt>
+File: eps/11-eps-converted-to.pdf Graphic file (type pdf)
+<use eps/11-eps-converted-to.pdf>
+Package pdftex.def Info: eps/11-eps-converted-to.pdf  used on input line 23.
+(pdftex.def)             Requested size: 284.52606pt x 175.09462pt.
+) (zadaci/sveska-10.tex) [15
+
+ <./eps/11-eps-converted-to.pdf>] (zadaci/131-I.tex) (zadaci/128-bit.tex) (zadaci/izvod.tex) (zadaci/geom-serie.tex) [16
 
 ] (zadaci/siber-sqrt.tex) (zadaci/siber-power.tex) (zadaci/ln3.tex [17
 
@@ -546,20 +564,20 @@ File: izvod.3 Graphic file (type mps)
 
 ] (log.aux)
 Package rerunfilecheck Info: File `log.out' has not changed.
-(rerunfilecheck)             Checksum: 3AFE598F33035F866CD2453FCB8D1C97;5654.
+(rerunfilecheck)             Checksum: 9CFB808405644C7FAA7A1C076388780F;5906.
  ) 
 Here is how much of TeX's memory you used:
- 15783 strings out of 475385
- 246212 string characters out of 2777378
- 904546 words of memory out of 3000000
- 36785 multiletter control sequences out of 15000+600000
+ 15813 strings out of 475385
+ 246884 string characters out of 2777378
+ 904564 words of memory out of 3000000
+ 36795 multiletter control sequences out of 15000+600000
  485589 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,29n,77p,270b,856s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/srba/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on log.pdf (20 pages, 714900 bytes).
+Output written on log.pdf (20 pages, 728270 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 363 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
+ 392 words of extra memory for PDF output out of 10000 (max. 10000000)
 

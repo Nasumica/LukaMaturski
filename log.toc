@@ -28,13 +28,16 @@
 \contentsline {subsubsection}{\numberline {6.1.2}Jedna{{\v c}}ina\nobreakspace {}2}{12}{subsubsection.6.1.2}%
 \contentsline {subsubsection}{\numberline {6.1.3}JJJJ}{13}{subsubsection.6.1.3}%
 \contentsline {subsubsection}{\numberline {6.1.4}{{\v C}}etiri {{\v c}}etvorke}{13}{subsubsection.6.1.4}%
-\contentsline {subsubsection}{\numberline {6.1.5}Beskona{{\v c}}ni koren}{14}{subsubsection.6.1.5}%
+\contentsline {subsubsection}{\numberline {6.1.5}Sveska 1}{14}{subsubsection.6.1.5}%
+\contentsline {subsubsection}{\numberline {6.1.6}Beskona{{\v c}}ni koren}{14}{subsubsection.6.1.6}%
 \contentsline {subsection}{\numberline {6.2}Nejedna{{\v c}}ine}{15}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Odabrani primeri}{16}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Geometrijski niz}{16}{subsubsection.6.3.1}%
-\contentsline {subsubsection}{\numberline {6.3.2}Poluraspad joda}{16}{subsubsection.6.3.2}%
-\contentsline {subsubsection}{\numberline {6.3.3}Decimalne cifre}{16}{subsubsection.6.3.3}%
-\contentsline {subsubsection}{\numberline {6.3.4}Izvod}{16}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.2.1}11}{15}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}10}{15}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Razni primeri}{16}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Poluraspad joda}{16}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}Decimalne cifre}{16}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}Izvod}{16}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4}Geometrijski niz}{16}{subsubsection.6.3.4}%
 \contentsline {subsection}{\numberline {6.4}Ru{{\v c}}ni rad}{17}{subsection.6.4}%
 \contentsline {subsubsection}{\numberline {6.4.1}Analogni kvadratni koren}{17}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}Analogni stepen}{17}{subsubsection.6.4.2}%

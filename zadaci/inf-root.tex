@@ -2,17 +2,13 @@
 
 \zadatak
 Odredi vrednost
-$$
-x=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}}}\right)
-$$
-gde je $\e$ osnova prirodnog logaritma.
-
+\begin{align*}
+    x&=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}}}\right)
+\intertext{gde je $\e$ osnova prirodnog logaritma.
 \resenje 
 Kako je $\ln \e=1$, a koriste{\cc}i jednakost za logaritam proizvoda \eqref{eq:lnmul} 
-i jednakost za logaritam korena \eqref{eq:lnroot},  mo{\zv}emo pisati
-\begin{align*}
-x
-&=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}}}\right)\\
+i jednakost za logaritam korena \eqref{eq:lnroot},  mo{\zv}emo pisati}
+%&=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}}}\right)\\
 &=1+\frac12\ln\left(\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}} \right)\\
 &=1+\frac12\left(1+\frac13\ln\left(\e\sqrt[4]{\e\sqrt[5]{\cdots}} \right)\right)\\
 &=1+\frac12\left(1+\frac13\left(1+\frac14\ln\left(\e\sqrt[5]{\cdots} \right) \right)\right)\\
