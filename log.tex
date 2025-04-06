@@ -21,8 +21,6 @@
 
 \usepackage{qrcode}
 
-%\usepackage[answerdelayed,lastexercise]{exercise}
-
 \DeclareGraphicsRule{*}{mps}{*}{}
 
 \input serbian
@@ -50,7 +48,6 @@
 \def\comma{{,}}
 \let\dotacc=\.
 \def\.{{,}}
-%\def\e{{\boldsymbol{e}}}
 \def\e{{\bf e}}
 %\def\naplog{\mathop{\mathop{\rm Log}\limits^{\rm Nap}}\nolimits}
 \def\naplog{\mathop{\rm NapLog}\nolimits}
@@ -65,8 +62,8 @@
 
 \newcount\exno \exno=0
 \def\zabox#1{\leavevmode\hbox to 5em{{\bf #1}\hfill}}
-\def\odg{\par\medskip\noindent\zabox{Re{\sv}e{\nj}e:}}
-\def\zad{\global\advance\exno by 1\relax
+\def\resenje{\par\medskip\noindent\zabox{Re{\sv}e{\nj}e:}}
+\def\zadatak{\global\advance\exno by 1\relax
   \par\noindent\leavevmode
   \llap{$\vartriangleright\>$}\zabox{Zadatak:}}
 \newcommand{\rsinfty}{{\,\widetilde{\!\infty\!}\,}}
@@ -418,7 +415,7 @@ Ova formula se koristi i za odre{\dj}iva{\nj}e starosti stena ili fosila.
 
 %\clearpage
 
-\subsection{Osnova $\e$}
+\subsection{Osnova \e}
 
 Ovu logaritamsku osnovu je otkrio Jakob Bernuli (Jacob Bernoulli) kada je
 prou{\cv}avao {\sl slo{\zv}enu kamatu}, ali je Ojler (Leonhard Euler) dokazao da je
@@ -433,13 +430,14 @@ $$
 $$
 
 \def\ep{\hphantom{!}}
+\def\rf#1!{\frac1{\hphantom{!}#1!}}
 Antilogaritam je $\e^x$, koji se kao funkicja pi{\sv}e $\exp(x)$, i zove se
 {\sl eksponencijalna funkcija}. Ova funkcija je poznata po tome {\sv}to je to 
 jedina funkcija {\cv}iji je izvod jednak samoj funkciji. Brojna vrednost se mo{\zv}e
 izra{\cv}unati formulom
 \begin{equation}
 \label{eq:exp}
-\okvir{\e^x=\exp(x)=\sum_{n=0}^\infty{x^n\over n!}},
+\okvir{\e^x=\exp(x)=\sum_{n=0}^\infty{x^n\over n!}}.
 \end{equation}
 Ako stavimo da je $x=1$,
 brojna vrednost osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
@@ -447,7 +445,7 @@ brojna vrednost osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
 \label{eq:e}
 \begin{aligned}
 \e
-&={1\over\ep0!}+{1\over\ep1!}+{1\over\ep2!}+{1\over\ep3!}+{1\over\ep4!}+{1\over\ep5!}+\cdots\\
+&=\rf0!+\rf1!+\rf2!+\rf3!+\rf4!+\rf5!+\cdots\\
 &=2\.
 7182818284\,
 5904523536\,
@@ -696,13 +694,13 @@ $$
 
 \subsection{\jed1}
 
-\zad Na{\dj}i re{\sv}e{\nj}e jedna{\cv}ne
+\zadatak Na{\dj}i re{\sv}e{\nj}e jedna{\cv}ne
 $$
 \log_2(x-2)+\log_4(x-2)+\log_{16}(x-2)=7.
 $$
 (Zadatak sa mog prijemnog ispita na FIT.)
 
-\odg
+\resenje
 Vidimo da su osnove logaritama stepeni broja 2, 
 pa iz jednakosti za logaritam stepena osnove \eqref{eq:powbase} sledi
 \begin{align*}
@@ -721,13 +719,13 @@ $$
 
 \subsection{\jed2}
 
-\zad
+\zadatak
 Re{\sv}i jedna{\cv}inu
 $$
 2\log(x) - \log(6-x)=0.
 $$
 
-\odg
+\resenje
 Da bi logaritam u jedna{\cv}ini bio definisan mora biti 
 $$
 x>0\land 6-x>0\sledi 0<x<6.
@@ -750,13 +748,13 @@ x&=\ram{2}.
 
 \subsection{\jed3}
 
-\zad
+\zadatak
 Re{\sv}i jedna{\cv}inu
 $$
 \ln(x)=\ln(15-x)-\ln(x+1).
 $$
 
-\odg
+\resenje
 Jedna{\cv}ina je definisana za
 $$
 x>0\land 15-x>0\land x+1>0\sledi 0<x<15.
@@ -779,13 +777,13 @@ $$
 
 \subsection{Geometrijski niz}
 
-\zad
+\zadatak
 Za $0\le x<1$, uprostiti izraz
 $$
 y=\log(1+x+x^2+x^3+x^4+\cdots).
 $$
 
-\odg
+\resenje
 Kako je zbir\footnote{{\bf Dokaz:} Ako je $s=1+x+x^2+x^3+x^4+\cdots=1+x\cdot(1+x+x^2+x^3+x^4+\cdots)
 =1+x\cdot s$, onda sledi $s=1/(1-x)$. \QED} beskona{\cv}nog geometrijskog niza
 $$
@@ -801,13 +799,11 @@ y&=\log\left({1\over 1-x}\right),
 
 \subsection{Poluraspad joda}
 
-\def\iso#1-#2{\vphantom{\rm#2}^{#1}{\rm#2}}
-
-\zad 
+\zadatak \def\iso#1-#2{\vphantom{\rm#2}^{#1}{\rm#2}}
 Ako imamo $63\um g$ izotopa joda $\iso 131-I$, a znamo da smo pre 11 dana imali $163\um g$, koje je vreme
 poluraspada ovog izotopa? (Koristi prirodni logaritam.)
 
-\odg
+\resenje
 Iz formule \eqref{eq:halftime} na strani \pageref{eq:halftime}, sledi da se vreme poluraspada
 mo{\zv}e izra{\cv}unati
 $$
@@ -825,14 +821,15 @@ $$
 
 \subsection{Beskona{\cv}ni koren}
 
-\zad
+\zadatak
 Odredi vrednost
 $$
 x=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\cdots}}}}\right)
 $$
 gde je $\e$ osnova prirodnog logaritma.
 
-\odg Kako je $\ln \e=1$, a koriste{\cc}i jednakost za logaritam proizvoda \eqref{eq:lnmul} 
+\resenje 
+Kako je $\ln \e=1$, a koriste{\cc}i jednakost za logaritam proizvoda \eqref{eq:lnmul} 
 i jednakost za logaritam korena \eqref{eq:lnroot},  mo{\zv}emo pisati
 \begin{align*}
 x
@@ -842,7 +839,7 @@ x
 &=1+\frac12\left(1+\frac13\left(1+\frac14\ln\left(\e\sqrt[5]{\cdots} \right) \right)\right)\\
 &=1+\frac12\left(1+\frac13\left(1+\frac14\left(1+\frac15\ln(\cdots)\right) \right) \right)\\
 &=1+\frac12+\frac12\mul\frac13+\frac12\mul\frac13\mul\frac14+\frac12\mul\frac13\mul\frac14\mul\frac15+\cdots\\
-&={1\over\ep1!}+{1\over\ep2!}+{1\over\ep3!}+{1\over\ep4!}+{1\over\ep5!}+\cdots
+&=\rf1!+\rf2!+\rf3!+\rf4!+\rf5!+\cdots
 \intertext{Ako pogledamo formulu \eqref{eq:e} na strani \pageref{eq:e}, mo{\zv}emo videti da je ovaj zbir jednak}
 x&=\ram{\e-1},
 \end{align*}
@@ -850,13 +847,13 @@ jer iz sume za izra{\cv}unava{\nj}e $\e$ nedostaje {\sl nulti\/} {\cv}lan $1/0!=
 
 
 \subsection{Decimalne cifre}
-\zad Koliko decimalnih cifara ima 128-bitna promen{\lj}iva?
-\odg $d=\lfloor\logten 2^{128}\rfloor+1=\lfloor 128\logten 2\rfloor+1=\lfloor 38.5318\rfloor+1=38+1=\ram{39}.$
+\zadatak Koliko decimalnih cifara ima 128-bitna promen{\lj}iva?
+\resenje $d=\lfloor\logten 2^{128}\rfloor+1=\lfloor 128\logten 2\rfloor+1=\lfloor 38.5318\rfloor+1=38+1=\ram{39}.$
 
 
 \subsection{Izvod}
-\zad Odredi izvod funkcije $f(\alpha)=\log_3(\cos\alpha)$.
-\odg Kako je izvod $\cos\alpha$ jednak $-\sin\alpha$ i iz jednakosti 
+\zadatak Odredi izvod funkcije $f(\alpha)=\log_3(\cos\alpha)$.
+\resenje Kako je izvod $\cos\alpha$ jednak $-\sin\alpha$ i iz jednakosti 
 za izvod logaritma funkcije \eqref{eq:izvod}, sledi da je
 $$
 f'(\alpha)
@@ -871,14 +868,14 @@ $$
 
 \def\4{{\color{red}\bf4}}
 
-\zad
+\zadatak
 Dokazati da svaki prirodan broj $n\in{\mathbb N}$, mo{\zv}e biti predstav{\lj}en sa \4 broja \4,
 pomo{\cc}u logaritamske funkcije i kvadratnog korena
 $$
 n=\log_{\sqrt\4/\4}\left(\log_\4 \underbrace{\sqrt{\sqrt{\cdots\sqrt\4}}}_{\text{$n$ korena}}\right).
 $$
 
-\odg
+\resenje
 Kako je
 $$
 {\sqrt \4\over \4}={1\over2}
@@ -896,7 +893,7 @@ izraz mo{\zv}e biti upro{\sv}{\cc}en
 \end{align*}
 
 \def\2{{\it2}}
-\def\dlog{\mathop{\sl\ell og}\nolimits_\2}
+\def\dlog{\mathop{\it\ell og}\nolimits_\2}
 \begingroup\it
 Davno je u jednom {\cv}asopisu postav{\lj}en sli{\cv}an zadatak: 
 da se sa {\sv}to ma{\nj}e istih brojeva,
@@ -906,7 +903,6 @@ Re{\sv}io ga je nobelovac Pol Dirak (Paul Dirac)
 sa~3~broja~\2, {\cv}ije originalno
 re{\sv}e{\nj}e izgleda
 $$
-%n=
 -\dlog\dlog\sqrt{\cdots n\cdots\sqrt\2}
 =-\dlog\dlog\2^{\2^{-n}}
 =-\dlog\2^{-n}=n.
@@ -916,7 +912,7 @@ $$
 
 \subsection{ln 3}\label{sssec:ln3}
  
-\zad
+\zadatak
 Pomo{\cc}u postupka \eqref{eq:alg} sa 
 strane~\pageref{eq:alg},
 izra{\cv}unati {\sl pe{\sv}ke\/} pribli{\zv}nu vrednost $\ln 3$, 
@@ -933,7 +929,7 @@ $$
 \def\step#1{\par\smallskip\indent\leavevmode
   Korak {\it#1}.\kern2em\relax}
 
-\odg
+\resenje
 Za $x=3$, izraz $r=(x-1)/(x+1)=1/2$. U nultom koraku postav{\lj}amo po{\cv}etne vrednosti:
 \step0 $k=1,\quad p=2r=1,\quad q=r^2=1/4,\quad a=p=1,\quad y=a=1$.
 
@@ -963,10 +959,10 @@ $$
 
 \subsection{Analogni kvadratni koren}\label{sssec:sibersqrt}
 
-\zad
+\zadatak
 Objasni na{\cv}in za odre{\dj}iva{\nj}e vrednosti $\sqrt x$ logaritmarom.
 
-\odg Kvadratni koren se mo{\zv}e direktno {\cv}itati sa logaritmara ako {\sl u glavi\/} izvr{\sv}imo 
+\resenje Kvadratni koren se mo{\zv}e direktno {\cv}itati sa logaritmara ako {\sl u glavi\/} izvr{\sv}imo 
 de{\lj}enje sa 2, i po potrebi, sabira{\nj}e sa $0\.5$, 
 {\sv}to je vrlo jednostavno, jer se radi o brojevima izme{\dj}u 0 i 1 sa najvi{\sv}e 3 decimale. 
 Kako je
@@ -989,11 +985,11 @@ Naravno, $\sqrt{530}$ se ra{\cv}una kao $10\sqrt{5\.3}$, ili $\sqrt{0\.53}={1\ov
 
 \subsection{Analogni stepen}\label{sssec:siberpower}
 
-\zad
+\zadatak
 Odredi logaritmarom pribli{\zv}nu vrednost
 $z=2\.3^{1\.7}$.
 
-\odg
+\resenje
 Pomo{\cc}u jednakosti \eqref{eq:power} predstavimo
 $$
 z=2\.3^{1\.7}=10^{1\.7\cdot\log(2\.3)}.
@@ -1064,6 +1060,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \end{enumerate}
 
 
+\iffalse
 \clearpage
 
 \thispagestyle{empty}
@@ -1074,5 +1071,6 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \begin{center}
 \qrcode{https://github.com/Nasumica/LukaMaturski/blob/main/log.pdf}
 \end{center}
+\fi
 
 \end{document}
