@@ -873,8 +873,11 @@ INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT zadaci\siber-power.tex
 INPUT zadaci\ln3.tex
-INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmcsc10.tfm
+INPUT autor.tex
+INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssq8.tfm
+INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssqi8.tfm
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmcsc10.tfm
 INPUT log.aux
 INPUT .\log.out
 INPUT .\log.out
@@ -914,6 +917,10 @@ INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss8.pfb
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss8.pfb
+INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssq8.pfb
+INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssq8.pfb
+INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssqi8.pfb
+INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssqi8.pfb
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\srba\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb

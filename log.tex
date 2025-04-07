@@ -1,6 +1,10 @@
 \documentclass[12pt, twoside, a4paper]{article}
 
 \usepackage[margin=1truein]{geometry}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{palatino}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -313,6 +317,7 @@ zvuk motora mlaznog aviona pri poleta{\nj}u je $150\um{dB}$,
 a smrtonosan je zvuk od $240\um{dB}$ i vi{\sv}e.
 Zvu{\cv}ni top {\sf Genasys LRAD} ima nivo zvuka od oko $160\um{dB}$,
 {\sv}to zna{\cv}i da je $10^{11}$ puta mo{\cc}niji od govora.
+%Naravno, treba uzeti u obzir da nivo opada sa kvadratom rastoja{\nj}a.
 
 Sli{\cv}na formula se koristi i za odre{\dj}iva{\nj}e ja{\cv}ine zem{\lj}otresa.
 
@@ -451,16 +456,17 @@ izgleda ovako:
 \end{equation}
 (Videti zadatak \ref{sssec:ln3} na strani \pageref{sssec:ln3}.)
 Ovim postupkom se mo{\zv}e izra{\cv}unati konstanta
+\label{ln2}
 \begin{align*}
 \ln2
-&=\frac{2}{1\cdot3^1}+\frac{2}{3\cdot3^3}+\frac{2}{5\cdot3^5}+\frac{2}{7\cdot3^7}+\frac{2}{9\cdot3^9}+\cdots\\
+&=\frac{2}{1\cdot3^1}+\frac{2}{3\cdot3^3}+\frac{2}{5\cdot3^5}+\frac{2}{7\cdot3^7}+\frac{2}{9\cdot3^9}+\cdots\nonumber \\
 \noalign{\smallskip}
 &= 0\.
 6931471805\,
 5994530941\,
 7232121458\,
 1765680755\,
-\ldots\\
+\ldots
 \intertext{kao i konstanta}
 \ln 10&=2\.
 3025850929\,
@@ -689,6 +695,7 @@ $$
 \input zadaci/siber-power
 \input zadaci/ln3
 
+\input autor
 
 \section{Reference}
 
@@ -717,12 +724,13 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \def\link#1#2{\item\href{#1}{#2\hfill\break{\footnotesize\tt#1}}}
 
 \begin{enumerate}
+\link{https://github.com/Nasumica/LukaMaturski/blob/main/log.pdf}{{\sf GitHub} --- Luka S Ne{\sv}i{\cc} --- Maturski rad --- Logaritam}
 \link{https://en.wikipedia.org/wiki/Logarithm}{{\sc WikipediA} --- Logarithm}
 \link{https://mathworld.wolfram.com/Logarithm.html}{Wolfram MathWorld --- Logarithm}
 \link{https://mathworld.wolfram.com/Antilogarithm.html}{Wolfram MathWorld --- Antiogarithm}
 \link{https://reference.wolfram.com/language/ref/Log.html}{Wolfram Language \& System Documentation Center --- Logarithm}
 \link{https://inria.hal.science/inria-00543939/PDF/briggs1624doc.pdf}{A reconstruction of the tables of Briggs' {\sl Arithmetica logarithmica\/} (1624)}
-\link{https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2975232/fulltext.pdf}{Newman's Short Proof of the Prime Number Theorem}
+%\link{https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2975232/fulltext.pdf}{Newman's Short Proof of the Prime Number Theorem}
 \link{https://www.youtube.com/watch?v=VRzH4xB0GdM}{{\sf YouTube} --- Log Tables --- Numberphile}
 \link{https://www.youtube.com/watch?v=xRpR1rmPbJE}{{\sf YouTube} --- The iPhone of Slide Rules --- Numberphile}
 \link{https://www.youtube.com/watch?v=Noo4lN-vSvw}{{\sf YouTube} --- The Four 4s --- Numberphile}

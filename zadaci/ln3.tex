@@ -40,9 +40,31 @@ $$
 \smallskip\noindent
 {\sv}to je prili{\cv}no ta{\cv}no za samo 5 koraka, jer je apsolutna gre{\sv}ka oko $2\.4\puta10^{-5}$.
 
-\smallskip
-
+\iffalse
 Da smo ra{\cv}unali u 20 koraka, 
-dobili bi smo $\ln3=\frac{636083906982236368109838473}{578988523561291667944243200}$, 
+dobili bi smo $\ln3\approx\frac{636083906982236368109838473}{578988523561291667944243200}$, 
 gre{\sv}ka bi bila oko $7\puta10^{-15}$, {\sv}to je preciznost s kojom je 1617.\ godine Brigs
-izra{\cv}unao svoje logaritamske tablice.
+izra{\cv}unao svoje prve logaritamske tablice.
+\fi
+
+\dodatak
+Ako ve{\cc} imamo precizno izra{\cv}unatu konstantu $\ln2$, onda je bo{\lj}e ra{\cv}unati $\ln3$ kao $\ln(3/2)+\ln2$,
+jer {\cc}e u postupku, umesto $r=1/2$, biti $r=(3/2-1)/(3/2+1)=1/5$, 
+odnosno, umesto $q=1/4$, bi{\cc}e $q=1/25$,
+{\sv}to dovodi do mnogo br{\zv}eg izra{\cv}unava{\nj}a. U istom broju koraka bi smo dobili
+$$
+\ln\frac32\approx
+\ff2/5, \ff152/375, \ff19006/46875, \ff665216/1640625, \ff49891214/123046875, 
+\ff13720083976/33837890625,
+$$
+gde posled{\nj}i razlomak ima gre{\sv}ku od oko $1\.3\puta10^{-10}$.
+Kada mu dodamo $\ln2$ sa strane~\pageref{ln2} dobi{\cc}emo
+$
+\ln3\approx1.0986122885\ldots
+$
+\iffalse
+Ovakav postupak je najbr{\zv}i ako ra{\cv}unamo $\ln x=\ln(x/2^n)+n\ln2$,
+gde biramo $n$ takvo da $|x/2^n|$ bude {\sv}to bil{\zv}e 1, odnosno, da $|q|$ bude najma{\nj}e mogu{\cc}e.
+Na primer, za $\ln5$ treba izabrati $n=2$, odnosno, $\ln5=\ln(5/2^2)+2\ln2$, dok je
+$\ln7=\ln(7/2^3)+3\ln2$.
+\fi
