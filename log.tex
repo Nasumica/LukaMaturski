@@ -65,7 +65,7 @@
 \def\um#1{\,{\rm#1}}
 \newdimen\mm \mm=1truemm
 
-\def\marg#1{\colorbox{Aquamarine}{\eightss\color{white}\hbox to 1em{\hss#1\hss}\/}}
+\def\marg#1{\raise1pt\hbox{\colorbox{Aquamarine}{\color{white}\hbox to 1em{\hss\eightss#1\/\hss}}}}
 \def\ram#1{\,\fcolorbox{black}{white}{$\displaystyle{\mathstrut #1}$}\,}
 \def\okvir#1{\,\fcolorbox{black}{Goldenrod}{$\displaystyle{\mathstrut #1}$}\,}
 \def\sledi{{\quad\Rightarrow\quad}}
@@ -232,7 +232,7 @@ odakle je
 \end{equation}
 Iz ove jednakosti mo{\zv}e se izvesti i jednakost
 \begin{equation}
-\okvir{\logb\sqrt[n] x={1\over n}\logb x}.
+\okvir{\logb\sqrt[n] x=\frac1n\logb x}.
 \label{eq:lnroot}
 \end{equation}
 Odavde se mo{\zv}e izvesti jednakost
@@ -254,7 +254,7 @@ $$
 $$
 Odavde je
 \begin{equation}
-\okvir{\loga x={\logb x\over\logb a}}.
+\okvir{\loga x=\frac{\logb x}{\logb a}}.
 \label{eq:chgbase}
 \end{equation}
 Iz ove jednakosti, ako stavimo da je $x=b$, se dobija i jednakost
@@ -263,7 +263,7 @@ Iz ove jednakosti, ako stavimo da je $x=b$, se dobija i jednakost
 \end{equation}
 Iz jednakosti \eqref{eq:powb} i \eqref{eq:chgbase}, ako stavimo da je $a=b^n$, sledi jednakost
 \begin{equation}
-\okvir{\log_{b^n}x = {1\over n}\logb x}.
+\okvir{\log_{b^n}x = \frac1n\logb x}.
 \label{eq:powbase}
 \end{equation}
 Odavde, ako stavimo da je $n=-1$, sledi
@@ -313,7 +313,7 @@ u prakti{\cv}noj upotrebi 10 puta ma{\nj}a jedinica {\sl decibel\/}~(dB), odnosn
 Nivo \hbox{sig\-na\-la} $L$, koji zavisi
 od odnosa izmerene snage $P$ i refrentne snage $P_0$, izra{\zv}en u deci\-belima iznosi
 $$
-L=10\logten\left({P\over P_0}\right)\um{dB}.
+L=10\logten\left(\frac{P}{P_0}\right)\um{dB}.
 $$
 Kako se u akustici uzima da je referentna snaga $P_0=10^{-12}\um W$, moglo bi se pisati
 da je nivo zvuka u decibelima
@@ -387,7 +387,7 @@ Ako imamo po{\cv}etan broj jezgara $N_0$ i broj jezgara $N_t$ nakon vremena $t$,
 se mo{\zv}e pred\-sta\-vi\-ti formulom
 \begin{equation}
 \label{eq:halftime}
-{N_0\over N_t}=2^{t/\th}\sledi {t\over\th}=\logtwo\left( {N_0\over N_t} \right).
+\frac{N_0}{N_t}=2^{t/\th}\sledi \frac{t}{\th}=\logtwo\left( \frac{N_0}{N_t} \right).
 \end{equation}
 Ova formula se koristi i za odre{\dj}iva{\nj}e starosti stena ili fosila.
 
@@ -400,7 +400,7 @@ Ovu logaritamsku osnovu je otkrio Jakob Bernuli (Jacob Bernoulli) kada je
 prou{\cv}avao {\sl slo{\zv}enu kamatu\/} i dokazao da {\sl kontinualna\/} slo{\zv}ena kamata
 te{\zv}i konstanti
 $$
-\e=\lim_{n\to\infty}\left(1+{1\over n}\right)^{\!n}\!,
+\e=\lim_{n\to\infty}\left(1+\frac1n\right)^{\!n}\!,
 $$
 ali je Ojler (Leonhard Euler)
 odredio {\nj}enu vrednosti i dao joj ime.
@@ -418,7 +418,7 @@ jedina funkcija {\cv}iji je izvod jednak samoj funkciji. Brojna vrednost se mo{\
 izra{\cv}unati formulom
 \begin{equation}
 \label{eq:exp}
-\okvir{\e^x=\exp(x)=\sum_{n=0}^\infty{x^n\over n!}}.
+\okvir{\e^x=\exp(x)=\sum_{n=0}^\infty\frac{x^n}{n!}}.
 \end{equation}
 Ako stavimo da je $x=1$,
 brojna vrednost osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
@@ -487,7 +487,7 @@ Ovim postupkom se mo{\zv}e izra{\cv}unati konstanta
 \end{align*}
 Ove konstante se koriste prilikom izra{\cv}unava{\nj}a vrednosti binarnog, odnosno, dekadnog logaritma
 $$
-\lb x=\logtwo x={\ln x\over \ln2},\qquad \lg x=\logten x={\ln x\over \ln 10}.
+\lb x=\logtwo x=\frac{\ln x}{\ln2},\qquad \lg x=\logten x=\frac{\ln x}{\ln 10}.
 $$
 
 \subsection{Veri{\zv}ni razlomak}
@@ -584,13 +584,13 @@ Kako je $y/x=\tan\theta$, prirodni logaritam kompleksnog broja,
 pred\-stav\-{\lj}e\-nog pravouglim koordinatama, iz formule \eqref{eq:cln},
 mo{\zv}e se izra{\cv}unati
 \begin{equation}
-\okvir{\ln(x+iy)={1\over2}\ln(x^2+y^2)+i\arctan\left({y\over x}\right)}.
+\okvir{\ln(x+iy)=\frac12\ln(x^2+y^2)+i\arctan\left(\frac yx\right)}.
 \label{eq:clncart}
 \end{equation}
 I za kompleksne brojeve va{\zv}i jednakost promene baze \eqref{eq:chgbase}, tako da za dva kompleksna
 broja $z$ i $w$, gde je $z\ne0$, $w\ne0$ i $w\ne1$, sledi
 $$
-\log_w z={\ln z\over \ln w},
+\log_w z=\frac{\ln z}{\ln w},
 $$
 gde se $\ln z$ i $\ln w$ ra{\cv}unaju pomo{\cc}u formule \eqref{eq:cln}, odnosno, \eqref{eq:clncart}.
 Na primer,
@@ -609,7 +609,7 @@ $$
 $$
 gde, ako prebacimo 1 na desnu stranu i {\sl logaritmujemo}, dobijamo zanim{\lj}iva jednakost
 $$
-{\ln(-1)\over\sqrt{-1}}=\pi.
+\frac{\ln(-1)}{\sqrt{-1}}=\pi.
 $$
 
 
@@ -618,11 +618,11 @@ $$
 
 Ako je 
 $$
-y=\ln x\sledi y'={1\over x},
+y=\ln x\sledi y'=\frac1x,
 $$
 odakle se, pomo{\cc}u jednakosti \eqref{eq:chgbase} i jednakosti za izvod slo{\zv}ene funkcije, mo{\zv}e dobiti
 \begin{equation}
-\okvir{y=\logb(f(x))\sledi y'={f'(x)\over f(x)\ln b}}.
+\okvir{y=\logb(f(x))\sledi y'={f'\frac(x}{f(x)\ln b}}.
 \label{eq:izvod}
 \end{equation}
 
@@ -653,7 +653,7 @@ imao samo 15--16 godina.
 Ako funkcija $\pi(n)$ ima vrednost {\sl ukupan broj prostih brojeva ma{\nj}ih
 ili jednakih od~$n$}, onda va{\zv}i
 $$
-\lim_{n\to\infty}{\pi(n)\ln n\over n} = 1.
+\lim_{n\to\infty}\frac{\pi(n)\ln n}{n} = 1.
 $$
 Posledica ove teoreme je da je $n$-ti prost broj $p_n$, za veliko $n$, otprilike
 $$
