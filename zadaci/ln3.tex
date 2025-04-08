@@ -2,8 +2,8 @@
  
 \zadatak
 Pomo{\cc}u postupka \eqref{eq:alg} sa 
-strane~\pageref{eq:alg},
-izra{\cv}unati {\sl pe{\sv}ke\/} pribli{\zv}nu vrednost $\ln 3$, 
+strane~\pageref{eq:alg}, a u {\cv}ast Nepera i Brigsa,
+izra{\cv}unaj {\sl pe{\sv}ke\/} pribli{\zv}nu vrednost $\ln 3$
 u~5 koraka. Za upore{\dj}iva{\nj}e, ta{\cv}na vrednost je
 $$
 \ln3=1\.
@@ -58,13 +58,20 @@ $$
 \ff13720083976/33837890625,
 $$
 gde posled{\nj}i razlomak ima gre{\sv}ku od oko $1\.3\puta10^{-10}$.
-Kada mu dodamo $\ln2$ sa strane~\pageref{ln2} dobi{\cc}emo
-$
-\ln3\approx1.0986122885\ldots
-$
-\iffalse
+Kada mu, sa strane~\pageref{ln2}, dodamo $\ln2$, dobi{\cc}emo
+$$\ln3\approx1\.0986122885\ldots$$
+
 Ovakav postupak je najbr{\zv}i ako ra{\cv}unamo $\ln x=\ln(x/2^n)+n\ln2$,
-gde biramo $n$ takvo da $|x/2^n|$ bude {\sv}to bil{\zv}e 1, odnosno, da $|q|$ bude najma{\nj}e mogu{\cc}e.
-Na primer, za $\ln5$ treba izabrati $n=2$, odnosno, $\ln5=\ln(5/2^2)+2\ln2$, dok je
-$\ln7=\ln(7/2^3)+3\ln2$.
-\fi
+gde biramo $n$ takvo da $x/2^n$ bude {\sv}to bil{\zv}e 1, a samim tim, da $q$ bude najma{\nj}e mogu{\cc}e.
+% Na primer, za $\ln5$ treba izabrati $n=2$, odnosno, $\ln5=\ln(5/2^2)+2\ln2$, dok je
+% $\ln7=\ln(7/2^3)+3\ln2$.
+% Sli{\cv}an postupak se zove {\sl normalizacija mantise} i prili{\cv}no je jasan kada je broj
+% predstav{\lj}en u binarnom sistemu. 
+% Recimo, broj $10 = (1010)_2 = (1\.010)_2\puta2^3$ (mrdnemo decimalni zarez iza prve binarne jedinice sleva na desno,
+% a broj mrda{\nj}a je $n$).
+% I $\ln10$ bi smo najbr{\zv}e izra{\cv}unali kao $\ln(1\.25)+3\ln2$. 
+% $$
+% \ln{1.25}\approx
+% \ff2/9, \ff488/2187, \ff65882/295245, \ff37355104/167403915, 
+% \ff27231870886/122037454035, \ff2695955217784/12081707949465,
+% $$
