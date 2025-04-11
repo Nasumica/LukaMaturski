@@ -1,11 +1,24 @@
 \subsubsection{Net 2}
  
-\zadatak
+\zadatak Koje vrednosti zadovo{\lj}avaju slede{\cc}u nejedna{\cv}inu
+\begin{align*}
+\log_7 (x + 5) &> \log_5 (x + 5).
+\intertext{\resenje Prebacimo izraz u zajedni{\cv}ki logaritam}
+\frac{\log(x+5)}{\log7} &> \frac{\log(x+5)}{\log5} \\
+\log5\log(x+5) &> \log7\log(x+5).
+\intertext{Kako je $\log5<\log7$ i pozitivni su, da bi uslov va{\zv}io, mora biti}
+\log(x+5)&<0,
+\intertext{odakle je}
+x+5&<1\\
+x&<-4,
+\intertext{a da bi logaritam bio definisan mora da va{\zv}i i}
+x+5&>0\\
+x&>-5,
+\end{align*}
+odakle je re{\sv}e{\nj}e
 $$
-\log_7 (x + 5) > \log_5 (x + 5).
+x\in\ram{(-5 ,-4)}.
 $$
-
-\resenje
-$$
--5 < x < -4.
-$$
+% $$
+% \slika{\includegraphics[width=100\mm]{eps/net2.eps}}{$y=\log_7 (x + 5) - \log_5 (x + 5)$.}
+% $$

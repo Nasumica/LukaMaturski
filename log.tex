@@ -1,10 +1,14 @@
 \documentclass[12pt, twoside, a4paper]{article}
 
+%pdfTeX
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+
 \usepackage[margin=1truein]{geometry}
 
-% \usepackage[utf8]{fontenc}
-%\usepackage{palatino}
+% \usepackage{palatino}
 % \usepackage{charter}
+
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -14,7 +18,7 @@
 \usepackage{mathtools}
 \usepackage{pdflscape}
 \usepackage{rotating}
-% \usepackage{texlogos}
+\usepackage{enumitem}
 
 \usepackage[dvipsnames]{xcolor}
 
@@ -26,10 +30,12 @@
 ]{hyperref}
 
 \usepackage{qrcode}
-
-\DeclareGraphicsRule{*}{mps}{*}{}
+\usepackage{svg}
 
 \input serbian
+
+
+\DeclareGraphicsRule{*}{mps}{*}{}
 
 \renewcommand*\contentsname{Sadr{\zv}aj}
 
@@ -615,14 +621,13 @@ $$
 
 \subsection{Izvod}
 
-
 Ako je 
 $$
 y=\ln x\sledi y'=\frac1x,
 $$
 odakle se, pomo{\cc}u jednakosti \eqref{eq:chgbase} i jednakosti za izvod slo{\zv}ene funkcije, mo{\zv}e dobiti
 \begin{equation}
-\okvir{y=\logb(f(x))\sledi y'={f'\frac(x}{f(x)\ln b}}.
+\okvir{y=\logb(f(x))\sledi y'=\frac{f'(x)}{f(x)\ln b}}.
 \label{eq:izvod}
 \end{equation}
 
@@ -631,7 +636,7 @@ Povr{\sv}ina figure ispod funkcije $y=1/x$ do $x$-ose, u opsegu od 1~do~$x$ izno
 $\ln x$.\penalty-1000
 (Matemati{\cv}ki zapisano: $\int_1^x\dx/x=\ln x$.)
 $$
-\slika{\includegraphics[]{izvod.3}}{Geometrijsko zna{\cv}e{\nj}e $\ln x$.}
+\slika{\includegraphics[]{log.3}}{Geometrijsko zna{\cv}e{\nj}e $\ln x$.}
 $$
 (Na slici je $x=\e$, tako da je povr{\sv}ina osen{\cv}ane figure jednaka 1.)
 
@@ -672,6 +677,7 @@ $$
 \input zadaci/44
 \input zadaci/sveska-7
 \input zadaci/inf-root
+\input zadaci/net3
 
 \clearpage
 
@@ -682,9 +688,8 @@ $$
 \input zadaci/sveska-9
 \input zadaci/net1
 \input zadaci/net2
-\input zadaci/net3
-\input zadaci/net4
-\input zadaci/net5
+% \input zadaci/net4
+% \input zadaci/net5
 
 \clearpage
 
@@ -706,16 +711,18 @@ $$
 
 \vfill
 
-\rightline{\eightssi \the\exno\ zadataka u ovom radu.}
+%\rightline{\eightssi \the\exno\ zadataka u ovom radu.}
 
 
 \section{Reference}
 
+\tolerance=10000
+
 \renewcommand{\labelenumi}{[{\it\arabic{enumi}\/}]}
-\def\lit#1#2#3(#4){\item #1: \navod{#2}, {\sl#3\/} (#4)}
+\def\lit#1#2#3(#4){\item #1: {\navod{#2}}, {\sl#3\/} (#4)}
 \font\logoten=logo10 scaled 1200
 \def\MP{{\logoten METAPOST}}
-\def\link#1#2{\item\href{#1}{#2\hfill\break{\footnotesize\tt#1}}}
+\def\link#1#2{\item\href{#1}{#2}\hfill\break\href{#1}{\footnotesize\tt#1}}
 
 \definecolor{ZXink}{rgb}{0.25, 0.25, 0.25}
 \definecolor{ZXpaper}{rgb}{0, 1, 1}
@@ -767,7 +774,7 @@ $$
 
 \subsection{Linkovi}
 
-\begin{enumerate}
+\begin{enumerate}[parsep=0cm]
 \link{https://github.com/Nasumica/LukaMaturski/blob/main/log.pdf}{{\sf GitHub} --- Luka S. Ne{\sv}i{\cc} --- Maturski rad --- Logaritam}
 \link{https://en.wikipedia.org/wiki/Logarithm}{{\sc WikipediA} --- Logarithm}
 \link{https://mathworld.wolfram.com/Logarithm.html}{Wolfram MathWorld --- Logarithm}
@@ -779,21 +786,21 @@ $$
 \link{https://www.youtube.com/watch?v=VRzH4xB0GdM}{{\sf YouTube} --- Log Tables --- Numberphile}
 \link{https://www.youtube.com/watch?v=xRpR1rmPbJE}{{\sf YouTube} --- The iPhone of Slide Rules --- Numberphile}
 \link{https://www.youtube.com/watch?v=Noo4lN-vSvw}{{\sf YouTube} --- The Four 4s --- Numberphile}
-\link{https://github.com/Nasumica/Wirth}{GitHub --- Srbislav D. Ne{\sv}i{\cc} --- Numerical recipes in Pascal}
+%\link{https://github.com/Nasumica/Wirth}{GitHub --- Srbislav D. Ne{\sv}i{\cc} --- Numerical recipes in Pascal}
 \end{enumerate}
 
 
 \subsection{Literatura}
 
-\begin{enumerate}
+\begin{enumerate}[parsep=0cm]
 \lit{Larousse}{Matematika}{Op{\sv}ta enciklopedija}(1967)
 \lit{Neboj{\sv}a Ikodinovi{\cc}, Sla{\dj}ana Dimitrijevi{\cc}, Suzana Aleksi{\cc}}{U{\dz}benik sa
-zbirkom zadataka za 2. razred gimnazije}{Matematika 2}(2019)
+zbir\-kom zadataka za 2. razred gimnazije}{Matematika 2}(2019)
 \lit{Vene Bogoslavov}{Zbirka re\sv enih zadataka iz matematike 2}{}(2008--2011)
-\lit{Marjan Mateji\cc, Lidija Stefanovi\cc, Branislav Ran\dj elovi\cc, Igor Milovanovi\cc}{Kom\-ple\-ti
+\lit{Marjan M. Mateji\cc, Lidija V. Stefanovi\cc, Branislav M. Ran\dj elovi\cc, Igor \Zv. Milo\-va\-novi\cc}{Kom\-ple\-ti
 zadataka za prijemni ispit}{Matematika}(2011)
 \lit{Rade Nikoli{\cc}}{Zadaci za prijemni ispit iz matematike na Fakultet informacionih tehnologija}{}(2020)
-\lit{Gradimir V. Milovanovi{\cc}, {\Dj}or{\dj}e R. {\Dj}or{\dj}evi{\cc}}{Programira{\nj}e numeri{\cv}kih metoda}{}(1981)
+\lit{Gradimir V. Milovanovi{\cc}, {\Dj}or{\dj}e R. {\Dj}or{\dj}evi{\cc}}{Programira{\nj}e numeri{\cv}kih me\-to\-da}{}(1981)
 \lit{Donald E. Knuth}{Seminumerical Algorithms}{The Art of Computer Programming}(1968--)
 \lit{Drago{\lj}ub Vasi{\cc}, Vene Bogoslavov, Gli{\sv}a Ne{\sv}kovi{\cc}}{Logaritamske tablice}{}(2008)
 \lit{Henry Briggs}{Arithmetica logarithmica}{}(1624)
@@ -803,21 +810,25 @@ zadataka za prijemni ispit}{Matematika}(2011)
 
 \subsection{Software}
 
-\begin{enumerate}
+\newbox\gobox \setbox\gobox\hbox{\textsf{\textbf{GO}}}
+\newdimen\godim \godim=\ht\gobox \advance\godim\dp\gobox
+\newdimen\down \down=0.03\godim \advance\godim\down
+\begin{enumerate}[parsep=0cm]
   \item Mathematica --- Wolfram Research
   \item {\sf Visual Studio Code} (Integrated Development Environment) --- Microsoft
   \item \TeX\ (typesetting system) --- Donald E. Knuth
   \item \LaTeX\ (\TeX\ macros) --- Leslie Lamport
+  \item \AmS-\TeX\ (\TeX\ macros) --- American Mathematical Society
   \item \MP\ (PostScript programming language)--- John D. Hobby
   \item \textbf{Pascal} (programming language) --- Niklaus Wirth
-  \item \textsf{\textbf{GO}} (programming language) --- Google
   \item \textbf{Python} (programming language) --- Python Software Foundation
+  \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GO.png}} (programming language) --- Google
   \item \ZXBASIC\ --- Sinclair Research Ltd.
 \end{enumerate}
 
 
-\input autor
 
+\input autor
 
 \iffalse
 \clearpage

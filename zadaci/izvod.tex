@@ -1,10 +1,20 @@
 \subsubsection{Izvod}
-\zadatak Odredi izvod funkcije $f(\alpha)=\log_3(\cos\alpha)$.
-\resenje Kako je izvod $\cos\alpha$ jednak $-\sin\alpha$ i iz jednakosti 
-\eqref{eq:izvod} za izvod logaritma funkcije, sledi da je
-$$
-f'(\alpha)
-=\frac{-\sin\alpha}{\cos\alpha\ln3}
-%\noalign{\smallskip}
-=\ram{-\frac{\tan\alpha}{\ln3}}.
-$$
+
+% \zadatak Odredi izvod funkcije $f(\alpha)=\log_3(\cos\alpha)$.
+% \resenje Kako je izvod $\cos\alpha$ jednak $-\sin\alpha$ i iz jednakosti 
+% \eqref{eq:izvod} za izvod logaritma funkcije, sledi da je
+% $$
+% f'(\alpha)
+% =\frac{-\sin\alpha}{\cos\alpha\ln3}
+% =\ram{-\frac{\tan\alpha}{\ln3}}.
+% $$
+
+\zadatak  Odredi izvod funkcije
+\begin{align*}
+    f(x) &= \ln\left(\frac{x^5 (1-\sin^2 x)}{3x+1}\right)
+\intertext{\resenje Zamenimo $1-\sin^2x=\cos^2 x$ i razlo{\zv}imo funkciju}
+    f(x) &= 5\ln x + 2\ln\cos x - \ln(3x+1).\\
+\intertext{Iz jednakosti \eqref{eq:izvod} za izvod logaritma funkcije, sledi da je}
+    f'(x) &= \frac5x + 2\cdot\frac{-\sin x}{\cos x} - \frac3{3x+1}\\
+    &= \ram{\frac5x - 2\tan x - \frac3{3x+1}}.
+\end{align*}
