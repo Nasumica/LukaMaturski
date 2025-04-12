@@ -31,6 +31,7 @@
 
 \usepackage{qrcode}
 \usepackage{svg}
+\usepackage{wrapfig,lipsum}
 
 \input serbian
 
@@ -43,6 +44,58 @@
 \newcommand{\sectionbreak}{\clearpage
   \vskip 0.75in plus 0.25in minus 0.25in\relax}
 %\newcommand{\subsectionbreak}{\clearpage}
+
+\definecolor{ZXink}{rgb}{0.25, 0.25, 0.25}
+\definecolor{ZXpaper}{rgb}{0, 1, 1}
+%\def\aspect{.618034}
+\def\aspect{1}
+
+\def\bitrow#1{{\hbox{\count0=7\relax\count1=#1\relax
+\vrule width 0pt height \dimen0 depth 0pt\relax
+\loop
+\ifnum\count1<128\relax
+\kern \aspect\dimen0\relax
+%\kern .707101\dimen0\relax
+%{\color{ZXpaper}\vrule width .70711\dimen0 height \dimen0 depth 0pt}\relax
+\else
+%{\color{ZXink}\vrule width .707101\dimen0 height \dimen0 depth 0pt}\relax
+{\color{ZXink}\vrule width \aspect\dimen0 height \dimen0 depth 0pt}\relax
+\advance\count1 by -128\relax
+\fi
+\advance\count1 by \count1\relax
+\advance\count0 by -1\relax
+\unless\ifnum\count0<0\repeat}}}
+
+\newbox\zxbox
+\def\bitbox#1#2#3#4#5#6#7#8{{\setbox\zxbox\hbox{0}%
+\dimen0=\ht\zxbox \divide\dimen0 by 6\relax
+\lower\dimen0\vbox{\offinterlineskip
+\bitrow{#1}\bitrow{#2}\bitrow{#3}\bitrow{#4}\bitrow{#5}\bitrow{#6}\bitrow{#7}\bitrow{#8}}}}
+\def\ZXL{\bitbox{0}{64}{64}{64}{64}{64}{126}{0}}
+\def\ZXE{\bitbox{0}{126}{64}{124}{64}{64}{126}{0}}
+\def\ZXT{\bitbox{0}{254}{16}{16}{16}{16}{16}{0}}
+\def\ZXspace{\bitbox00000000}
+\def\ZXr{\bitbox{0}{0}{28}{32}{32}{32}{32}{0}}
+\def\ZXdollar{\bitbox{0}{8}{62}{40}{62}{10}{62}{8}}
+\def\ZXeq{\bitbox000{62}0{62}00}
+\def\ZXquote{\bitbox0{36}{36}00000}
+\def\ZXzero{\bitbox0{60}{70}{74}{82}{98}{60}0}
+\def\ZXone{\bitbox0{24}{40}888{62}0}
+\def\ZXZ{\bitbox0{126}48{16}{32}{126}0}
+\def\ZXX{\bitbox0{66}{36}{24}{24}{36}{66}0}
+\def\ZXB{\bitbox0{124}{66}{124}{66}{66}{124}0}
+\def\ZXA{\bitbox0{60}{66}{66}{126}{66}{66}0}
+\def\ZXS{\bitbox0{60}{64}{60}2{66}{60}0}
+\def\ZXI{\bitbox0{62}8888{62}0}
+\def\ZXC{\bitbox0{60}{66}{64}{64}{66}{60}0}
+
+\def\BASIC{\leavevmode\ZXB\ZXA\ZXS\ZXI\ZXC\relax}
+\def\ZXBASIC{\leavevmode\ZXZ\ZXX\ZXspace\ZXB\ZXA\ZXS\ZXI\ZXC\relax}
+\def\LETr#1{\ZXL\ZXE\ZXT\ZXspace\ZXr\ZXdollar\ZXeq\ZXquote#1\ZXquote\relax}
+
+\newdimen\zxpx \zxpx=0.25mm
+\newdimen\zxscreen \zxscreen=320\zxpx
+
 
 \font\eightss=cmssq8
 \font\eightssi=cmssqi8
@@ -86,8 +139,10 @@
   \zabox{Zadatak:}}
 \def\resenje{\par\medskip\noindent\leavevmode
   \llap{$\blacktriangleright\>$}\zabox{Re{\sv}e{\nj}e:}}
+\def\dodatak{\par\medskip\noindent\leavevmode
+\llap{$\vcenter{\hbox{$\scriptstyle\bigstar$}}\>$}\zabox{Dodatak:}}
 
-\def\dodatak{\par\medskip\noindent\zabox{Dodatak:}}
+%\def\dodatak{\par\medskip\noindent\zabox{Dodatak:}}
 \newcommand{\rsinfty}{{\,\widetilde{\!\infty\!}\,}}
 
 %\def\footnote#1{\relax}
@@ -127,6 +182,8 @@ sa zna{\cv}e{\nj}em \navod{broj kojim se ra{\cv}una}.
 \subsection{Grafik funkcije}
 
 \newcounter{figno}
+\def\newpic#1{\stepcounter{figno}%
+  \hbox{{\bf Slika \thefigno:\/~}#1}}
 \def\slika#1#2{\stepcounter{figno}\displaylines{
   \hbox{#1}\cr\hbox{{\bf Slika \thefigno:\/~}#2}}}
 
@@ -335,7 +392,8 @@ Zvu{\cv}ni top {\sf Genasys LRAD} ima nivo zvuka od oko $160\um{dB}$,
 {\sv}to zna{\cv}i da je $10^{11}$ puta mo{\cc}niji od govora.
 %Naravno, treba uzeti u obzir da nivo opada sa kvadratom rastoja{\nj}a.
 
-Sli{\cv}na formula se koristi i za odre{\dj}iva{\nj}e ja{\cv}ine zem{\lj}otresa.
+Sli{\cv}na formula se koristi i za odre{\dj}iva{\nj}e ja{\cv}ine zem{\lj}otresa, ili pH vrednosti.
+% $M=\logten I$, gde je $M$ magnituda po {\sl Rihterovoj skali}, a $I$ intenzitet.
 
 \subsection{Osnova 2}
 
@@ -491,7 +549,7 @@ Ovim postupkom se mo{\zv}e izra{\cv}unati konstanta
 3642076011\,
 \ldots
 \end{align*}
-Ove konstante se koriste prilikom izra{\cv}unava{\nj}a vrednosti binarnog, odnosno, dekadnog logaritma
+Ove konstante se koriste prilikom izra{\cv}unava{\nj}a vrednosti binarnog, odnosno, de\-kad\-nog logaritma
 $$
 \lb x=\logtwo x=\frac{\ln x}{\ln2},\qquad \lg x=\logten x=\frac{\ln x}{\ln 10}.
 $$
@@ -544,7 +602,7 @@ Pre pojave digitrona, za pribli{\zv}no odre{\dj}iva{\nj}e
 brojne vrednosti logaritma,
 koristila se je analogna mehani{\cv}ka sprava sa nekoliko le{\nj}ira zvana {\sl logaritmar}.
 $$
-\slika{\includegraphics[width=0.93\textwidth]{siber2.jpg}}{{\Sv}iber.}
+\slika{\includegraphics[width=0.90\textwidth]{siber2.jpg}}{{\Sv}iber.}
 $$
 Le{\nj}iri imaju podeoke sa decimalom i logaritamskom, a {\cv}esto i sa sinusnom skalom.
 Jedan od le{\nj}ira je bio klizni, te otuda popularno ime {\sl{\sv}iber\/}
@@ -678,6 +736,7 @@ $$
 \input zadaci/sveska-7
 \input zadaci/inf-root
 \input zadaci/net3
+\input zadaci/log2ser
 
 \clearpage
 
@@ -695,11 +754,12 @@ $$
 
 \subsection{Razni primeri}
 
-\input zadaci/131-I
+\input zadaci/earthquake
 \input zadaci/128-bit
-\input zadaci/i-na-i
+\input zadaci/131-I
 \input zadaci/izvod
 \input zadaci/geom-serie
+\input zadaci/i-na-i
 
 \clearpage
 
@@ -724,53 +784,6 @@ $$
 \def\MP{{\logoten METAPOST}}
 \def\link#1#2{\item\href{#1}{#2}\hfill\break\href{#1}{\footnotesize\tt#1}}
 
-\definecolor{ZXink}{rgb}{0.25, 0.25, 0.25}
-\definecolor{ZXpaper}{rgb}{0, 1, 1}
-%\def\aspect{.618034}
-\def\aspect{1}
-
-\def\bitrow#1{{\hbox{\count0=7\relax\count1=#1\relax
-\vrule width 0pt height \dimen0 depth 0pt\relax
-\loop
-\ifnum\count1<128\relax
-\kern \aspect\dimen0\relax
-%\kern .707101\dimen0\relax
-%{\color{ZXpaper}\vrule width .70711\dimen0 height \dimen0 depth 0pt}\relax
-\else
-%{\color{ZXink}\vrule width .707101\dimen0 height \dimen0 depth 0pt}\relax
-{\color{ZXink}\vrule width \aspect\dimen0 height \dimen0 depth 0pt}\relax
-\advance\count1 by -128\relax
-\fi
-\advance\count1 by \count1\relax
-\advance\count0 by -1\relax
-\unless\ifnum\count0<0\repeat}}}
-
-\newbox\zxbox
-\def\bitbox#1#2#3#4#5#6#7#8{{\setbox\zxbox\hbox{0}%
-\dimen0=\ht\zxbox \divide\dimen0 by 6\relax
-\lower\dimen0\vbox{\offinterlineskip
-\bitrow{#1}\bitrow{#2}\bitrow{#3}\bitrow{#4}\bitrow{#5}\bitrow{#6}\bitrow{#7}\bitrow{#8}}}}
-\def\ZXL{\bitbox{0}{64}{64}{64}{64}{64}{126}{0}}
-\def\ZXE{\bitbox{0}{126}{64}{124}{64}{64}{126}{0}}
-\def\ZXT{\bitbox{0}{254}{16}{16}{16}{16}{16}{0}}
-\def\ZXspace{\bitbox00000000}
-\def\ZXr{\bitbox{0}{0}{28}{32}{32}{32}{32}{0}}
-\def\ZXdollar{\bitbox{0}{8}{62}{40}{62}{10}{62}{8}}
-\def\ZXeq{\bitbox000{62}0{62}00}
-\def\ZXquote{\bitbox0{36}{36}00000}
-\def\ZXzero{\bitbox0{60}{70}{74}{82}{98}{60}0}
-\def\ZXone{\bitbox0{24}{40}888{62}0}
-\def\ZXZ{\bitbox0{126}48{16}{32}{126}0}
-\def\ZXX{\bitbox0{66}{36}{24}{24}{36}{66}0}
-\def\ZXB{\bitbox0{124}{66}{124}{66}{66}{124}0}
-\def\ZXA{\bitbox0{60}{66}{66}{126}{66}{66}0}
-\def\ZXS{\bitbox0{60}{64}{60}2{66}{60}0}
-\def\ZXI{\bitbox0{62}8888{62}0}
-\def\ZXC{\bitbox0{60}{66}{64}{64}{66}{60}0}
-
-\def\ZXBASIC{\leavevmode\ZXZ\ZXX\ZXspace\ZXB\ZXA\ZXS\ZXI\ZXC\relax}
-\def\LETr#1{\ZXL\ZXE\ZXT\ZXspace\ZXr\ZXdollar\ZXeq\ZXquote#1\ZXquote\relax}
-
 
 \subsection{Linkovi}
 
@@ -786,7 +799,7 @@ $$
 \link{https://www.youtube.com/watch?v=VRzH4xB0GdM}{{\sf YouTube} --- Log Tables --- Numberphile}
 \link{https://www.youtube.com/watch?v=xRpR1rmPbJE}{{\sf YouTube} --- The iPhone of Slide Rules --- Numberphile}
 \link{https://www.youtube.com/watch?v=Noo4lN-vSvw}{{\sf YouTube} --- The Four 4s --- Numberphile}
-%\link{https://github.com/Nasumica/Wirth}{GitHub --- Srbislav D. Ne{\sv}i{\cc} --- Numerical recipes in Pascal}
+\link{https://github.com/Nasumica/Wirth}{GitHub --- Srbislav D. Ne{\sv}i{\cc} --- Numerical recipes in Pascal}
 \end{enumerate}
 
 
@@ -810,7 +823,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
 
 \subsection{Software}
 
-\newbox\gobox \setbox\gobox\hbox{\textsf{\textbf{GO}}}
+\newbox\gobox \setbox\gobox\hbox{\textbf{GO}}
 \newdimen\godim \godim=\ht\gobox \advance\godim\dp\gobox
 \newdimen\down \down=0.03\godim \advance\godim\down
 \begin{enumerate}[parsep=0cm]
@@ -823,7 +836,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
   \item \textbf{Pascal} (programming language) --- Niklaus Wirth
   \item \textbf{Python} (programming language) --- Python Software Foundation
   \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GO.png}} (programming language) --- Google
-  \item \ZXBASIC\ --- Sinclair Research Ltd.
+  \item {\ZXBASIC} (programming language) --- Sinclair Research Ltd.
 \end{enumerate}
 
 
