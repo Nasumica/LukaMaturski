@@ -31,7 +31,11 @@
 
 \usepackage{qrcode}
 \usepackage{svg}
-\usepackage{wrapfig,lipsum}
+\usepackage{wrapfig}
+
+\usepackage{totcount}
+\newtotcounter{zadaci}
+\setcounter{zadaci}{0}
 
 \input serbian
 
@@ -131,8 +135,8 @@
 
 \newcount\exno \exno=0
 \def\zabox#1{\leavevmode\hbox to 5.2em{{\bf #1}\hfill}}
-% \def\resenje{\par\medskip\noindent\zabox{Re{\sv}e{\nj}e:}}
 \def\zadatak{\global\advance\exno by 1\relax
+  \addtocounter{zadaci}{1}
   \par\noindent\leavevmode
   \llap{$\vartriangleright\>$}%
   \hbox to 0pt{\kern\textwidth\kern2em{\marg{\the\exno}}\hss}%
@@ -157,6 +161,16 @@
 
 \section{Uvod}
 
+Ovaj rad se bavi {\sl logaritamskom funkcijom}, jednom od najva{\zv}nijih funkcija u matematici.
+Zbog svoje va{\zv}nosti spada u grupu {\sl elementarnih funkcija}, zajedno sa eksponencijalnom i 
+trigonometrijskim funkcijama. Opisane su {\nj}ene osobine i dati su primeri {\nj}ene upotrebe,
+kao i zadaci sa re{\sv}e{\nj}ima (ukupno \the\numexpr\totvalue{zadaci}).
+
+Sama re{\cv} {\sl logaritam\/} poti{\cv}e od gr{\cv}kih re{\cv}i 
+$\lambda\acute o\gamma o\varsigma$~({\sl logos\/}) i 
+$\acute\alpha\rho\iota\theta\mu\acute o\varsigma$~({\sl aritmos\/}), 
+sa zna{\cv}e{\nj}em \navod{broj kojim se ra{\cv}una}.
+
 \subsection{Definicija logaritma}
 
 Ako je
@@ -171,13 +185,10 @@ gde je $b$ {\sl osnova\/} ({\sl baza\/}) logaritma, a $x$ {\sl argument}.
 (Izgovara se \navod{$y$ je jednako logaritam od $x$ za osnovu $b$}
 ili kra{\cc}e \navod{$y$ je logaritam $b$ od $x$}.)
 Tako{\dj}e va{\zv}i
-$$
+$
 b=x^{1/y}=\sqrt[y]x.
-$$
-Sama re{\cv} {\sl logaritam\/} poti{\cv}e od gr{\cv}kih re{\cv}i 
-$\lambda\acute o\gamma o\varsigma$~({\sl logos\/}) i 
-$\acute\alpha\rho\iota\theta\mu\acute o\varsigma$~({\sl aritmos\/}), 
-sa zna{\cv}e{\nj}em \navod{broj kojim se ra{\cv}una}.
+$
+
 
 \subsection{Grafik funkcije}
 
@@ -189,7 +200,7 @@ sa zna{\cv}e{\nj}em \navod{broj kojim se ra{\cv}una}.
 
 
 Funkcija je u skupu realnih brojeva ${\mathbb R}$ definisana za $x>0$ i $b>0\land b\ne1$.
-Za $b>1$ funkcija je rastu{\cc}a, dok je za $b<1$ funkcija opadaju{\cc}a.
+Funkcija je {\sl monotona\/}: za $b>1$ funkcija je {\sl rastu{\cc}a}, dok je za $b<1$ funkcija {\sl opadaju{\cc}a}.
 Funkcija ima samo jednu {\sl nulu}, uvek za $x=1$.
 Va{\zv}i {\sl bijekcija\/}: 
 $\logb x=\logb y \Leftrightarrow x=y$.
@@ -295,10 +306,10 @@ odakle je
 \end{equation}
 Iz ove jednakosti mo{\zv}e se izvesti i jednakost
 \begin{equation}
-\okvir{\logb\sqrt[n] x=\frac1n\logb x}.
+\okvir{\logb\sqrt[n] x=\frac1n\logb x},
 \label{eq:lnroot}
 \end{equation}
-Odavde se mo{\zv}e izvesti jednakost
+kao i jednakost
 \begin{equation}
 \okvir{x^y=b^{y\logb x}}.
 \label{eq:power}
@@ -849,7 +860,9 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \par\vfill
 
 $$
-\slika{\includegraphics[width=\textwidth]{mandel-log-spiral.jpg}}{%
+\slika{\includegraphics[
+  % decodearray={0.5 1 0.5 1 0.5 1},
+  width=\textwidth]{mandel-log-spiral.jpg}}{%
 \href{https://en.wikipedia.org/wiki/Mandelbrot_set}{Mandelbrotov skup} --- 
 \href{https://en.wikipedia.org/wiki/Logarithmic_spiral}{logaritamske spirale}.}
 $$
@@ -866,5 +879,6 @@ $$
 \qrcode{https://github.com/Nasumica/LukaMaturski/blob/main/log.pdf}
 \end{center}
 \fi
+
 
 \end{document}
