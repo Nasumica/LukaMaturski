@@ -129,8 +129,8 @@
 \newdimen\mm \mm=1truemm
 
 \def\marg#1{\raise1pt\hbox{\colorbox{Aquamarine}{\color{white}\hbox to 1em{\hss\eightss#1\/\hss}}}}
-\def\ram#1{\,\fcolorbox{black}{white}{$\displaystyle{\mathstrut #1}$}\,}
-\def\okvir#1{\,\fcolorbox{black}{Goldenrod}{$\displaystyle{\mathstrut #1}$}\,}
+\def\ram#1{\,\fcolorbox{black}{white}{$\,\displaystyle{\mathstrut #1}\,$}\,}
+\def\okvir#1{\fcolorbox{black}{Goldenrod}{$\,\displaystyle{\mathstrut #1}\,$}}
 \def\sledi{{\quad\Rightarrow\quad}}
 
 \newcount\exno \exno=0
@@ -149,8 +149,9 @@
 %\def\dodatak{\par\medskip\noindent\zabox{Dodatak:}}
 \newcommand{\rsinfty}{{\,\widetilde{\!\infty\!}\,}}
 
-\def\GitHub{https://github.com/Nasumica/LukaMaturski/blob/main/}
-
+\def\GitHub{https://github.com/Nasumica/LukaMaturski/}
+\def\GitHubMain{\GitHub blob/main/}
+\def\GitHubRaw{\GitHub raw/refs/heads/main/}
 
 \begin{document}
 
@@ -767,7 +768,7 @@ $$
 %\clearpage
 \input zadaci/net1
 \input zadaci/net2
-% \input zadaci/net4
+\input zadaci/net4
 % \input zadaci/net5
 
 \clearpage
@@ -810,7 +811,7 @@ $$
 \subsection{Linkovi}
 
 \begin{enumerate}[parsep=0cm]
-\link{\GitHub log.pdf}{{\sf GitHub} --- Luka S. Ne{\sv}i{\cc} --- Maturski rad --- Logaritam}
+\link{\GitHubRaw log.pdf}{{\sf GitHub} --- Luka S. Ne{\sv}i{\cc} --- Maturski rad --- Logaritam}
 \link{https://en.wikipedia.org/wiki/Logarithm}{{\sc WikipediA} --- Logarithm}
 \link{https://mathworld.wolfram.com/Logarithm.html}{Wolfram MathWorld --- Logarithm}
 \link{https://mathworld.wolfram.com/Antilogarithm.html}{Wolfram MathWorld --- Antiogarithm}
