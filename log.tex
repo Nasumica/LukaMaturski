@@ -127,6 +127,7 @@
 \def\th{t_{1/2}}
 \def\um#1{\,{\rm#1}}
 \newdimen\mm \mm=1truemm
+\def\cis{\mathbin{\rm cis}}
 
 \def\marg#1{\raise1pt\hbox{\colorbox{Aquamarine}{\color{white}\hbox to 1em{\hss\eightss#1\/\hss}}}}
 \def\ram#1{\,\fcolorbox{black}{white}{$\,\displaystyle{\mathstrut #1}\,$}\,}
@@ -152,6 +153,8 @@
 \def\GitHub{https://github.com/Nasumica/LukaMaturski/}
 \def\GitHubMain{\GitHub blob/main/}
 \def\GitHubRaw{\GitHub raw/refs/heads/main/}
+
+\parindent=24pt
 
 \begin{document}
 
@@ -356,7 +359,21 @@ a uzev{\sv}i u obzir i jednakost \eqref{eq:recip} dobija se
 \okvir{\log_{1/b}x = \logb(1/x)}.
 \end{equation}
 
+\bigskip
 
+\font\manfnt=manfnt scaled 1200 % 1.2 * sqrt(1.2) * 1000
+\def\dbend{{\manfnt\char126\relax}}
+\def\danger#1\par{\begingroup\hangindent=\parindent 
+\hangafter=-2 \noindent\leavevmode
+\smash{\hbox to 0pt{\kern-\hangindent\lower1.2pt\hbox{\dbend}\hss}}%
+#1\par\endgroup}
+
+
+\danger
+Treba biti oprezan kod kori{\sv}{\cc}e{\nj}a svih ovih jednakosti 
+i uvek treba proveriti interval u kome se ne{\sv}to ra{\cv}una.
+Na primer, iz jednakosti \eqref{eq:lnmul} sledi $\log x^2=2\log x$, {\sv}to je ispravno za $x>0$.
+Ina{\cv}e, $\log x^2=2\log|x|$, za bilo koje $x\ne0$.
 
 \section{Naj{\cv}e{\sv}{\cc}e logaritamske osnove}
 
@@ -655,7 +672,7 @@ z
 &= x + iy &&\qquad\text{pravougle koordinate}\\
 &= \rho\, (\cos\theta +i\sin\theta)&&\qquad\text{polarne koordinate}\\
 %&= \rho\mathbin{\rm cis}\theta&&\qquad\text{skra{\cc}eni polarni zapis}\\
-& = \rho\, \e^{i\theta}&&\qquad\text{Ojlerova formula}
+& = \rho\, \e^{i\theta} &&\qquad\text{Ojlerova formula}
 \end{alignat*}
 onda se, iz Ojlerove formule i jednakosti \eqref{eq:lnmul} i \eqref{eq:powb}, dobija
 \begin{equation}
@@ -688,9 +705,10 @@ Iz Ojlerove formule se mo{\zv}e dobiti, kako je nazvana,
 {\sl najlep{\sv}a formula u istoriji ma\-te\-ma\-ti\-ke},
 u kojoj je upotreb{\lj}eno 5 najva{\zv}nijih matemati{\cv}kih konstatnti 
 ($0,1,\pi,\e,i$)
-$$
-\okvir{\e^{i\pi}+1=0},
-$$
+\begin{equation}
+  \okvir{\e^{i\pi}+1=0},
+  \label{eq:zeuler}
+\end{equation}
 gde, ako prebacimo 1 na desnu stranu i {\sl logaritmujemo}, dobijamo zanim{\lj}ivu jednakost
 $$
 \frac{\ln(-1)}{\sqrt{-1}}=\pi.
@@ -717,6 +735,13 @@ $$
 \slika{\includegraphics[]{log.3}}{Geometrijsko zna{\cv}e{\nj}e $\ln x$.}
 $$
 (Na slici je $x=\e$, tako da je povr{\sv}ina osen{\cv}ane figure jednaka 1.)
+
+\medskip
+
+Mo{\zv}e se dobiti i bitna jednakost
+\begin{equation}
+  \okvir{f(x)=a^x\sledi f'(x)=a^x \ln a}.
+\end{equation}
 
 \subsection{Limes}
 
@@ -774,7 +799,7 @@ $$
 
 \clearpage
 
-\addtocontents{toc}{\protect\newpage}
+% \addtocontents{toc}{\protect\newpage}
 
 \subsection{Razni primeri}
 
@@ -782,8 +807,9 @@ $$
 \input zadaci/128-bit
 \input zadaci/131-I
 \input zadaci/izvod
-\input zadaci/geom-serie
 \input zadaci/i-na-i
+\input zadaci/neglog
+\input zadaci/geom-serie
 
 \clearpage
 
