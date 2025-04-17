@@ -895,7 +895,17 @@ zadataka za prijemni ispit}{Matematika}(2011)
 
 \bigskip
 
-\rightline{\eightssi--- Luka S. Ne{\sv}i{\cc},\enspace\eightss (\the\year)}
+\input dayofweek
+
+\def\twodig#1{\ifnum#1>9\else0\fi\number#1}
+\def\datum{\twodig\day.\twodig\month.\number\year.}
+\newcount\hour \hour=\time \divide\hour by 60
+\newcount\minute \minute=-\hour \multiply\minute by 60
+\advance\minute by \time 
+\def\vreme{\twodig\hour:\twodig\minute}
+
+% \rightline{\eightssi--- Luka S. Ne{\sv}i{\cc},\enspace\eightss (\the\year)}
+\rightline{\eightssi--- \href{mailto:luka.s.nesic@gmail.com}{Luka S. Ne{\sv}i{\cc}},\enspace\eightss\DayOfWeek~\datum~\vreme}
 
 \par\vfill
 
