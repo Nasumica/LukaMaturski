@@ -774,13 +774,12 @@ $$
 \subsection{Benfordov zakon}
 
 Verovatno{\cc}a da prva cifra neke matemati{\cv}ke ili fizi{\cv}ke konstante, 
-kao i du{\zv}ine reke, visine planine, broja stanovnika, cene ne{\cv}ega, rastoja{\nj}a,
+kao i du{\zv}ine reke, visine planine, broja stanovnika, rastoja{\nj}a,
 sta{\nj}a na ra{\cv}unu,
-\dots, bude $d$ iznosi
-$$
-p(d)=\logten \left(1+\frac1d\right),
-$$
-i bi{\cc}e 1 u oko $30\%$ slu{\cv}ajeva.
+\dots, bude $d$ u bazi $b$, prati takozvani {\sl Benfordov zakon\/} (Frank Benford) i iznosi
+\begin{equation}\label{eq:benford}
+  p(d)=\log_b \left(1+\frac1d\right).
+\end{equation}
 
 \section{Zadaci i re{\sv}e{\nj}a}
 
@@ -823,6 +822,7 @@ i bi{\cc}e 1 u oko $30\%$ slu{\cv}ajeva.
 \input zadaci/izvod
 \input zadaci/i-na-i
 \input zadaci/neglog
+\input zadaci/benford
 
 \clearpage
 
@@ -927,17 +927,20 @@ $$
 \href{https://en.wikipedia.org/wiki/Logarithmic_spiral}{logaritamske spirale}.}
 $$
 
-\iffalse
+\iftrue
 \clearpage
 
+\pagecolor{Goldenrod}
 \thispagestyle{empty}
 \leavevmode\hbox{}
 
 \vfill
 
 \begin{center}
-\qrcode{https://github.com/Nasumica/LukaMaturski/blob/main/log.pdf}
+\def\QR{\GitHubRaw log.pdf}
+\qrcode{\QR}
 \end{center}
+
 \fi
 
 
