@@ -119,7 +119,7 @@
 \def\puta{\times}
 \def\comma{{,}}
 \let\dotacc=\.
-\def\.{{,}}
+\def\.{\smash{,}\vphantom{.}}
 \def\e{{\bf e}}
 %\def\naplog{\mathop{\mathop{\rm Log}\limits^{\rm Nap}}\nolimits}
 \def\naplog{\mathop{\rm NapLog}\nolimits}
@@ -738,13 +738,13 @@ $$
 $$
 (Na slici je $x=\e$, tako da je povr{\sv}ina osen{\cv}ane figure jednaka 1.)
 
-\medskip
+% \medskip
 
-Iz jednskosti $a^x=\e^{x\ln a}$,
-mo{\zv}e se dobiti i jednakost
-\begin{equation}
-  \okvir{f(x)=a^x\sledi f'(x)=a^x \ln a}.
-\end{equation}
+% Iz jednskosti $a^x=\e^{x\ln a}$,
+% mo{\zv}e se dobiti i jednakost
+% \begin{equation}
+%   \okvir{f(x)=a^x\sledi f'(x)=a^x \ln a}.
+% \end{equation}
 
 \subsection{Limes}
 
@@ -771,6 +771,16 @@ $$
 p_n\sim n\ln n.
 $$
 
+\subsection{Benfordov zakon}
+
+Verovatno{\cc}a da prva cifra neke matemati{\cv}ke ili fizi{\cv}ke konstante, 
+kao i du{\zv}ine reke, visine planine, broja stanovnika, cene ne{\cv}ega, rastoja{\nj}a,
+sta{\nj}a na ra{\cv}unu,
+\dots, bude $d$ iznosi
+$$
+p(d)=\logten \left(1+\frac1d\right),
+$$
+i bi{\cc}e 1 u oko $30\%$ slu{\cv}ajeva.
 
 \section{Zadaci i re{\sv}e{\nj}a}
 

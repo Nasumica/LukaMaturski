@@ -52,6 +52,12 @@ dotlabel("", (u,v));
 dotlabel.bot(btex $\mathstrut b$ etex, (u,0));
 
 numeric u, v;
+u = 2b*ux; v = mlog(2b)*uy/256;
+draw (u,0) -- (u,v) dashed evenly;
+dotlabel("", (u,v));
+dotlabel.bot(btex $\mathstrut 2b$ etex, (u,0));
+
+numeric u, v;
 u = b*b*ux; v = mlog(b*b)*uy/256;
 draw (u,0) -- (u,v) dashed evenly;
 dotlabel("", (u,v));
