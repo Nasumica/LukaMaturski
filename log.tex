@@ -140,7 +140,7 @@
 \def\sledi{{\quad\Rightarrow\quad}}
 
 \newcount\exno \exno=0
-\def\zabox#1{\leavevmode\hbox to 5.2em{{\bf #1}\hfill}}
+\def\zabox#1{\leavevmode\hbox to 5.2em{{\textbf{#1}}\hfill}}
 \def\zadatak{\global\advance\exno by 1\relax
   \addtocounter{zadaci}{1}
   \par\noindent\leavevmode
@@ -708,7 +708,7 @@ $$
 
 \medskip
 
-Iz Ojlerove formule se mo{\zv}e dobiti, kako je nazvana, 
+Iz Ojlerove formule se mo{\zv}e dobiti
 {\sl najlep{\sv}a formula u istoriji ma\-te\-ma\-ti\-ke},
 u kojoj je upotreb{\lj}eno 5 najva{\zv}nijih matemati{\cv}kih konstatnti 
 ($0,1,\pi,\e,i$)
@@ -758,6 +758,16 @@ $$
 \ln x=\lim_{n\to\infty}n(\sqrt[n]x-1).
 $$
 
+\subsection{Benfordov zakon}
+
+Verovatno{\cc}a da {\sl po{\cv}etne cifre\/} neke matemati{\cv}ke ili fizi{\cv}ke konstante
+(kao i du{\zv}ine reke, visine planine, broja stanovnika, rastoja{\nj}a,
+sta{\nj}a na ra{\cv}unu,
+\dots), budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl Benfordov zakon\/} (Frank Benford), i iznosi
+\begin{equation}\label{eq:benford}
+  p(b,\ell)=\log_b \left(1+\frac1\ell\right).
+\end{equation}
+
 \subsection{Teorema prostih brojeva}
 
 Jo{\sv} jedno mesto gde se pojav{\lj}uje prirodni logaritam u {\sl teoriji brojeva} je,
@@ -776,15 +786,6 @@ $$
 p_n\sim n\ln n.
 $$
 
-\subsection{Benfordov zakon}
-
-Verovatno{\cc}a da {\sl po{\cv}etne cifre\/} neke matemati{\cv}ke ili fizi{\cv}ke konstante, 
-kao i du{\zv}ine reke, visine planine, broja stanovnika, rastoja{\nj}a,
-sta{\nj}a na ra{\cv}unu,
-\dots, budu $\ell$ u bazi $b$, prati takozvani {\sl Benfordov zakon\/} (Frank Benford), i iznosi
-\begin{equation}\label{eq:benford}
-  p(b,\ell)=\log_b \left(1+\frac1\ell\right).
-\end{equation}
 
 \section{Zadaci i re{\sv}e{\nj}a}\label{sec:zadaci}
 

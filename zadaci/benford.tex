@@ -1,5 +1,20 @@
 \subsubsection{Prvo, pa 1}
 
-\zadatak Koliko procenata cena po{\cv}i{\nj}e cifrom 1?
+\def\fibonacci#1#2#3{%
+\newcount\one \one=#1
+\newcount\two \two=#2
+\number\one,~\number\two,
+\newcount\f
+\newcount\n \n=#3 \advance\n-2
+\loop
+  \f=\two \advance\two\one \one=\f
+  \number\two,
+  \advance \n -1
+\ifnum \n>0 \repeat
+\dots}
 
-\resenje Iz fomule \eqref{eq:benford} sledi da je $p_1=\logten 2 \approx \ram{30\.103\%}$.
+\zadatak Koliki procenat cena {\sl od igle do lokomotive\/} po{\cv}i{\nj}e cifrom 1?
+% Koliki procenat {\sl Fibona{\cv}ijevih brojeva\/} (Leonardo Bonacci) \fibonacci11{22} 
+% po{\cv}i{\nj}e ciforn~1?
+
+\resenje Iz fomule \eqref{eq:benford} sa strane \pageref{eq:benford} sledi da je $p_1=\logten 2 \approx \ram{30\.103\%}$.
