@@ -50,9 +50,9 @@
 \renewcommand*\contentsname{Sadr{\zv}aj}
 
 \usepackage{titlesec}
-\newcommand{\sectionbreak}{\clearpage
+\newcommand{\sectionbreak}{\newpage
   \vskip 0.75in plus 0.25in minus 0.25in\relax}
-%\newcommand{\subsectionbreak}{\clearpage}
+%\newcommand{\subsectionbreak}{\newpage}
 
 \definecolor{ZXink}{rgb}{0.25, 0.25, 0.25}
 \definecolor{ZXpaper}{rgb}{0, 1, 1}
@@ -498,7 +498,7 @@ se mo{\zv}e pred\-sta\-vi\-ti formulom
 Ova formula se koristi i za odre{\dj}iva{\nj}e starosti stena ili fosila.
 
 
-%\clearpage
+%\newpage
 
 \subsection{Osnova \e}
 
@@ -801,14 +801,13 @@ $$
 \input zadaci/net3
 \input zadaci/log2ser
 
-\clearpage
+\newpage
 
 \subsection{Nejedna{\cv}ine}
 
 \input zadaci/sveska-11
 \input zadaci/sveska-9
 \input zadaci/sveska-10
-%\clearpage
 \input zadaci/net1
 \input zadaci/net2
 \input zadaci/net4
@@ -831,7 +830,7 @@ $$
 \input zadaci/neglog
 \input zadaci/benford
 
-\clearpage
+\newpage
 
 \subsection{Ru{\cv}ni rad}
 
@@ -939,7 +938,7 @@ $$
 \fi
 
 \iftrue
-\clearpage
+\newpage
 
 \pagecolor{karton}
 \thispagestyle{empty}
