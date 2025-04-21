@@ -140,17 +140,18 @@
 \def\sledi{{\quad\Rightarrow\quad}}
 
 \newcount\exno \exno=0
+\newdimen\signdp \signdp=1pt
 \def\zabox#1{\leavevmode\hbox to 5.2em{{\textbf{#1}}\hfill}}
 \def\zadatak{\global\advance\exno by 1\relax
   \addtocounter{zadaci}{1}
   \par\noindent\leavevmode
-  \llap{$\vartriangleright\>$}%
+  \raise\signdp\llap{$\vartriangleright\>$}%
   \hbox to 0pt{\kern\textwidth\kern2em{\marg{\the\exno}}\hss}%
   \zabox{Zadatak:}}
 \def\resenje{\par\medskip\noindent\leavevmode
-  \llap{$\blacktriangleright\>$}\zabox{Re{\sv}e{\nj}e:}}
+  \raise\signdp\llap{$\blacktriangleright\>$}\zabox{Re{\sv}e{\nj}e:}}
 \def\dodatak{\par\medskip\noindent\leavevmode
-\llap{$\vcenter{\hbox{$\scriptstyle\bigstar$}}\>$}\zabox{Dodatak:}}
+  \raise\signdp\llap{$\vcenter{\hbox{$\scriptstyle\bigstar\,$}}\>$}\zabox{Dodatak:}}
 
 %\def\dodatak{\par\medskip\noindent\zabox{Dodatak:}}
 \newcommand{\rsinfty}{{\,\widetilde{\!\infty\!}\,}}
@@ -813,7 +814,7 @@ $$
 \input zadaci/net4
 % \input zadaci/net5
 \input zadaci/net6
-\input zadaci/royal
+\input zadaci/granice
 
 \newpage
 
