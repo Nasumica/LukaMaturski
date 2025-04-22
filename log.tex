@@ -114,6 +114,9 @@
 \def\Ki{\K_{\n=1}}
 \def\Kinf#1#2{\Ki^\infty\displaystyle{\frac{#1}{#2}}}
 
+\def\land{\mathbin{\>\wedge\>}}
+\def\lor{\mathbin{\>\vee\>}}
+
 \def\mul{{\cdot}}
 \def\navod#1{\relax,\kern-0.06667em,\relax#1\relax``\relax}
 
@@ -755,9 +758,9 @@ $$
 \subsection{Limes}
 
 Ojler je dokazao da je
-$$
-\ln x=\lim_{n\to\infty}n(\sqrt[n]x-1).
-$$
+\begin{equation}\label{eq:limes}
+  \ln x=\lim_{n\to\infty}n(\sqrt[n]x-1).
+\end{equation}
 
 \subsection{Benfordov zakon}
 
@@ -791,6 +794,9 @@ $$
 \section{Zadaci i re{\sv}e{\nj}a}\label{sec:zadaci}
 
 \subsection{Jedna{\cv}ine}
+
+\newdimen\sirina \sirina=60truemm
+
 \def\jed{Jedna{\cv}ina~}
 
 \input zadaci/fit-prijemni
@@ -811,9 +817,9 @@ $$
 \input zadaci/sveska-10
 \input zadaci/net1
 \input zadaci/net2
-\input zadaci/net4
 % \input zadaci/net5
 \input zadaci/net6
+% \input zadaci/net4
 \input zadaci/granice
 
 \newpage
