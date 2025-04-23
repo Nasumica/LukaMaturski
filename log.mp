@@ -174,4 +174,23 @@ label.top(btex $y$ etex, (0, u/(b/10)+5mm));
 
 endfig;
 
+
+
+vardef ben(expr x) =
+    floor(mexp(uniformdeviate(mlog(x)))) / x
+enddef;
+
+beginfig(4);
+    color dirt; dirt = (0.7, 0.5, 0.1);
+    numeric ux, uy;
+    ux := 50mm; uy := 22/3pt;
+    pickup pensquare scaled 0.1mm;
+    for i = 1 upto 300:
+        numeric p; p := ben(1000) * ux;
+        draw (p,0) -- (p,uy) withcolor dirt;
+    endfor;
+    pickup pensquare scaled 0.4pt;
+    draw origin--(ux,0)--(ux,uy)--(0,uy)--cycle;
+endfig;
+
 end.
