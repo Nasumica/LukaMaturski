@@ -3,6 +3,8 @@ prologues := 3;
 
 input TEX;
 
+randomseed := 2006.0908;
+
 color gridmm; gridmm=5/8[blue, white];
 color gridcm; gridcm=3/8[blue, white];
 
@@ -177,20 +179,31 @@ endfig;
 
 
 vardef ben(expr x) =
-    floor(mexp(uniformdeviate(mlog(x)))) / x
+    (mexp(uniformdeviate(mlog(x))) - 1) / (x - 1)
 enddef;
 
 beginfig(4);
     color dirt; dirt = (0.7, 0.5, 0.1);
     numeric ux, uy;
-    ux := 50mm; uy := 22/3pt;
+    % ux := 90mm;  uy := 31/6pt;
+    ux := 1in; uy := 22/3pt;
     pickup pensquare scaled 0.1mm;
-    for i = 1 upto 300:
-        numeric p; p := ben(1000) * ux;
+    for i = 1 upto 100:
+        numeric p; p := ben(10) * ux;
         draw (p,0) -- (p,uy) withcolor dirt;
     endfor;
     pickup pensquare scaled 0.4pt;
     draw origin--(ux,0)--(ux,uy)--(0,uy)--cycle;
+	if false:
+		for i = 0 upto 9:
+			draw (i*ux/9, uy) -- (i*ux/9, uy+0.8pt);
+		endfor;
+		for i = 1 upto 9:
+			label.top(TEX("$\scriptscriptstyle" & decimal i & "$"),((i-0.5)*ux/9, uy-1.5pt));
+		endfor;
+	fi
 endfig;
+
+
 
 end.
