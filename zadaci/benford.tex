@@ -1,15 +1,15 @@
 \subsubsection{Prvo, pa 1}
 
 \def\fibonacci#1#2#3{%
-\newcount\o \o=#1
-\newcount\t \t=#2
-\number\o,~\number\t
-\newcount\f
+\newcount\a \a=#1
+\newcount\b \b=#2
+\number\a,~\number\b
+\newcount\t
 \newcount\n \n=#3 \advance\n-2
 \loop
-  \f=\t \advance\t\o \o=\f
-  , \number\t
-  \advance \n -1
+  \t=\b \advance\b\a \a=\t
+  , \number\b
+  \advance\n-1
 \ifnum \n>0 \repeat}
 
 \zadatak 

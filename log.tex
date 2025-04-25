@@ -118,7 +118,9 @@
 \def\lor{\mathbin{\>\vee\>}}
 
 \def\mul{{\cdot}}
-\def\navod#1{\relax,\kern-0.06667em,\relax#1\relax``\relax}
+
+\newbox\qqbox
+\def\navod#1{\leavevmode\setbox\qqbox\hbox{``}\hbox to \wd\qqbox{,\hss,}#1\hbox to \wd\qqbox{`\hss`}}
 
 \def\logten{\log_{10}}
 \def\logtwo{\log_2}
@@ -225,11 +227,11 @@ $$
 
 \subsection{Antilogaritam}
 
-\def\antilog{\mathop{\rm anti\,log}\nolimits}
+\def\antilog{\mathop{\rm antilog}\nolimits}
 Inverzna funkcija logaritmu
 je obi{\cv}no stepenova{\nj}e osnove logaritma argumentom i zove se {\sl antilogaritam}
 \begin{equation}
-\okvir{\antilog_bx = \logb^{-1}x =  b^x}.
+\okvir{\antilog_b x = \logb^{-1}x =  b^x}.
 \end{equation}
 Iz same definicije va{\zv}i
 \begin{equation}
@@ -524,7 +526,7 @@ $$
 \def\rf#1!{\frac1{\hphantom{!}#1!}}
 Antilogaritam je $\e^x$, koji se kao funkicja pi{\sv}e $\exp(x)$, i zove se
 {\sl eksponencijalna funkcija}. Ova funkcija je poznata po tome {\sv}to je to 
-jedina funkcija {\cv}iji je izvod jednak samoj funkciji. Brojna vrednost se mo{\zv}e
+jedina funkcija {\cv}iji je prvi izvod jednak samoj funkciji; $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
 izra{\cv}unati formulom
 \begin{equation}
 \label{eq:exp}
@@ -576,7 +578,6 @@ izgleda ovako:
 \enspace}
 \endgroup
 \end{equation}
-(Videti zadatak \ref{sssec:ln3} na strani \pageref{sssec:ln3}.)
 Ovim postupkom se mo{\zv}e izra{\cv}unati vrednost
 \label{ln2}
 \begin{align*}
@@ -597,9 +598,10 @@ Ovim postupkom se mo{\zv}e izra{\cv}unati vrednost
 3642076011\,
 \ldots
 \end{align*}
-Ove vrednosti se koriste prilikom izra{\cv}unava{\nj}a vrednosti binarnog, odnosno, de\-kad\-nog logaritma
+(Videti zadatak \ref{sssec:ln3} na strani \pageref{sssec:ln3}.)
+Pomo{\cc}u {\nj}ih se mogu izra{\cv}unati vrednosti binarnog, odnosno, de\-kad\-nog logaritma
 $$
-\lb x=\logtwo x=\frac{\ln x}{\ln2},\qquad \lg x=\logten x=\frac{\ln x}{\ln 10}.
+\logtwo x=\frac{\ln x}{\ln2},\qquad \logten x=\frac{\ln x}{\ln 10}.
 $$
 
 \subsection{Veri{\zv}ni razlomak}
