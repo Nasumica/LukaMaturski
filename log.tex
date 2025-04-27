@@ -102,9 +102,8 @@
 \def\ZXBASIC{\leavevmode\ZXZ\ZXX\ZXspace\ZXB\ZXA\ZXS\ZXI\ZXC\relax}
 \def\LETr#1{\ZXL\ZXE\ZXT\ZXspace\ZXr\ZXdollar\ZXeq\ZXquote#1\ZXquote\relax}
 
-\newdimen\zxpx \zxpx=0.25mm
-\newdimen\zxscreen \zxscreen=320\zxpx
-
+\newdimen\zxscreen \zxscreen=\textwidth
+\advance\zxscreen -0.5em \divide\zxscreen 2
 
 \font\eightss=cmssq8
 \font\eightssi=cmssqi8
@@ -151,7 +150,7 @@
   \addtocounter{zadaci}{1}
   \par\noindent\leavevmode
   \raise\signdp\llap{$\vartriangleright\>$}%
-  \hbox to 0pt{\kern\textwidth\kern2em{\marg{\the\exno}}\hss}%
+  \hbox to 0pt{\kern\textwidth\kern 2em{\marg{\the\exno}}\hss}%
   \zabox{Zadatak:}}
 \def\resenje{\par\medskip\noindent\leavevmode
   \raise\signdp\llap{$\blacktriangleright\>$}\zabox{Re{\sv}e{\nj}e:}}
@@ -607,20 +606,22 @@ $$
 \subsection{Veri{\zv}ni razlomak}
 
 Brojna vrednost prirodnog logaritma mo{\zv}e se izra{\cv}unati i pomo{\cc}u {\sl veri{\zv}nog razlomka}
-\begin{align*}
+\begin{equation}\label{eq:verige}
+\begin{aligned}
 \ln(1+x)
 &=\cfrac{x}{1+\cfrac{1^2x}{2-1x+\cfrac{2^2x}{3-2x+\cfrac{3^2x}{4-3x+\ddots}}}}\\
 \noalign{\vskip-3pt}
 &=\cfrac{x}{1+ \Kinf{\n^2x}{\n+1-\n x}}.
-\end{align*}
+\end{aligned}
+\end{equation}
 Poput simbola koji se koriste za sumu `$\rm\Sigma$' ili proizvod `$\rm\Pi$', 
 Gaus (Johann Carl Friedrich Gau\ss) je smislio, verovatno, najpogodniji na{\cv}in za predstav{\lj}a{\nj}e
-veri{\zv}nih (lan{\cv}anih) razlomaka,
+veri{\zv}nih ({\sl lan\-{\cv}a\-nih\/}) razlomaka,
 gde simbol `K' poti{\cv}e od nema{\cv}ke re{\cv}i za {\sl prekinuti lanac\/} ({\sl Kettenbruch\/}). 
 Izraz iza ovog simbola pokazuje kako izgleda {\sl op{\sv}ti {\cv}lan\/} veri{\zv}nog razlomka.
 
 \def\ff#1/#2,{\frac{#1}{#2},}
-Ako pomo{\cc}u ove formule izra{\cv}unamo prvih 11 {\sl konvergenata} $\ln2$ kao $-\ln(1-1/2)$, dobi{\cc}emo
+Ako pomo{\cc}u ove formule izra{\cv}unamo prvih 11 {\sl konvergenata\/} $\ln2$ kao $-\ln(1-1/2)$, dobi{\cc}emo
 $$
 \ln2\approx\ff1/2, \ff5/8, \ff2/3, \ff131/192, \ff661/960, \ff1327/1920, \ff1163/1680, \ff148969/215040, 
 \ff447047/645120, \ff44711/64512, \ff983705/1419264, \dots
@@ -658,7 +659,7 @@ Le{\nj}iri imaju podeoke sa decimalom i logaritamskom, a {\cv}esto i sa sinusnom
 Jedan od le{\nj}ira je bio klizni, te otuda popularno ime {\sl{\sv}iber\/}
 (od nema{\cv}kog {\sl Rechen\-schieber\/}). Koristi se jednostavno, pomera{\nj}em
 kliza{\cv}a i {\cv}ita{\nj}em vrednosti sa odgovaraju{\cc}e skale.
-(Videti za\-da\-tke~\ref{sssec:sibersqrt} i~\ref{sssec:siberpower}.)
+(Videti za\-da\-tke~\ref{sssec:siberpower} i~\ref{sssec:sibersqrt}.)
 
 Postojale su i kru{\zv}ne varijante, pa i {\dz}epne, gde je
 {\dz}epni sat sa logaritmarom i kompasom  bio \navod{iPhone} XIX i prve polovine XX~veka.
@@ -743,19 +744,12 @@ odakle se, pomo{\cc}u jednakosti \eqref{eq:chgbase} i jednakosti za izvod slo{\z
 \def\dx{{\it dx}}
 Povr{\sv}ina figure ispod funkcije $y=1/x$ do $x$-ose, u opsegu od 1~do~$x$ iznosi 
 $\ln x$.\penalty-1000
-Matemati{\cv}ki zapisano: $\int_1^x\dx/x=\ln x$.
+Matemati{\cv}ki zapisano: $\int_1^x\dx/x=\ln x$. 
 $$
 \slika{\includegraphics[]{log.3}}{Geometrijsko zna{\cv}e{\nj}e $\ln x$.}
 $$
 (Na slici je $x=\e$, tako da je povr{\sv}ina osen{\cv}ane figure jednaka 1.)
 
-% \medskip
-
-% Iz jednskosti $a^x=\e^{x\ln a}$,
-% mo{\zv}e se dobiti i jednakost
-% \begin{equation}
-%   \okvir{f(x)=a^x\sledi f'(x)=a^x \ln a}.
-% \end{equation}
 
 \subsection{Limes}
 
@@ -768,10 +762,10 @@ Ojler je dokazao da je
 
 Verovatno{\cc}a da {\sl po{\cv}etne cifre\/} neke matemati{\cv}ke ili fizi{\cv}ke konstante
 (kao i du{\zv}ine reke, visine planine, broja stanovnika, rastoja{\nj}a,
-sta{\nj}a na ra{\cv}unu,
-\dots), budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl Benfordov zakon\/} (Frank Benford), i iznosi
+sta{\nj}a na ra{\cv}unu, \dots), 
+budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl Benfordov zakon\/} (Frank Benford), i iznosi
 \begin{equation}\label{eq:benford}
-  p(b,\ell)=\log_b \left(1+\frac1\ell\right).
+  P(b,\ell)=\log_b \left(1+\frac1\ell\right).
 \end{equation}
 
 \subsection{Teorema prostih brojeva}
@@ -843,8 +837,8 @@ $$
 
 \subsection{Ru{\cv}ni rad}
 
-\input zadaci/siber-sqrt
 \input zadaci/siber-power
+\input zadaci/siber-sqrt
 \input zadaci/ln3
 
 \vfill
@@ -913,7 +907,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
   \item \MP\ (PostScript programming language)--- John D. Hobby
   \item \textbf{Pascal} (programming language) --- Niklaus Wirth
   \item \textbf{Python} (programming language) --- Python Software Foundation
-  \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GOc.png}} (programming language) --- Google
+  \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GO.png}} (programming language) --- Google
   \item {\ZXBASIC} (programming language) --- Sinclair Research Ltd.
 \end{enumerate}
 
