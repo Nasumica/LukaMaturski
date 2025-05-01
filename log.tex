@@ -179,37 +179,37 @@ trigonometrijskim i {\nj}ima inverznim funkcijama, spada u grupu {\sl elementarn
 Opisane su {\nj}ene osobine i dati su primeri {\nj}ene upotrebe,
 kao i \hyperref[sec:zadaci]{zadaci sa re{\sv}e{\nj}ima} (ukupno \the\numexpr\totvalue{zadaci}).
 
+Sama re{\cv} {\sl logaritam\/} poti{\cv}e od gr{\cv}kih re{\cv}i 
+$\lambda\acute o\gamma o\varsigma$~({\sl logos\/}) i 
+$\alpha\rho\iota\theta\mu\acute o\varsigma$~({\sl aritmos\/}), 
+sa zna\-{\cv}e\-{\nj}em \navod{broj kojim se ra{\cv}una}.
+
 
 
 \subsection{Definicija logaritma}
 
-Ako je
+\begin{equation}
+  \okvir{\scalebox{1.44}{$y=\log_b x$}}
+\end{equation}
+je re{\sv}e{\nj}e po $y$ jedna{\cv}ine
 $$
 x=b^{\,y},
+% \qquad\text{odnosno},\qquad
+% b=\sqrt[y]x,
 $$
-onda se mo{\zv}e pisati
-\begin{equation}
-\okvir{\scalebox{1.44}{$y=\log_b x$}},
-\end{equation}
 gde je $b$ {\sl osnova\/} ({\sl baza\/}) logaritma, a $x$ {\sl argument}.
 (Izgovara se \navod{$y$ je jednako logaritam od $x$ za osnovu $b$}
 ili kra{\cc}e \navod{$y$ je logaritam $b$ od $x$}.)
 % Tako{\dj}e va{\zv}i $b=x^{1/y}=\sqrt[y]x$.
 
-Sama re{\cv} {\sl logaritam\/} poti{\cv}e od gr{\cv}kih re{\cv}i 
-$\lambda\acute o\gamma o\varsigma$~({\sl logos\/}) i 
-$\acute\alpha\rho\iota\theta\mu\acute o\varsigma$~({\sl aritmos\/}), 
-sa zna\-{\cv}e\-{\nj}em \navod{broj kojim se ra{\cv}una}.
 
-
-\subsection{Grafik funkcije}
+\subsection{Tok i grafik funkcije}
 
 \newcounter{figno}
 \def\newpic#1{\stepcounter{figno}%
   \hbox{{\bf Slika \thefigno:\/~}#1}}
 \def\slika#1#2{\stepcounter{figno}\displaylines{
   \hbox{#1}\cr\hbox{{\bf Slika \thefigno:\/~}#2}}}
-
 
 Funkcija je u skupu realnih brojeva ${\mathbb R}$ definisana za $x>0$ i $b>0\land b\ne1$.
 Funkcija je {\sl monotona\/}: za $b>1$ funkcija je {\sl rastu{\cc}a}, dok je za $b<1$ funkcija {\sl opadaju{\cc}a}.
@@ -231,7 +231,6 @@ Iz same definicije va{\zv}i
 \begin{equation}
 \okvir{\log_b(\antilog_b x)=\antilog_b(\log_b x)=x}.
 \end{equation}
-
 
 
 \section{Jednakosti}
@@ -386,7 +385,7 @@ a~ina{\cv}e, $\log x^2=2\log|x|$, za bilo koje $x\ne0$.
 
 \subsection{Osnova 10}
 
-U ini{\zv}e{\nj}erstvu se naj{\cv}e{\sv}{\cc}e koristi osnova logaritma 10,
+U ini{\zv}e{\nj}erstvu se naj{\cv}e{\sv}{\cc}e koristi logaritam sa osnovom 10,
 zove se {\sl dekadni\/} ili {\sl zajedni{\cv}ki\/} logaritam, i pi{\sv}e se
 $$
 y=\logten x
@@ -406,7 +405,7 @@ Dekadni logaritam je pogodan i kada se koristi, takozvani {\sl nau{\cv}ni\/} ili
 zapis broja.
 Na primer, {\sl Plankova konstanta\/} (Max Planck) iznosi
 $$
-h=6\.62607015\puta 10^{-34}
+h=6\.62607015\puta 10^{-34}\um{J/Hz}
 $$
 koja ima dekadni logatiram
 $$
@@ -586,7 +585,7 @@ Na ovaj na{\cv}in se mo{\zv}e izra{\cv}unati vrednost
     7232121458\,
     1765680755\,
     \ldots
-  \end{split}\\
+  \end{split}
   \intertext{kao i vrednost}
   \begin{split}\label{eq:ln10}
     \ln10
@@ -632,16 +631,15 @@ gde je posled{\nj}i razlomak ta{\cv}an na 5 decimala.
 
 \subsection{Logaritamske tablice}
 
-Prve tablice logaritama je izra{\cv}unao Neper (John Napier of Merchiston)
-1614.\ godine,
-koje su prakti{\cv}no sadr{\zv}ale logaritam za osnaovu $1/\e$, sa skaliranim argumentom i rezultatom,
+Prve tablice logaritama je 1614.~godine izra{\cv}unao {\sv}kotski matemati{\cv}ar Neper (John Napier of Merchiston),
+koje su prakti{\cv}no sadr{\zv}ale logaritam za osnaovu $1/\e$, sa ska\-li\-ra\-nim argumentom i rezultatom,
 iako sam Neper nije znao za konstantu $\e$.
 Savremenim zapisom bi ovaj logaritam bio definisan kao
 $$
 \naplog (x) = 10^7\log_{1/\e}(x/10^7) = -10^7\ln(x/10^7).
 $$
 
-Nekoliko godina kasnije, 1617.\ i 1624, Brigs (Henry Briggs) je izra{\cv}unao
+Nekoliko godina kasnije, 1617.\ i 1624, engleski matemati{\cv}ar Brigs (Henry Briggs) je izra{\cv}unao
 tablice de\-kad\-nih logaritama sa 14 cifara ta{\cv}nosti, koje se uz dopune i ispravke
 koriste i danas pod imenom {\sl Brigsove tablice}.
 
@@ -656,7 +654,7 @@ koristila se je analogna mehani{\cv}ka sprava sa nekoliko le{\nj}ira zvana {\sl 
 $$
 \slika{\includegraphics[width=0.90\textwidth]{siber2.jpg}}{{\Sv}iber.}
 $$
-Le{\nj}iri imaju podeoke sa decimalom i logaritamskom, a {\cv}esto i sa sinusnom skalom.
+Le{\nj}iri imaju podeoke sa decimalom i logaritamskom, a {\cv}esto i sa sinusnom i nekom drugom skalom.
 Jedan od le{\nj}ira je bio klizni, te otuda popularno ime {\sl{\sv}iber\/}
 (od nema{\cv}kog {\sl Rechen\-schieber\/}). Koristi se jednostavno, pomera{\nj}em
 kliza{\cv}a i {\cv}ita{\nj}em vrednosti sa odgovaraju{\cc}e skale.
@@ -888,7 +886,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
   \item {\sf Visual Studio Code} (Integrated Development Environment) --- Microsoft
   \item {\ZXBASIC} (\pl) --- Sinclair Research Ltd.
   \item \textbf{Pascal} (\pl) --- Niklaus Wirth
-  \item \textbf{Delphi} (\pl) --- Borland, Embarcadero
+  % \item \textbf{Delphi} (\pl) --- Borland, Embarcadero
   \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GOc.png}} (\pl) --- Google
   \item \textbf{Python} (\pl) --- Python Software Foundation
   \item \MP\ (PostScript \pl)--- John D. Hobby
