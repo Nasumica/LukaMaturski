@@ -109,7 +109,7 @@ label.ulft(btex $\rho$ etex, 0.5z0);
 label(btex $\theta$ etex, 1/2z4);
 
 
-label.urt(btex $z$ etex, z0);
+dotlabel.urt(btex $z$ etex, z0);
 label.llft(btex $0$ etex, origin);
 dotlabel.bot(btex $x$ etex, (x0,0));
 dotlabel.lft(btex $y$ etex, (0,y0));

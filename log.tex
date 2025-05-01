@@ -25,8 +25,6 @@
 
 \usepackage[dvipsnames]{xcolor}
 
-\definecolor{karton}{rgb}{1, 0.8, 0}
-
 \definecolor{darkblue}{rgb}{0, 0, 0.4}
 \usepackage[
   colorlinks = true,
@@ -177,7 +175,7 @@
 
 Ovaj rad se bavi {\sl logaritamskom funkcijom}, jednom od najva{\zv}nijih funkcija u matematici.
 Zbog svoje va{\zv}nosti, zajedno sa eksponencijalnom,
-trigonometrijskim i {\nj}ima inverznim funkcijama, spada u grupu {\sl elementarnih funkcija}. 
+trigonometrijskim i {\nj}ima inverznim funkcijama, spada u grupu {\sl elementarnih\/} funkcija. 
 Opisane su {\nj}ene osobine i dati su primeri {\nj}ene upotrebe,
 kao i \hyperref[sec:zadaci]{zadaci sa re{\sv}e{\nj}ima} (ukupno \the\numexpr\totvalue{zadaci}).
 
@@ -187,19 +185,16 @@ kao i \hyperref[sec:zadaci]{zadaci sa re{\sv}e{\nj}ima} (ukupno \the\numexpr\tot
 
 Ako je
 $$
-x=b^y
+x=b^{\,y},
 $$
 onda se mo{\zv}e pisati
 \begin{equation}
-\okvir{y=\log_b x},
+\okvir{\scalebox{1.44}{$y=\log_b x$}},
 \end{equation}
 gde je $b$ {\sl osnova\/} ({\sl baza\/}) logaritma, a $x$ {\sl argument}.
 (Izgovara se \navod{$y$ je jednako logaritam od $x$ za osnovu $b$}
 ili kra{\cc}e \navod{$y$ je logaritam $b$ od $x$}.)
-Tako{\dj}e va{\zv}i
-$
-b=x^{1/y}=\sqrt[y]x.
-$
+% Tako{\dj}e va{\zv}i $b=x^{1/y}=\sqrt[y]x$.
 
 Sama re{\cv} {\sl logaritam\/} poti{\cv}e od gr{\cv}kih re{\cv}i 
 $\lambda\acute o\gamma o\varsigma$~({\sl logos\/}) i 
@@ -496,7 +491,7 @@ ako je $\mant>0$, ina{\cv}e je nedefinisan.
 
 Binarni logaritam se koristi i u atomskoj fizici.
 Vreme {\sl poluraspada\/} $\th$ je vreme potrebno da se raspadne polovina jezgara atoma neke materije. 
-Ako imamo po{\cv}etan broj jezgara $N_0$ i broj jezgara $N_t$ nakon vremena $t$, njihov odnsos
+Ako imamo po{\cv}etan broj jezgara $N_0$ i broj jezgara $N_t$ nakon vremena $t$, njihov odnos
 se mo{\zv}e pred\-sta\-vi\-ti formulom
 \begin{equation}
 \label{eq:halftime}
@@ -535,9 +530,8 @@ izra{\cv}unati formulom
 \end{equation}
 Ako stavimo da je $x=1$,
 brojna vrednost osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
-\begin{equation}
-\label{eq:e}
-\begin{aligned}
+\begin{equation}\label{eq:e}
+\begin{split}
 \e
 &=\rf0!+\rf1!+\rf2!+\rf3!+\rf4!+\rf5!+\cdots\\
 \noalign{\smallskip}
@@ -546,7 +540,7 @@ brojna vrednost osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
 5904523536\,
 0287471352\,
 6624977572\,\ldots
-\end{aligned}
+\end{split}
 \end{equation}
 sa {\zv}e{\lj}enom ta{\cv}no{\sv}{\cc}u.
 
@@ -580,31 +574,34 @@ izgleda ovako:
 \enspace}
 \endgroup
 \end{equation}
-Ovim postupkom se mo{\zv}e izra{\cv}unati vrednost
-\label{ln2}
-\begin{align*}
-\ln2
-&=\frac{2}{1\cdot3^1}+\frac{2}{3\cdot3^3}+\frac{2}{5\cdot3^5}+\frac{2}{7\cdot3^7}+\frac{2}{9\cdot3^9}+\cdots\nonumber \\
-\noalign{\smallskip}
-&= 0\.
-6931471805\,
-5994530941\,
-7232121458\,
-1765680755\,
-\ldots
-\intertext{kao i vrednost}
-\ln 10
-&=\frac{2}{1\cdot9^1}+\frac{2}{3\cdot9^3}+\frac{2}{5\cdot9^5}+\frac{2}{7\cdot9^7}+\frac{2}{9\cdot9^9}+\cdots+3\ln2\\
-\noalign{\smallskip}
-&=2\.
-3025850929\,
-9404568401\,
-7991454684\,
-3642076011\,
-\ldots
-\end{align*}
+Na ovaj na{\cv}in se mo{\zv}e izra{\cv}unati vrednost
+\begin{align}
+  \begin{split}\label{eq:ln2}
+    \ln2
+    & = \frac{2}{1\cdot3^1}+\frac{2}{3\cdot3^3}+\frac{2}{5\cdot3^5}+\frac{2}{7\cdot3^7}+\frac{2}{9\cdot3^9}+\cdots\\
+    \noalign{\smallskip}
+    & = 0\.
+    6931471805\,
+    5994530941\,
+    7232121458\,
+    1765680755\,
+    \ldots
+  \end{split}\\
+  \intertext{kao i vrednost}
+  \begin{split}\label{eq:ln10}
+    \ln10
+    & = \frac{2}{1\cdot9^1}+\frac{2}{3\cdot9^3}+\frac{2}{5\cdot9^5}+\frac{2}{7\cdot9^7}+\frac{2}{9\cdot9^9}+\cdots+3\ln2\\
+    \noalign{\smallskip}
+    & = 2\.
+    3025850929\,
+    9404568401\,
+    7991454684\,
+    3642076011\,
+    \ldots
+  \end{split}
+\end{align}
 (Videti zadatak \ref{sssec:ln3} na strani \pageref{sssec:ln3}.)
-Pomo{\cc}u {\nj}ih se mogu izra{\cv}unati vrednosti binarnog $\logtwo x=\ln x/\ln2$, odnosno, de\-kad\-nog 
+Pomo{\cc}u {\nj}ih se mogu izra{\cv}unati brojne vrednosti binarnog $\logtwo x=\ln x/\ln2$, odnosno, de\-kad\-nog 
 $\logten x=\ln x/\ln 10$ logaritma.
 
 \subsection{Veri{\zv}ni razlomak}
@@ -676,7 +673,7 @@ Prvi kompjuter ENIAC (Electronic Numerical Integrator And Computer)
 je naprav{\lj}en 1946. godine da bi izra{\cv}unao tablice za vojsku.
 
 
-\section{Jo{\sv} pone{\sv}to}
+\section{Razno}
 
 \subsection{Kompleksni logaritam}
 
@@ -778,10 +775,9 @@ Jo{\sv} jedno mesto gde se pojav{\lj}uje prirodni logaritam u {\sl teoriji broje
 takozvana, {\sl teorema prostih brojeva\/} (PNT), kojom se je bavio Gaus kada je
 imao samo 15--16 godina.
 
-\smallskip
+% \smallskip
 
-Ako funkcija $\pi(n)$ ima vrednost {\sl ukupan broj prostih brojeva ma{\nj}ih
-ili jednakih od~$n$}, onda va{\zv}i
+Ako defini{\sv}emo funkciju $\pi(n)$ koja ima vrednost {\sl ukupan broj prostih brojeva ne ve{\cc}ih od~$n$}, onda va{\zv}i
 $$
 \lim_{n\to\infty}\frac{\pi(n)\ln n}{n} = 1.
 $$
@@ -826,7 +822,7 @@ $$
 
 % \addtocontents{toc}{\protect\newpage}
 
-\subsection{Sitni primeri}
+\subsection{Kratki primeri}
 
 \input zadaci/earthquake
 \input zadaci/128-bit
@@ -855,8 +851,10 @@ $$
 \tolerance=10000
 
 \renewcommand{\labelenumi}{[{\it\arabic{enumi}\/}]}
-\def\lit#1#2#3(#4){\item #1: {\navod{#2}}, {\sl#3\/} (#4)}
+\def\lit#1#2#3(#4){\item #1: {\navod{#2}},
+  \def\vol{#3}\ifx\vol\empty\else {\sl\vol\/} \fi (#4)}
 \font\logoten=logo10 scaled 1200
+\font\logoteni=logosl10 scaled 1200
 \def\MP{{\logoten META}\-{\logoten POST}}
 \def\link#1#2{\item\href{#1}{#2}\hfill\break{\footnotesize\url{#1}}}
 
@@ -872,29 +870,34 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \lit{Rade Nikoli{\cc}}{Zadaci za prijemni ispit iz matematike na Fakultet informacionih tehnologija}{}(2020)
 \lit{Gradimir V. Milovanovi{\cc}, {\Dj}or{\dj}e R. {\Dj}or{\dj}evi{\cc}}{Programira{\nj}e numeri{\cv}kih me\-to\-da}{}(1981)
 \lit{Donald E. Knuth}{Seminumerical Algorithms}{The Art of Computer Programming}(1968--)
+\lit{Milton Abramowitz, Irene Stegun}{Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables}{Applied Mathematics}(1964)
 \lit{Drago{\lj}ub Vasi{\cc}, Vene Bogoslavov, Gli{\sv}a Ne{\sv}kovi{\cc}}{Logaritamske tablice}{}(2008)
 \lit{Henry Briggs}{Arithmetica logarithmica}{}(1624)
 \lit{Donald E. Knuth}{The \TeX book}{Computers and Typesetting}(1996)
-\lit{John D. Hobby}{User's manual}{\MP}(2024)
+\lit{John D. Hobby}{User's manual}{\logoteni METAPOST}(2024)
 \end{enumerate}
 
 \subsection{Software}
 
 \newbox\gobox \setbox\gobox\hbox{\textbf{GO}}
 \newdimen\godim \godim=\ht\gobox \advance\godim\dp\gobox
-\newdimen\down \down=0.03\godim \advance\godim\down
+\newdimen\down \down=0.03\godim \advance\godim2\down
+\def\pl{programming language}
 \begin{enumerate}[parsep=0cm]
   \item Mathematica --- Wolfram Research
   \item {\sf Visual Studio Code} (Integrated Development Environment) --- Microsoft
+  \item {\ZXBASIC} (\pl) --- Sinclair Research Ltd.
+  \item \textbf{Pascal} (\pl) --- Niklaus Wirth
+  \item \textbf{Delphi} (\pl) --- Borland, Embarcadero
+  \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GOc.png}} (\pl) --- Google
+  \item \textbf{Python} (\pl) --- Python Software Foundation
+  \item \MP\ (PostScript \pl)--- John D. Hobby
   \item \TeX\ (typesetting system) --- Donald E. Knuth
   \item \LaTeX\ (\TeX\ macros) --- Leslie Lamport
   \item \AmS-\TeX\ (\TeX\ macros) --- American Mathematical Society
-  \item \MP\ (PostScript programming language)--- John D. Hobby
-  \item \textbf{Pascal} (programming language) --- Niklaus Wirth
-  \item \textbf{Python} (programming language) --- Python Software Foundation
-  \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GO.png}} (programming language) --- Google
-  \item {\ZXBASIC} (programming language) --- Sinclair Research Ltd.
 \end{enumerate}
+
+\pagebreak
 
 
 \subsection{Linkovi}
