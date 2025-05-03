@@ -10,26 +10,28 @@
 \def\vp{{\vec v}}
 \def\norm#1{{\Vert#1\Vert}}
 
-Poput skupa kompleksnih brojeva ${\mathbb Z}$ koji predstav{\lj}aju ta{\cv}ku u 2D prostoru,
-skup~${\mathbb H}$ kvaterniona predstav{\lj}a ta{\cv}ku u 3D prostoru. Otkrio ih je 
+Poput skupa kompleksnih brojeva ${\mathbb Z}$, koji predstav{\lj}a ta{\cv}ke u 2D prostoru,
+skup~${\mathbb H}$\break {\sl kvaterniona\/} predstav{\lj}a ta{\cv}ke u 3D prostoru. Otkrio ih je 
 1843. godine irski matemati{\cv}ar
 Hamilton (William Rowan Hamilton), te {\nj}emu u {\cv}ast i oznaka skupa ${\mathbb H}$.
 
-\medskip
+\subsubsection{Definicija}
 
 Neka je $q\in{\mathbb H}$ kvaternion
-$$
-q=s+v
-$$
+\begin{equation}
+    q=s+v
+\end{equation}
 koji se sastoji od skalarnog dela $s\in{\mathbb R}$ i vektorskog dela $v\in{\mathbb R}^3$, gde je
-$$
-v=xi+yj+zk
-$$
+\begin{equation}
+    v=xi+yj+zk
+\end{equation}
 3D vekor, i gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
 za koje va{\zv}i
-$$
-i^2=j^2=k^2=ijk=-1.
-$$
+\begin{equation}
+    i^2=j^2=k^2=ijk=-1.
+\end{equation}
+
+\subsubsection{Operacije i funkcije}
 
 Analogno kompleksnim brojevima, mo{\zv}e se definisati apsolutna vrednost
 $$
@@ -45,21 +47,18 @@ $$
 \varphi = \arccos \frac s{\norm q},
 $$
 odakle sledi polarna forma kvaterniona
-$$
-q
+\begin{equation}
+    q
 =\rho\,(\cos\varphi + \uv\sin\varphi)
 =\rho\,\e^{\uv\varphi}.
-$$
-
+\end{equation}
 
 Iz svega ovoga mo{\zv}e se dobiti
-\begin{equation}
-    \exp(q) = \e^s \left( \cos\varphi + \uv\sin\varphi \right)\\
-\end{equation}
-i
-\begin{equation}
-    \ln(q)  = \ln\rho + \uv\varphi.
-\end{equation}
+\begin{align}
+    \exp(q) &= \e^s \left( \cos\varphi + \uv\sin\varphi \right)\\
+    \intertext{i}
+    \ln(q)  &= \ln\rho + \uv\varphi.
+\end{align}
 
 
 \bigskip
