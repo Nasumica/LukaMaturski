@@ -25,16 +25,18 @@ koji se sastoji od skalarnog dela $s\in{\mathbb R}$ i vektorskog dela $v\in{\mat
 \begin{equation}
     v=xi+yj+zk
 \end{equation}
-3D vekor, a gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
+3D vektor, a gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
 za koje va{\zv}i
 \begin{gather}    
     i^2=j^2=k^2=ijk=-1,\quad
     ij=k,\quad jk=i,\quad ki=j. 
 \end{gather}
 
-\danger U skupu kvaterniona $\Hset$ za operaciju mno{\zv}e{\nj}a ne va{\zv}i {\sl zakon komutacije}: ako su
-$p,q\in\Hset$, onda je $pq=-qp$. Ovo je logi{\cv}no ako se setimo da i kod
+\danger U skupu kvaterniona $\Hset$ za operaciju mno{\zv}e{\nj}a, uop{\sv}teno, ne va{\zv}i {\sl zakon komutacije}:
+$ji=-ij=-k$, $kj=-jk=-i$, $ik=-ki=-j$.
+Ovo je logi{\cv}no ako se setimo da i kod
 {\sl Rubikove kocke\/} nije svejedno kojim redosledom okre{\cc}emo stranice.
+Va{\zv}i {\sl asocijativnost}: $(i\cdot j)\cdot k=i\cdot(j\cdot k)$.
 
 \subsubsection{Operacije i funkcije}
 
@@ -57,13 +59,18 @@ odakle sledi polarni zapis kvaterniona
 =\rho\,(\cos\varphi + \uv\sin\varphi)
 =\rho\,\e^{\uv\varphi}.
 \end{equation}
-
 Iz svega ovoga mo{\zv}e se dobiti
-\begin{align}
-    \exp(q) &= \e^s \left( \cos\varphi + \uv\sin\varphi \right)\\
-    \intertext{i}
-    \ln(q)  &= \ln\rho + \uv\varphi.
-\end{align}
+\begin{equation}
+    \okvir{\exp(q) = \e^s \left( \cos\norm v + \uv\sin\norm v \right)}
+\end{equation}
+i
+\begin{equation}
+    \okvir{\ln(q)  = \ln\rho + \uv\varphi}.
+\end{equation}
+
+\medskip
+
+Ostale operacije i funkcije nisu tema ovog rada.
 
 
 \newpage
