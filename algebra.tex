@@ -1,0 +1,75 @@
+
+% \newcount\brk \brk=\value{section}
+% \renewcommand\thesection{\Alph{section}}
+
+\section{Logaritam u algebri}
+
+\subsection{Kvaternioni}
+
+\def\uv{{u}}
+\def\vp{{\vec v}}
+\def\norm#1{{\Vert#1\Vert}}
+
+Poput skupa kompleksnih brojeva ${\mathbb Z}$ koji predstav{\lj}aju ta{\cv}ku u 2D prostoru,
+skup~${\mathbb H}$ kvaterniona predstav{\lj}a ta{\cv}ku u 3D prostoru. Otkrio ih je 
+1843. godine irski matemati{\cv}ar
+Hamilton (William Rowan Hamilton), te {\nj}emu u {\cv}ast i oznaka skupa ${\mathbb H}$.
+
+\medskip
+
+Neka je $q\in{\mathbb H}$ kvaternion
+$$
+q=s+v
+$$
+koji se sastoji od skalarnog dela $s\in{\mathbb R}$ i vektorskog dela $v\in{\mathbb R}^3$, gde je
+$$
+v=xi+yj+zk
+$$
+3D vekor, i gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
+za koje va{\zv}i
+$$
+i^2=j^2=k^2=ijk=-1.
+$$
+
+Analogno kompleksnim brojevima, mo{\zv}e se definisati apsolutna vrednost
+$$
+\rho = \norm q = \sqrt{s^2+x^2+y^2+z^2},
+$$
+koja se u ovom slu{\cv}aju zove {\sl norma},
+jedini{\cv}ni vektor vektorskg dela
+$$
+\uv = \frac v{\norm v},
+$$
+i ugao rotacije
+$$
+\varphi = \arccos \frac s{\norm q},
+$$
+odakle sledi polarna forma kvaterniona
+$$
+q
+=\rho\,(\cos\varphi + \uv\sin\varphi)
+=\rho\,\e^{\uv\varphi}.
+$$
+
+
+Iz svega ovoga mo{\zv}e se dobiti
+\begin{equation}
+    \exp(q) = \e^s \left( \cos\varphi + \uv\sin\varphi \right)\\
+\end{equation}
+i
+\begin{equation}
+    \ln(q)  = \ln\rho + \uv\varphi.
+\end{equation}
+
+
+\bigskip
+
+\danger U skupu kvaterniona ${\mathbb H}$ za operaciju mno{\zv}e{\nj}a ne va{\zv}i {\sl zakon komutacije}: ako su
+$p,q\in{\mathbb H}$, onda je $pq=-qp$. Ovo je logi{\cv}no ako se setimo da i kod
+{\sl Rubikove kocke\/} nije svejedno kojim redosledom okre{\cc}emo stranice.
+
+\newpage
+
+\subsection{Matrice}
+
+\newpage
