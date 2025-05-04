@@ -1,7 +1,4 @@
 
-% \newcount\brk \brk=\value{section}
-% \renewcommand\thesection{\Alph{section}}
-
 \section{Logaritam u algebri}
 
 \subsection{Kvaternioni}
@@ -11,7 +8,7 @@
 \def\norm#1{{\Vert#1\Vert}}
 
 Poput skupa kompleksnih brojeva $\Cset$, koji predstav{\lj}a ta{\cv}ke u 2D prostoru,
-skup~$\Hset$\break {\sl kvaterniona\/} predstav{\lj}a ta{\cv}ke u 3D prostoru. Prvi ih je opisao 
+skup {\sl kvater\-niona\/}~$\Hset$, predstav{\lj}a ta{\cv}ke u 3D prostoru. Prvi ih je opisao 
 1843. godine irski ma\-te\-ma\-ti\-{\cv}ar
 Hamilton (William Rowan Hamilton), te {\nj}emu u {\cv}ast i oznaka skupa $\Hset$.
 
@@ -27,7 +24,7 @@ koji se sastoji od skalarnog dela $s\in{\mathbb R}$ i vektorskog dela $v\in{\mat
 \end{equation}
 3D vektor, a gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
 za koje va{\zv}i
-\begin{gather}    
+\begin{gather}\label{eq:qunits}
     i^2=j^2=k^2=ijk=-1,\quad
     ij=k,\quad jk=i,\quad ki=j. 
 \end{gather}
@@ -35,12 +32,12 @@ za koje va{\zv}i
 \danger U skupu kvaterniona $\Hset$ za operaciju mno{\zv}e{\nj}a, uop{\sv}teno, ne va{\zv}i {\sl zakon komutacije}:
 $ji=-ij=-k$, $kj=-jk=-i$, $ik=-ki=-j$.
 Ovo je logi{\cv}no ako se setimo da i kod
-{\sl Rubikove kocke\/} nije svejedno kojim redosledom okre{\cc}emo stranice.
-Va{\zv}i {\sl asocijativnost}: $(i\cdot j)\cdot k=i\cdot(j\cdot k)$.
+{\sl Rubikove kocke\/} naj{\cv}e{\sv}{\cc}e nije svejedno kojim redosledom okre{\cc}emo stranice.
+Va{\zv}i {\sl asocijativnost}: $(p\cdot q)\cdot r=p\cdot(q\cdot r)$.
 
 \subsubsection{Operacije i funkcije}
 
-Analogno kompleksnim brojevima, mo{\zv}e se definisati apsolutna vrednost
+Analogno kompleksnim brojevima, i za kvaternione mo{\zv}e se definisati apsolutna vrednost
 $$
 \rho = \norm q = \sqrt{s^2+x^2+y^2+z^2}
 $$
@@ -70,7 +67,14 @@ i
 
 \medskip
 
-Ostale operacije i funkcije nisu tema ovog rada.
+\danger
+Ostale operacije i funkcije nisu tema ovog rada, ali operacije sabira{\nj}a i oduzima{\nj}a
+su jednostavne, za mno{\zv}e{\nj}e treba obratiti pa{\zv}{\nj}u na formulu \eqref{eq:qunits} i
+komutativnost, a recipro{\cv}na vrednost je
+$q^{-1}={q^*}/\rho^2$, gde je ${q^*}=s-v$, {\sl konjugovana\/} vrednost. 
+Uobi{\cv}ajeno je da se de{\lj}e{\nj}e pi{\sv}e $p/q=pq^{-1}$.
+Trigonometrijske i hiperboli{\cv}ne funkcije mogu se izraziti pomo{\cc}u eksponencijalne,
+a {\nj}ihove inverzne pomo{\cc}u logaritamske funkcije.
 
 
 \newpage
