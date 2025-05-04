@@ -1,24 +1,19 @@
 \subsubsection{Izumira{\nj}e}
 
 \zadatak Na{\dj}i $n$ ako je
-$$
-\log_23\cdot\log_34\cdot\log_45\cdot\log_56\cdots\log_n(n+1)=10.
-$$
-
-\resenje
-Ako prebacimo sve logartime u osnovu 2, dobijamo
-$$
+\begin{align*}
+\log_23\cdot\log_34\cdot\log_45\cdot\log_56\cdots\log_n(n+1)&=10.
+\intertext{\resenje
+Ako prebacimo sve logartime u osnovu 2, dobijamo}
 \log_23
 \cdot\frac{\log_24}{\log_23}
 \cdot\frac{\log_25}{\log_24}
 \cdot\frac{\log_26}{\log_25}
-\cdots\frac{\log_2(n+1)}{\log_2n}=10.
+\cdots\frac{\log_2(n+1)}{\log_2n}&=10.
+\intertext{Vidimo da {\cc}e, nakon {\sl masovnog\/} skra{\cc}iva{\nj}a, {\sl izumreti\/} svi izrazi osim}
+\log_2(n+1)&=10,
+\end{align*}
+odakle je,
 $$
-Vidimo da {\cc}e, nakon {\sl masovnog\/} skra{\cc}iva{\nj}a, {\sl izumreti\/} svi izrazi osim
-$$
-\log_2(n+1)=10\sledi n+1 = 2^{10}=1024,
-$$
-odnosno,
-$$
-n=\ram{1023}.
+n+1 = 2^{10}=1024 \sledi n=\ram{1023}.
 $$
