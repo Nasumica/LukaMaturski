@@ -1,6 +1,3 @@
-
-\section{Logaritam u algebri}
-
 \subsection{Kvaternioni}
 
 \def\uv{{u}}
@@ -12,8 +9,10 @@ Poput skupa kompleksnih brojeva $\Cset$, koji predstav{\lj}a objekte u 2D prosto
 skup {\sl kvater\-niona\/}~$\Hset$, predstav{\lj}a objekte u 3D prostoru. Prvi ih je opisao 
 1843. godine irski ma\-te\-ma\-ti\-{\cv}ar
 Hamilton (William Rowan Hamilton), te {\nj}emu u {\cv}ast i oznaka skupa $\Hset$.
+U~informatici su neizbe{\zv}ni deo 3D~grafike.
 
-\subsubsection{Definicija}
+% \subsubsection{Definicija}
+\medskip
 
 Kvaternion $q\in\Hset$ mo{\zv}e biti predstav{\lj}en kao zbir
 \begin{equation}
@@ -37,23 +36,24 @@ Ovo je logi{\cv}no ako se setimo da i kod
 {\sl Rubikove kocke\/} naj{\cv}e{\sv}{\cc}e nije svejedno kojim redosledom okre{\cc}emo stranice.
 Va{\zv}i {\sl asocijativnost}: $(p\cdot q)\cdot r=p\cdot(q\cdot r)$.
 
-\subsubsection{Operacije i funkcije}
+% \subsubsection{Operacije i funkcije}
+\medskip
 
-Da bi $q=s+v$ bio kvaternion, mora biti $v\ne0$, ina{\cv}e je $q$ obi{\cv}an realan broj, 
+Da bi $q=s+v$ bio {\sl pravi\/} kvaternion, mora biti $v\ne0$, ina{\cv}e je $q$ obi{\cv}an realan broj, 
 kada se prime{\nj}uju operacije i funkcije iz skupa $\Rset$.
 Ako odredimo apsolutnu vrednost kvaterniona
 $$
-\lambda = \norm v = \sqrt{x^2+y^2+z^2},\qquad
-\rho = \norm q = \sqrt{s^2+\lambda^2}
+\lambda = \norm v = \sqrt{\mathstrut x^2+y^2+z^2},\qquad
+\rho = \norm q = \sqrt{\mathstrut s^2+\lambda^2}
 $$
-(koja se u ovom slu{\cv}aju zove {\sl norma\/}),
+koja se zove {\sl norma\/},
 {\sl jedini{\cv}ni vektor\/} ({\sl unit\/}) vektorskog dela kvaterniona
 $$
 \uv = \frac v\lambda, 
 $$
 koji se zove {\sl versor},
 i gde je po definiciji $\norm\uv=1$ i  $\uv^2=-1$,
-kao i {\nj}egov ugao orijentacije
+kao i ugao orijentacije
 $$
 \varphi = \arccos\left( \frac s\rho \right),
 $$
@@ -75,17 +75,11 @@ Iz svega ovoga se mo{\zv}e dobiti
 \medskip
 
 \danger
-Ostale operacije i funkcije nisu tema ovog rada, ali operacije sabira{\nj}a i oduzima{\nj}a
-su uobi{\cv}ajene, za mno{\zv}e{\nj}e treba obratiti pa{\zv}{\nj}u na formulu \eqref{eq:qunits} i
+Ostale operacije i funkcije nisu tema ovog rada, ali sabira{\nj}e i oduzima{\nj}e
+je uobi\-{\cv}a\-jeno, za mno{\zv}e{\nj}e treba obratiti pa{\zv}{\nj}u na formulu \eqref{eq:qunits} i
 komutativnost, a recipro{\cv}na vrednost je
 $q^{-1}=\con q/\rho^2$, gde je $\con q=s-v$, {\sl konjugovana\/} vrednost. 
 % Naj{\cv}e{\sv}{\cc}e se de{\lj}e{\nj}e ne pi{\sv}e $p/q$, ve{\cc} $pq^{-1}$.
-Tri\-gono\-metrijske i hiperboli{\cv}ne funkcije mogu se izraziti pomo{\cc}u eksponencijalne,
-a {\nj}ihove inverzne pomo{\cc}u logaritamske funkcije.
+Tri\-gono\-metrijske i hiperboli{\cv}ne funkcije se mogu izraziti pomo{\cc}u eksponencijalne,
+a {\nj}ihove inverzne pomo{\cc}u logaritamske funkcije.\par
 
-
-\newpage
-
-\subsection{Matrice}
-
-\newpage
