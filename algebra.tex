@@ -3,12 +3,13 @@
 
 \subsection{Kvaternioni}
 
-\def\uv{{\hat u}}
+\def\uv{{u}}
 \def\vp{{\vec v}}
-\def\norm#1{{\Vert#1\Vert}}
+\def\norm#1{{\vert#1\vert}}
+\def\con#1{{\bar#1}}
 
-Poput skupa kompleksnih brojeva $\Cset$, koji predstav{\lj}a ta{\cv}ke u 2D prostoru,
-skup {\sl kvater\-niona\/}~$\Hset$, predstav{\lj}a ta{\cv}ke u 3D prostoru. Prvi ih je opisao 
+Poput skupa kompleksnih brojeva $\Cset$, koji predstav{\lj}a objekte u 2D prostoru,
+skup {\sl kvater\-niona\/}~$\Hset$, predstav{\lj}a objekte u 3D prostoru. Prvi ih je opisao 
 1843. godine irski ma\-te\-ma\-ti\-{\cv}ar
 Hamilton (William Rowan Hamilton), te {\nj}emu u {\cv}ast i oznaka skupa $\Hset$.
 
@@ -22,7 +23,8 @@ koji se sastoji od skalarnog dela $s\in{\mathbb R}$ i vektorskog dela $v\in{\mat
 \begin{equation}
     v=xi+yj+zk
 \end{equation}
-3D vektor, a gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
+3D vektor, 
+a gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
 za koje va{\zv}i
 \begin{gather}\label{eq:qunits}
     i^2=j^2=k^2=ijk=-1,\quad
@@ -37,44 +39,48 @@ Va{\zv}i {\sl asocijativnost}: $(p\cdot q)\cdot r=p\cdot(q\cdot r)$.
 
 \subsubsection{Operacije i funkcije}
 
-Analogno kompleksnim brojevima, i za kvaternione mo{\zv}e se definisati apsolutna vrednost
+Da bi $q=s+v$ bio kvaternion, mora biti $v\ne0$, ina{\cv}e je $q$ obi{\cv}an realan broj, 
+kada se prime{\nj}uju operacije i funkcije iz skupa $\Rset$.
+Ako odredimo apsolutnu vrednost kvaterniona
 $$
 \lambda = \norm v = \sqrt{x^2+y^2+z^2},\qquad
 \rho = \norm q = \sqrt{s^2+\lambda^2}
 $$
 (koja se u ovom slu{\cv}aju zove {\sl norma\/}),
-ugao rotacije
+{\sl jedini{\cv}ni vektor\/} ({\sl unit\/}) vektorskog dela kvaterniona
 $$
-\varphi = \arccos\left( \frac s\rho \right)
+\uv = \frac v\lambda, 
 $$
-i {\sl jedini{\cv}ni\/} ({\sl unit\/}) vektor vektorskg dela kvaterniona
+koji se zove {\sl versor},
+i gde je po definiciji $\norm\uv=1$ i  $\uv^2=-1$,
+kao i {\nj}egov ugao orijentacije
 $$
-\uv = \frac v\lambda,
+\varphi = \arccos\left( \frac s\rho \right),
 $$
-odakle sledi polarni zapis kvaterniona
+mo{\zv}emo dobiti polarni zapis kvaterniona
 \begin{equation}
     q
 =\rho\,(\cos\varphi + \uv\sin\varphi)
 =\rho\,\e^{\uv\varphi}.
 \end{equation}
-Iz svega ovoga mo{\zv}e se dobiti
+Iz svega ovoga se mo{\zv}e dobiti
 \begin{equation}
     \okvir{\exp(q) = \e^s \left( \cos\lambda + \uv\sin\lambda \right)}
 \end{equation}
-i
+\hbox to \textwidth{\hss i\hss}
 \begin{equation}
-    \okvir{\ln(q)  = \ln\rho + \uv\varphi}.
+    \okvir{\ln(q)  = \ln\rho + \uv\varphi}\rlap{.}
 \end{equation}
 
 \medskip
 
 \danger
 Ostale operacije i funkcije nisu tema ovog rada, ali operacije sabira{\nj}a i oduzima{\nj}a
-su jednostavne, za mno{\zv}e{\nj}e treba obratiti pa{\zv}{\nj}u na formulu \eqref{eq:qunits} i
+su uobi{\cv}ajene, za mno{\zv}e{\nj}e treba obratiti pa{\zv}{\nj}u na formulu \eqref{eq:qunits} i
 komutativnost, a recipro{\cv}na vrednost je
-$q^{-1}={q^*}/\rho^2$, gde je ${q^*}=s-v$, {\sl konjugovana\/} vrednost. 
-Uobi{\cv}ajeno je da se de{\lj}e{\nj}e ne pi{\sv}e $p/q$, ve{\cc} $pq^{-1}$.
-Trigonometrijske i hiperboli{\cv}ne funkcije mogu se izraziti pomo{\cc}u eksponencijalne,
+$q^{-1}=\con q/\rho^2$, gde je $\con q=s-v$, {\sl konjugovana\/} vrednost. 
+% Naj{\cv}e{\sv}{\cc}e se de{\lj}e{\nj}e ne pi{\sv}e $p/q$, ve{\cc} $pq^{-1}$.
+Tri\-gono\-metrijske i hiperboli{\cv}ne funkcije mogu se izraziti pomo{\cc}u eksponencijalne,
 a {\nj}ihove inverzne pomo{\cc}u logaritamske funkcije.
 
 
