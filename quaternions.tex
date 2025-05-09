@@ -1,7 +1,7 @@
 \subsection{Kvaternioni}
 
 \def\uv{{u}}
-\def\vp{{\vec v}}
+\def\vp{{v}}
 \def\norm#1{{\vert#1\vert}}
 \def\con#1{{\bar#1}}
 
@@ -9,26 +9,28 @@ Poput skupa kompleksnih brojeva $\Cset$, koji predstav{\lj}a objekte u 2D prosto
 skup {\sl kvater\-niona\/}~$\Hset$, predstav{\lj}a objekte u 3D prostoru. Prvi ih je opisao 
 1843. godine irski ma\-te\-ma\-ti\-{\cv}ar
 Hamilton (William Rowan Hamilton), te {\nj}emu u {\cv}ast i oznaka skupa $\Hset$.
-U~informatici su neizbe{\zv}ni deo svega {\sv}to se de{\sv}ava u 3D.
 
-% \subsubsection{Definicija}
+U~informatici su neizbe{\zv}ni deo svega {\sv}to se de{\sv}ava u 3D:
+navigacija aviona, pod\-mor\-nica, raketa, satelita,
+nebeska i kvantna mehanika, robotika, grafika, \dots
+
 \medskip
 
 Kvaternion $q\in\Hset$ mo{\zv}e biti predstav{\lj}en kao zbir
 \begin{equation}
-    q=s+v
+    q=s+\vp
 \end{equation}
-koji se sastoji od skalarnog dela $s\in{\mathbb R}$ i vektorskog dela $v\in{\mathbb R}^3$, gde je
+koji se sastoji od skalarnog dela $s\in{\mathbb R}$ i vektorskog dela $\vp\in\Rset^3$, gde je
 \begin{equation}
-    v=(x,y,z)=xi+yj+zk
+    \vp=xi+yj+zk
 \end{equation}
-3D vektor, 
+3D vektor sa koordinatama $(x,y,z)$, 
 a gde su $i$, $j$ i $k$ jedini{\cv}ni vektori po $x$, $y$ i $z$ osi,
 za koje va{\zv}i
-\begin{gather}\label{eq:qunits}
+\begin{equation}\label{eq:qunits}
     i^2=j^2=k^2=ijk=-1,\quad
     ij=k,\quad jk=i,\quad ki=j. 
-\end{gather}
+\end{equation}
 
 \danger U skupu kvaterniona $\Hset$ za operaciju mno{\zv}e{\nj}a, uop{\sv}teno, ne va{\zv}i {\sl zakon komutacije}:
 $ji=-ij=-k$, $kj=-jk=-i$, $ik=-ki=-j$.
@@ -36,25 +38,24 @@ Ovo je logi{\cv}no kad se setimo da i kod
 {\sl Rubikove kocke\/} naj{\cv}e{\sv}{\cc}e nije svejedno kojim redosledom okre{\cc}emo stranice.
 Va{\zv}i {\sl asocijativnost}: $(p\cdot q)\cdot r=p\cdot(q\cdot r)$.
 
-% \subsubsection{Operacije i funkcije}
 \medskip
 
-Da bi $q=s+v$ bio {\sl pravi\/} kvaternion, mora biti $v\ne0$, ina{\cv}e je $q$ obi{\cv}an realan broj, 
+Da bi $q=s+\vp$ bio {\sl pravi\/} kvaternion, mora biti $\vp\ne0$, ina{\cv}e je $q$ obi{\cv}an realan broj, 
 kada se prime{\nj}uju operacije i funkcije iz skupa $\Rset$.
 Ako odredimo apsolutnu vrednost kvaterniona
 $$
-\lambda = \norm v = \sqrt{\mathstrut x^2+y^2+z^2},\qquad
+\lambda = \norm \vp = \sqrt{\mathstrut x^2+y^2+z^2},\qquad
 \rho = \norm q = \sqrt{\mathstrut s^2+\lambda^2}
 $$
 koja se zove {\sl norma\/}, odredimo
 {\sl jedini{\cv}ni vektor\/} ({\sl unit\/}) vektorskog dela kvaterniona
 $$
-\uv = \frac v\lambda, 
+\uv = \frac \vp\lambda, 
 $$
 koji se zove {\sl versor}
 i gde je po definiciji%
 \footnote{U skupu $\Hset$, $\sqrt{-1}$ ima beskona{\cv}no re{\sv}e{\nj}a:
-svaki kvaternion koji se nalazi na jedini{\cv}noj sferi je re{\sv}e{\nj}e
+svaki kvaternion koji se nalazi na {\sl jedini{\cv}noj sferi\/} je re{\sv}e{\nj}e
 ($s=0\land x^2+y^2+z^2=1$), odnosno, svaki versor.} 
 $\norm\uv=1$ i  $\uv^2=-1$,
 kao i ugao orijentacije
@@ -63,7 +64,7 @@ $$
 $$
 mo{\zv}emo dobiti polarni zapis kvaterniona
 \begin{equation}
-    q
+q
 =\rho\,(\cos\varphi + \uv\sin\varphi)
 =\rho\,\e^{\uv\varphi}.
 \end{equation}
@@ -82,7 +83,7 @@ Iz svega ovoga se mo{\zv}e dobiti
 Ostale operacije i funkcije nisu tema ovog rada, ali sabira{\nj}e i oduzima{\nj}e
 je uobi\-{\cv}a\-jeno, za mno{\zv}e{\nj}e treba obratiti pa{\zv}{\nj}u na formulu \eqref{eq:qunits} i
 komutativnost, a recipro{\cv}na vrednost je
-$q^{-1}=\con q/\rho^2$, gde je $\con q=s-v$, {\sl konjugovana\/} vrednost. 
+$q^{-1}=\con q/\rho^2$, gde je $\con q=s-\vp$, {\sl konjugovana\/} vrednost. 
 % Naj{\cv}e{\sv}{\cc}e se de{\lj}e{\nj}e ne pi{\sv}e $p/q$, ve{\cc} $pq^{-1}$.
 Tri\-gono\-metrijske i hiperboli{\cv}ne funkcije se mogu izraziti pomo{\cc}u eksponencijalne,
 a {\nj}ihove inverzne pomo{\cc}u logaritamske funkcije.\par

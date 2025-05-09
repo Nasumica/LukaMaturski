@@ -1,11 +1,16 @@
 \subsubsection{Izumira{\nj}e}
 
+\newbox\lnb
+\def\logn#1{%
+\setbox\lnb=\hbox{$\displaystyle\frac{#1}{1}$}%
+\hbox to \wd\lnb{\hss$\displaystyle#1$\hss}}
+
 \zadatak Na{\dj}i $n$ ako je
 \begin{align*}
-\log_23\cdot\log_34\cdot\log_45\cdot\log_56\cdots\log_n(n+1)&=10.
+\logn{\log_23}\cdot\logn{\log_34}\cdot\logn{\log_45}\cdot\logn{\log_56}\cdots\logn{\log_n(n+1)}&=10.
 \intertext{\resenje
 Ako prebacimo sve logartime u osnovu 2, dobijamo}
-\log_23
+\logn{\log_23}
 \cdot\frac{\log_24}{\log_23}
 \cdot\frac{\log_25}{\log_24}
 \cdot\frac{\log_26}{\log_25}
