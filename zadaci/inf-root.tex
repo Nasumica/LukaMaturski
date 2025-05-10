@@ -3,13 +3,12 @@
 \zadatak
 Odredi vrednost
 \begin{align*}
-    x&=\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\mathstrut\cdots}}}}\,.
+    x&=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\mathstrut\cdots}}}}\right).
 \intertext{
-\resenje Izvr{\sv}imo smenu $t=\ln x$.
+\resenje
 Kako je $\ln\e=1$ i koriste{\cc}i jednakost za logaritam proizvoda \eqref{eq:lnmul} 
 i jednakost za loga\-ri\-tam korena \eqref{eq:lnroot}, mo{\zv}emo pisati}
-t
-&=\ln\left(\e\sqrt[2]{\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\mathstrut\cdots}}}}\right)\\
+x
 &=1+\frac12\ln\left(\e\sqrt[3]{\e\sqrt[4]{\e\sqrt[5]{\mathstrut\cdots}}} \right)\\
 &=1+\frac12\left(1+\frac13\ln\left(\e\sqrt[4]{\e\sqrt[5]{\mathstrut\cdots}} \right)\right)\\
 &=1+\frac12\left(1+\frac13\left(1+\frac14\ln\left(\e\sqrt[5]{\mathstrut\cdots} \right) \right)\right)\\
@@ -17,8 +16,6 @@ t
 &=1+\frac12+\frac12\mul\frac13+\frac12\mul\frac13\mul\frac14+\frac12\mul\frac13\mul\frac14\mul\frac15+\cdots\\
 &=\rf1!+\rf2!+\rf3!+\rf4!+\rf5!+\cdots
 \intertext{Ako pogledamo formulu \eqref{eq:e} na strani \pageref{eq:e}, mo{\zv}emo videti da je ovaj zbir jednak}
-t&=\e-1,
-\intertext{jer iz sume za izra{\cv}unava{\nj}e $\e$ nedostaje {\sl nulti\/} {\cv}lan $1/0!=1$.
-Odavde je}
-x&=\e^t=\ram{\e^{\e-1}}\approx 5\.575.
+x&=\ram{\e-1},
+\intertext{jer iz sume za izra{\cv}unava{\nj}e $\e$ nedostaje {\sl nulti\/} {\cv}lan $1/0!=1$.}
 \end{align*}
