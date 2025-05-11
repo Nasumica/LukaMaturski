@@ -22,6 +22,7 @@
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{enumitem}
+\usepackage{bclogo}
 
 % \usepackage[symbol]{footmisc}
 
@@ -147,6 +148,7 @@
 \def\ram#1{\,\fcolorbox{black}{white}{$\,\displaystyle{\mathstrut #1}\,$}\,}
 \def\okvir#1{\,\fcolorbox{black}{Goldenrod}{$\,\displaystyle{\mathstrut #1}\,$}\,}
 \def\sledi{{\quad\Rightarrow\quad}}
+\def\podef{{\quad\buildrel\rm def\over\Longleftrightarrow\quad}}
 
 \newcount\exno \exno=0
 \newdimen\signdp \signdp=1pt
@@ -220,7 +222,7 @@ ili kra{\cc}e \navod{$y$ je logaritam $b$ od $x$}.)
   \hbox{#1}\cr\hbox{{\bf Slika \thefigno:\/~}#2}}}
 
 Funkcija je u skupu realnih brojeva ${\mathbb R}$ definisana za $x>0$ i $b>0\land b\ne1$.
-Funkcija je {\sl monotona\/}: za $b>1$ funkcija je {\sl rastu{\cc}a}, dok je za $b<1$ funkcija {\sl opadaju{\cc}a}.
+Funkcija je {\sl monotona\/}: za $b>1$ funkcija je {\sl rastu{\cc}a}, dok za $b<1$ funkcija je {\sl opadaju{\cc}a}.
 Zbog toga va{\zv}i {\sl bijekcija\/}: $\logb u=\logb v \Leftrightarrow u=v$.
 Funkcija ima jednu {\sl nulu}, uvek za $x=1$.
 $$
@@ -268,7 +270,7 @@ koja proizilazi iz same definicije logaritma i antilogaritma.
 
 Ako je
 $$
-u=\logb x\land v=\log_b y \sledi x=b^u\land y=b^v,
+u=\logb x\land v=\log_b y \podef x=b^u\land y=b^v,
 $$
 onda je, zbog jednakosti \eqref{eq:powb}
 $$
@@ -284,7 +286,7 @@ Iz ove jednakosti se mo{\zv}e izvesti formula za logaritam faktorujela broja. Ak
 $$
 n!=\prod_{k=1}^n k\sledi \log(n!)=\sum_{k=1}^n\log k.
 $$
-(Zanim{\lj}ivo je da je $\log(1\cdot2\cdot3)=\log(1+2+3)=\log1+\log2+\log3$.)
+(Zanim{\lj}ivo je da je $\log(1+2+3)=\log(1\cdot2\cdot3)=\log1+\log2+\log3$.)
 
 
 \subsection{Logaritam koli{\cv}nika}
@@ -292,7 +294,7 @@ $$
 Sli{\cv}no logaritmu proizvoda, 
 ako je
 $$
-u=\logb x\land v=\log_b y \sledi x=b^u\land y=b^v,
+u=\logb x\land v=\log_b y \podef x=b^u\land y=b^v,
 $$
 onda je, zbog jednakosti \eqref{eq:powb}
 $$
@@ -342,7 +344,7 @@ kao i jednakost
 
 Ako je
 $$
-y = \loga x\sledi x = a^y,
+y = \loga x \podef x = a^y,
 $$
 onda je 
 $$
@@ -373,11 +375,15 @@ a uzev{\sv}i u obzir i jednakost \eqref{eq:recip} dobija se
 
 \bigskip
 
+\newcommand\takecare{\includegraphics[height=24pt]{bc-takecare}}% 65 
+\robustify\takecare
+
 \font\manfnt=manfnt scaled 1200 % 1.2 * sqrt(1.2) * 1000
 \def\dbend{{\manfnt\char126\relax}}
 \def\danger#1\par{\begingroup\hangindent=\parindent 
 \hangafter=-2 \noindent\leavevmode
 \smash{\hbox to 0pt{\kern-\hangindent\lower1.2pt\hbox{\dbend}\hss}}%
+% \smash{\hbox to 0pt{\kern-\hangindent\lower15.5pt\hbox{\takecare}\hss}}%
 #1\par\endgroup}
 
 
@@ -530,6 +536,8 @@ $$
 Antilogaritam je {\sl eksponencijalna\/} funkcija $\e^x=\exp(x)$, koja je poznata po tome {\sv}to je to 
 jedina funkcija {\cv}iji je prvi izvod jednak samoj funkciji; $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
 izra{\cv}unati formulom
+% \footnote{Kako je iz formule $\e^0=0^0/0!=1$, sledi da je $0^0=0!=1$, kao {\sv}to i tvrde 
+% neki od najpoznatijih svetskih matemati{\cv}ara Conway, Knuth, Coxeter, Tao, \dots}
 \begin{equation}
 \label{eq:exp}
 \okvir{\e^x=\exp(x)=\sum_{n=0}^\infty\frac{x^n}{n!}}.
