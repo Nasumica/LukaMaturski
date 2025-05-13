@@ -19,7 +19,7 @@ $$
   Korak~{\it#1}.\kern2em\relax}
 
 \resenje
-Za $x=3$, izraz $r=(x-1)/(x+1)=1/2$. U nultom koraku postav{\lj}amo po{\cv}etne vrednosti:
+Za $x=3$ bi{\cc}e $r=(x-1)/(x+1)=1/2$. U nultom koraku postav{\lj}amo po{\cv}etne vrednosti:
 
 \smallskip
 
@@ -42,10 +42,12 @@ Za $x=3$, izraz $r=(x-1)/(x+1)=1/2$. U nultom koraku postav{\lj}amo po{\cv}etne 
 
 \noindent Rezultat je
 $$
-\ln3\approx\frac{3897967}{3548160}\approx \ram{1\.0986},
+\ln3\approx\frac{3897967}{3548160}\approx
+\ram{1.098588\ldots} 
+% \ram{1\.0986},
 $$
 {\sv}to nije lo{\sv}e za samo 5 koraka, jer je apsolutna gre{\sv}ka oko $2\.4\puta10^{-5}$.
-Ali, mo{\zv}e bo{\lj}e\dots
+Ali, mo{\zv}e bo{\lj}e~\dots
 
 \dodatak
 Ako ve{\cc} imamo precizno izra{\cv}unatu vrednost $\ln2$, onda je bo{\lj}e ra{\cv}unati $\ln3$ kao $\ln(3/4)+2\ln2$,
@@ -60,9 +62,9 @@ $$
 gde posled{\nj}i razlomak ima gre{\sv}ku od oko $1\.6\puta10^{-12}$,
 {\sv}to je vi{\sv}e od dvostruko ta{\cv}nih cifara.
 Kada mu (sa strane~\pageref{eq:ln2}) dodamo $2\ln2$, dobi{\cc}emo
-$$\ln3\approx 2\ln2 -\frac{281576520392}{978776737785} =
-\underbrace{\!1\.0986122886\,6\!}_{\hbox{\scriptsize 12 ta{\cv}nih cifara}}972615081\,\ldots$$
-% 1.09861228866972615081
+$$\ln3\approx 2\ln2 -\frac{281576520392}{978776737785} \approx
+{\,\underbrace{\!1\.0986122886\,6\!}_{\hbox{\scriptsize 12 ta{\cv}nih cifara}}972615081\,\ldots}
+$$
 
 Uop{\sv}teno, postupak je najbr{\zv}i ako ra{\cv}unamo $\ln x=\ln(x/2^n)+n\ln2$,
 gde biramo $n$ takvo da $x/2^n$ bude {\sv}to bil{\zv}e 1, odnosno, da $q$ bude najma{\nj}e mogu{\cc}e (vidi program).
