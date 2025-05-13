@@ -1,17 +1,5 @@
 \subsubsection{Prvo, pa 1}
 
-\def\fibonacci#1#2#3{%
-\newcount\a \a=#1
-\newcount\b \b=#2
-\number\a,~\number\b
-\newcount\t
-\newcount\n \n=#3 \advance\n-2
-\loop
-  \t=\b \advance\b\a \a=\t
-  , \number\b
-  \advance\n-1
-\ifnum \n>0 \repeat}
-
 \zadatak 
 Koliki procenat cena {\sl od igle do lokomotive\/}
 % Koliki procenat {\sl Fibona{\cv}ijevih brojeva\/} (Leonardo Bonacci) \fibonacci11{25},~\dots\

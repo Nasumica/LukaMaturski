@@ -745,6 +745,8 @@ $$
 \frac{\ln(-1)}{\sqrt{-1}}=\pi.
 $$
 
+\input quaternions
+
 \subsection{Izvod}
 
 Ako je 
@@ -758,6 +760,7 @@ odakle se, pomo{\cc}u jednakosti \eqref{eq:chgbase} i jednakosti za izvod slo{\z
 \end{equation}
 
 \def\dx{{\it dx}}
+\def\const{{\rm constant}}
 Povr{\sv}ina figure ispod funkcije $y=1/x$ do $x$-ose, u opsegu od 1~do~$x$ iznosi 
 $\ln x$.\penalty-1000
 Matemati{\cv}ki zapisano: $\int_1^x\dx/x=\ln x$. 
@@ -771,7 +774,7 @@ $$
 Neodre{\dj}eni integral logaritamske funkcije je
 \begin{equation}\label{eq:integral}
   \int \logb x\,\dx 
-  = x\logb x - \frac{x}{\ln b}+{\rm constant}.
+  = x\left(\logb x - \frac{1}{\ln b}\right)+\const.
 \end{equation}
 
 \subsection{Limes}
@@ -783,6 +786,18 @@ Ojler je dokazao da je
 
 \subsection{Benfordov zakon}
 
+\def\fibonacci#1#2#3{%
+\newcount\a \a=#1
+\newcount\b \b=#2
+\number\a,~\number\b
+\newcount\t
+\newcount\n \n=#3 \advance\n-2
+\loop
+  \t=\b \advance\b\a \a=\t
+  , \number\b
+  \advance\n-1
+\ifnum \n>0 \repeat}
+
 Verovatno{\cc}a da {\sl po{\cv}etne cifre\/} neke matemati{\cv}ke ili fizi{\cv}ke konstante
 (kao i du{\zv}ine reke, visine planine, broja stanovnika, rastoja{\nj}a,
 sta{\nj}a na ra{\cv}unu, \dots), 
@@ -790,27 +805,11 @@ budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl Benfordov zakon\/} (Frank
 \begin{equation}\label{eq:benford}
   P(b,\ell)=\log_b \left(1+\frac1\ell\right).
 \end{equation}
+Na primer, u {\sl Fibona{\cv}ijevom  nizu\/} (Leonardo Bonacci) brojeva
+(\fibonacci11{26},~\dots),
+verovatno{\cc}a da prva cifra nekog broja bude $9$ iznosi $\logten(1+1/9)\approx4\.58\%$.
 
-\input quaternions
-
-\subsection{Teorema prostih brojeva}
-
-Jo{\sv} jedno mesto gde se pojav{\lj}uje prirodni logaritam u {\sl teoriji brojeva} je,
-takozvana, {\sl teorema prostih brojeva\/} (PNT), kojom se je bavio Gaus kada je
-imao samo 15--16 godina.
-
-% \smallskip
-
-Ako funkcija $\pi(n)$ ima vrednost {\sl ukupan broj prostih bro\-je\-va ne ve{\cc}ih od~$n$}
-(na primer, $\pi(10)=4$ jer do 10 postoje 4 prosta broja: 2, 3, 5, i 7), onda va{\zv}i
-$$
-\lim_{n\to\infty}\frac{\pi(n)\ln n}{n} = 1.
-$$
-Posledica ove teoreme je da je $n$-ti prost broj $p_n$, za veliko $n$, otprilike
-$$
-p_n\sim n\ln n.
-$$
-
+% \input pnt
 
 \section{Zadaci i re{\sv}e{\nj}a}\label{sec:zadaci}
 
