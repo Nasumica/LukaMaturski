@@ -791,12 +791,12 @@ Ojler je dokazao da je
 \newcount\b \b=#2
 \number\a,~\number\b
 \newcount\t
-\newcount\n \n=#3 \advance\n-2
+\newcount\n \n=#3 \advance\n-3
 \loop
   \t=\b \advance\b\a \a=\t
   , \number\b
-  \advance\n-1
-\ifnum \n>0 \repeat}
+  \advance\n-1\ifnum\n>0 
+\repeat}
 
 Verovatno{\cc}a da {\sl po{\cv}etne cifre\/} neke matemati{\cv}ke ili fizi{\cv}ke konstante
 (kao i du{\zv}ine reke, visine planine, broja stanovnika, rastoja{\nj}a,
@@ -805,9 +805,13 @@ budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl Benfordov zakon\/} (Frank
 \begin{equation}\label{eq:benford}
   P(b,\ell)=\log_b \left(1+\frac1\ell\right).
 \end{equation}
-Na primer, u {\sl Fibona{\cv}ijevom  nizu\/} (Leonardo Bonacci) brojeva
-(\fibonacci11{26},~\dots),
+
+Na primer, u {\sl Fibona{\cv}ijevom  nizu\/} (Leonardo Bonacci): \fibonacci11{17},~\dots,
 verovatno{\cc}a da prva cifra nekog broja bude $9$ iznosi $\logten(1+1/9)\approx4\.58\%$.
+Ovu zakonitost je prvi otkrio 1881.\ godine astronom {\Nj}ucom (Simon Newcomb), kada je primetio da su
+listovi logaritamskih tablica koje je dugo koristio najpr{\lj}aviji
+na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
+(Videti zadatak \ref{sssec:benford} na strani \pageref{sssec:benford}.)
 
 % \input pnt
 
