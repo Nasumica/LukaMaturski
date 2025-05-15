@@ -174,7 +174,16 @@
 \parindent=24pt
 
 \usepackage{imakeidx}
-\makeindex
+
+\makeindex[columns=2, 
+title=Indeks, 
+%intoc,             % disable option "intoc"
+]
+
+\indexsetup{        % if unspecified, "level" defaults to \chapter* or \section*
+%level=\chapter      % numbered chapter in book class
+level=\section     % numbered section in article class
+}
 
 \def\idx#1{#1\index{#1}}
 
@@ -916,8 +925,6 @@ na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 
 % \input algebra
 
-\printindex
-
 
 \section{Reference}
 
@@ -999,10 +1006,9 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \end{enumerate}
 
 
+\input index
 
 
-
-\bigskip
 
 \input dayofweek
 
