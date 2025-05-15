@@ -173,6 +173,11 @@
 
 \parindent=24pt
 
+\usepackage{imakeidx}
+\makeindex
+
+\def\idx#1{#1\index{#1}}
+
 \begin{document}
 
 \input titlepage
@@ -188,7 +193,7 @@ trigonometrijskim i {\nj}ima inverznim funkcijama, spada u grupu {\sl elementarn
 Opisane su {\nj}ene osobine i dati su primeri {\nj}ene upotrebe,
 kao i \hyperref[sec:zadaci]{zadaci sa re{\sv}e{\nj}ima} (ukupno \the\numexpr\totvalue{zadaci}).
 
-Sama re{\cv} {\sl logaritam\/} poti{\cv}e od gr{\cv}kih re{\cv}i 
+Sama re{\cv} {\sl logaritam\/}\index{logaritam} poti{\cv}e od gr{\cv}kih re{\cv}i 
 $\lambda\acute o\gamma o\varsigma$~({\sl logos\/}) i 
 $\alpha\rho\iota\theta\mu\acute o\varsigma$~({\sl aritmos\/}), 
 sa zna\-{\cv}e\-{\nj}em \navod{odgovaraju{\cc}i broj}.
@@ -286,7 +291,7 @@ Iz ove jednakosti se mo{\zv}e izvesti formula za logaritam faktorujela broja. Ak
 $$
 n!=\prod_{k=1}^n k\sledi \log(n!)=\sum_{k=1}^n\log k.
 $$
-(Zanim{\lj}ivo je da je $\log(1+2+3)=\log(1\cdot2\cdot3)=\log1+\log2+\log3$.)
+(Zanim{\lj}ivo je da je $\log(1\cdot2\cdot3)=\log1+\log2+\log3=\log(1+2+3)$.)
 
 
 \subsection{Logaritam koli{\cv}nika}
@@ -910,6 +915,9 @@ na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 
 
 % \input algebra
+
+\printindex
+
 
 \section{Reference}
 
