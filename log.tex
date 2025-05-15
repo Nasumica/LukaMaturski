@@ -534,7 +534,7 @@ $$
 \def\ep{\hphantom{!}}
 \def\rf#1!{\frac1{\hphantom{!}#1!}}
 Antilogaritam je {\sl eksponencijalna\/} funkcija $\e^x=\exp(x)$, koja je poznata po tome {\sv}to je to 
-jedina funkcija {\cv}iji je prvi izvod jednak samoj funkciji; $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
+jedina funkcija {\cv}iji je prvi izvod jednak samoj funkciji: $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
 izra{\cv}unati formulom
 % \footnote{Kako je iz formule $\e^0=0^0/0!=1$, sledi da je $0^0=0!=1$, kao {\sv}to i tvrde 
 % neki od najpoznatijih svetskih matemati{\cv}ara Conway, Knuth, Coxeter, Tao, \dots}
@@ -771,10 +771,15 @@ $$
 
 
 \subsection{Integral}
-Neodre{\dj}eni integral logaritamske funkcije je
+% Neodre{\dj}eni integral logaritamske funkcije je
+% \begin{equation}\label{eq:integral}
+%   \int \logb x\,\dx 
+%   = x\left(\logb x - \frac{1}{\ln b}\right)+\const.
+% \end{equation}
+Neodre{\dj}eni integral prirodnog logaritma je
 \begin{equation}\label{eq:integral}
-  \int \logb x\,\dx 
-  = x\left(\logb x - \frac{1}{\ln b}\right)+\const.
+  \int \ln x\,\dx 
+  = x \ln x - x + \const.
 \end{equation}
 
 \subsection{Limes}
