@@ -26,6 +26,20 @@
 
 % \usepackage[symbol]{footmisc}
 
+\usepackage{imakeidx}
+
+\makeindex[columns=2, 
+title=Indeks, 
+%intoc,             % disable option "intoc"
+]
+
+\indexsetup{        % if unspecified, "level" defaults to \chapter* or \section*
+%level=\chapter      % numbered chapter in book class
+level=\section     % numbered section in article class
+}
+
+\def\idx#1{#1\index{#1}}
+
 \usepackage[dvipsnames]{xcolor}
 
 \definecolor{darkblue}{rgb}{0, 0, 0.4}
@@ -173,20 +187,6 @@
 
 \parindent=24pt
 
-\usepackage{imakeidx}
-
-\makeindex[columns=2, 
-title=Indeks, 
-%intoc,             % disable option "intoc"
-]
-
-\indexsetup{        % if unspecified, "level" defaults to \chapter* or \section*
-%level=\chapter      % numbered chapter in book class
-level=\section     % numbered section in article class
-}
-
-\def\idx#1{#1\index{#1}}
-
 \begin{document}
 
 \input titlepage
@@ -209,7 +209,7 @@ sa zna\-{\cv}e\-{\nj}em \navod{odgovaraju{\cc}i broj}.
 
 
 
-\subsection{Definicija logaritma}
+\subsection{Definicija logaritma}\index{definicija}
 
 Funkcija
 \begin{equation}
@@ -221,10 +221,9 @@ x=b^{\,y},
 % \qquad\text{odnosno},\qquad
 % b=\sqrt[y]x,
 $$
-gde je $b$ {\sl osnova\/} ({\sl baza\/}) logaritma, a $x$ {\sl argument}.
+gde je $b$ {\sl osnova\/}\index{osnova} ({\sl baza\/})\index{baza} logaritma, a $x$ {\sl\idx{argument}}.
 (Izgovara se \navod{$y$ je jednako logaritam od $x$ za osnovu $b$}
 ili kra{\cc}e \navod{$y$ je logaritam $b$ od $x$}.)
-% Tako{\dj}e va{\zv}i $b=x^{1/y}=\sqrt[y]x$.
 
 
 \subsection{Tok i grafik funkcije}
@@ -240,14 +239,14 @@ Funkcija je {\sl monotona\/}: za $b>1$ funkcija je {\sl rastu{\cc}a}, dok za $b<
 Zbog toga va{\zv}i {\sl bijekcija\/}: $\logb u=\logb v \Leftrightarrow u=v$.
 Funkcija ima jednu {\sl nulu}, uvek za $x=1$.
 $$
-\slika{\includegraphics[]{log.1}}{Grafik logaritamske funkcije $y=\logb x$.}
+\slika{\includegraphics[]{log.1}}{Grafik\index{grafik} logaritamske funkcije $y=\logb x$.}
 $$
 
 \subsection{Antilogaritam}
 
 \def\antilog{\mathop{\rm antilog}\nolimits}
 Inverzna funkcija logaritmu
-je obi{\cv}no stepenova{\nj}e osnove logaritma argumentom i zove se {\sl antilogaritam}
+je obi{\cv}no stepenova{\nj}e osnove logaritma argumentom i zove se {\sl\idx{antilogaritam}}
 \begin{equation}
 \okvir{\antilog_b x = \logb^{-1}x =  b^x}.
 \end{equation}
@@ -259,11 +258,11 @@ Iz same definicije va{\zv}i
 
 \section{Logaritamske jednakosti}
 
-Za logaritamsku funkciju va{\zv}e razne {\sl jednakosti\/} koje se koriste za 
+Za logaritamsku funkciju va{\zv}e razne {\sl jednakosti\/}\index{jednakosti} koje se koriste za 
 upro{\sv}{\cc}iva{\nj}e i pri\-la\-go\-{\dj}a\-va\-{\nj}e izraza prilikom re{\sv}ava{\nj}a
 problema i zadataka.
 
-\subsection{Logaritam stepena osnove}
+\subsection{Logaritam stepena osnove}\index{stepen osnove}
 
 Po samoj definiciji logaritma, ako je $x=b^a$, onda je
 \begin{equation}
@@ -280,7 +279,7 @@ Tako{\dj}e je bitna jednakost
 \end{equation}
 koja proizilazi iz same definicije logaritma i antilogaritma.
 
-\subsection{Logaritam proizvoda}
+\subsection{Logaritam proizvoda}\index{proizvod}
 
 Ako je
 $$
@@ -296,14 +295,14 @@ Odavde je
 \label{eq:lnmul}
 \end{equation}
 
-Iz ove jednakosti se mo{\zv}e izvesti formula za logaritam faktorujela broja. Ako je
+Iz ove jednakosti se mo{\zv}e izvesti formula za logaritam faktorujela\index{faktorijel $(n"!)$} broja. Ako je
 $$
 n!=\prod_{k=1}^n k\sledi \log(n!)=\sum_{k=1}^n\log k.
 $$
 (Zanim{\lj}ivo je da je $\log(1\cdot2\cdot3)=\log1+\log2+\log3=\log(1+2+3)$.)
 
 
-\subsection{Logaritam koli{\cv}nika}
+\subsection{Logaritam koli{\cv}nika}\index{koli{\cv}nik}
 
 Sli{\cv}no logaritmu proizvoda, 
 ako je
@@ -325,7 +324,7 @@ Iz ove jednakosti sledi
 \label{eq:recip}
 \end{equation}
 
-\subsection{Logaritam stepena broja}
+\subsection{Logaritam stepena broja}\index{stepen}
 
 Ako je
 $$
@@ -398,7 +397,7 @@ a uzev{\sv}i u obzir i jednakost \eqref{eq:recip} dobija se
 \hangafter=-2 \noindent\leavevmode
 \smash{\hbox to 0pt{\kern-\hangindent\lower1.2pt\hbox{\dbend}\hss}}%
 % \smash{\hbox to 0pt{\kern-\hangindent\lower15.5pt\hbox{\takecare}\hss}}%
-#1\par\endgroup}
+\index{pozor}#1\par\endgroup}
 
 
 \danger\label{danger}%\textbf{Napomena:\/}
@@ -411,7 +410,7 @@ me{\dj}utim, $\log x^2=2\log|x|$ za bilo koje $x\ne0$.
 
 \section{Naj{\cv}e{\sv}{\cc}e logaritamske osnove}
 
-\subsection{Osnova 10}
+\subsection{Osnova 10}\index{10}\index{log10@$\logten$}\index{dekadni logaritam}
 
 U ini{\zv}e{\nj}erstvu se naj{\cv}e{\sv}{\cc}e koristi logaritam sa osnovom 10,
 zove se {\sl dekadni\/} ili {\sl zajedni{\cv}ki\/} logaritam, i pi{\sv}e se
@@ -441,7 +440,7 @@ $$
 $$
 
 U fizici se za mere{\nj}e nivoa signala ili zvuka koristi jedinica {\sl be\/l}~(B), ali je {\cv}e{\sv}{\cc}e
-u prakti{\cv}noj upotrebi 10 puta ma{\nj}a jedinica {\sl decibel\/}~(dB), odnosno, $1\um{B}=10\um{dB}$. \
+u prakti{\cv}noj upotrebi 10 puta ma{\nj}a jedinica {\sl decibel\/}~(dB)\index{decibel}, odnosno, $1\um{B}=10\um{dB}$. \
 Nivo \hbox{sig\-na\-la} $L$, koji zavisi
 od odnosa izmerene snage $P$ i refrentne snage $P_0$, izra{\zv}en u deci\-belima iznosi
 $$
@@ -466,7 +465,7 @@ ili pH
 % ${\rm pH}=-\log[{\rm H}^+]$ 
 vrednosti.
 
-\subsection{Osnova 2}
+\subsection{Osnova 2}\index{2}\index{log2@$\logtwo$}\index{binarni logaritam}
 
 \def\lb{\mathop{\rm lb}}
 \def\bits{{\it bits}}
@@ -504,7 +503,7 @@ $$
 $$
 
 Kako su i realni brojevi u memoriji predstav{\lj}eni kao ure{\dj}eni parovi binarnih brojeva u obliku
-$x=(\mant,\expo)$, sa zna{\cv}e{\nj}em
+$x=(\mant,\expo)$\index{mantisa}\index{eksponent}, sa zna{\cv}e{\nj}em
 $$
 x=\mant\puta2^\expo,
 $$
@@ -517,7 +516,7 @@ ako je $\mant>0$, ina{\cv}e je nedefinisan.
 \smallskip
 
 Binarni logaritam se koristi i u atomskoj fizici.
-Vreme {\sl poluraspada\/} $\th$ je vreme potrebno da se raspadne polovina jezgara atoma neke materije. 
+Vreme {\sl poluraspada\/} $\th$\index{poluraspad} je vreme potrebno da se raspadne polovina jezgara atoma neke materije. 
 Ako imamo po{\cv}etan broj jezgara $N_0$ i broj jezgara $N_t$ nakon vremena $t$, njihov odnos
 se mo{\zv}e pred\-sta\-vi\-ti formulom
 \begin{equation}
@@ -529,15 +528,15 @@ Ova formula se koristi i za odre{\dj}iva{\nj}e starosti stena ili fosila.
 
 %\newpage
 
-\subsection{Osnova \e}
+\subsection{Osnova \e}\index{e@$\e$}\index{ln@$\ln$}\index{prirodni logaritam}
 
-Ovu logaritamsku osnovu je otkrio Jakob Bernuli (Jacob Bernoulli) kada je
+Ovu logaritamsku osnovu je otkrio Jakob \idx{Bernuli} (Jacob Bernoulli) kada je
 prou{\cv}avao {\sl slo{\zv}enu kamatu\/} i dokazao da {\sl kontinualna\/} slo{\zv}ena kamata
 te{\zv}i konstanti
 $$
 \e=\lim_{n\to\infty}\left(1+\frac1n\right)^{\!n}\!,
 $$
-ali je tek Ojler (Leonhard Euler)
+ali je tek \idx{Ojler} (Leonhard Euler)
 odredio {\nj}enu ta{\cv}nu vrednosti i dao joj ime.
 Logaritam za ovu osnovu se zove {\sl prirodni\/} logaritam ({\sl logarithmus naturalis\/})
 i pi{\sv}e se
@@ -547,17 +546,17 @@ $$
 
 \def\ep{\hphantom{!}}
 \def\rf#1!{\frac1{\hphantom{!}#1!}}
-Antilogaritam je {\sl eksponencijalna\/} funkcija $\e^x=\exp(x)$, koja je poznata po tome {\sv}to je to 
+Antilogaritam je {\sl eksponencijalna\/} funkcija\index{eksponencijalna funkcija} $\e^x=\exp(x)$\index{exp@$\exp$}, koja je poznata po tome {\sv}to je to 
 jedina funkcija {\cv}iji je prvi izvod jednak samoj funkciji: $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
 izra{\cv}unati formulom
 % \footnote{Kako je iz formule $\e^0=0^0/0!=1$, sledi da je $0^0=0!=1$, kao {\sv}to i tvrde 
 % neki od najpoznatijih svetskih matemati{\cv}ara Conway, Knuth, Coxeter, Tao, \dots}
 \begin{equation}
-\label{eq:exp}
+\label{eq:exp}\index{formula}
 \okvir{\e^x=\exp(x)=\sum_{n=0}^\infty\frac{x^n}{n!}}.
 \end{equation}
 Ako stavimo da je $x=1$,
-brojna vrednost osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
+\idx{brojna vrednost} osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
 \begin{equation}\label{eq:e}
 \begin{split}
 \e
@@ -573,12 +572,12 @@ brojna vrednost osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
 sa {\zv}e{\lj}enom ta{\cv}no{\sv}{\cc}u.
 
 
-\section{Brojna vrednost logaritma}
+\section{Brojna vrednost logaritma}\index{brojna vrednost}
 
 \subsection{Formula}
 
 Brojna vrednost prirodnog logaritma mo{\zv}e biti izra{\cv}unata pomo{\cc}u formule
-\begin{equation}
+\begin{equation}\index{formula}\index{ln@$\ln$}
 \okvir{
 \ln x
 %&=2\mathop{\rm arctanh}\frac{x-1}{x+1}\\
@@ -587,10 +586,10 @@ Brojna vrednost prirodnog logaritma mo{\zv}e biti izra{\cv}unata pomo{\cc}u form
 \label{eq:lnred}
 \end{equation}
 do {\zv}e{\lj}ene ta{\cv}nosti.
-Postupak kojim se ra{\cv}una $y=\ln x$ sa ta{\cv}no{\sv}{\cc}u $\varepsilon$
+Postupak kojim se ra{\cv}una $y=\ln x$ sa ta{\cv}no{\sv}{\cc}u $\varepsilon$\index{epsilon $(\varepsilon)$}
 izgleda ovako:
 \def\asg{\leftarrow}%
-\begin{equation}
+\begin{equation}\index{algoritam}
 \label{eq:alg}
 \begingroup\color{Blue}
 \ram{\enspace
@@ -604,7 +603,7 @@ izgleda ovako:
 \end{equation}
 Ovim postupkom se mo{\zv}e izra{\cv}unati vrednost
 \begin{align}
-  \begin{split}\label{eq:ln2}
+  \begin{split}\label{eq:ln2}\index{ln2@$\ln 2$}
     \ln2
     & = \frac{2}{1\cdot3^1}+\frac{2}{3\cdot3^3}+\frac{2}{5\cdot3^5}+\frac{2}{7\cdot3^7}+\frac{2}{9\cdot3^9}+\cdots\\
     \noalign{\smallskip}
@@ -616,7 +615,7 @@ Ovim postupkom se mo{\zv}e izra{\cv}unati vrednost
     \ldots
   \end{split}
   \intertext{kao i vrednost}
-  \begin{split}\label{eq:ln10}
+  \begin{split}\label{eq:ln10}\index{ln10@$\ln10$}
     \ln10
     & = \frac{2}{1\cdot9^1}+\frac{2}{3\cdot9^3}+\frac{2}{5\cdot9^5}+\frac{2}{7\cdot9^7}+\frac{2}{9\cdot9^9}+\cdots+3\ln2\\
     \noalign{\smallskip}
@@ -632,7 +631,7 @@ Ovim postupkom se mo{\zv}e izra{\cv}unati vrednost
 Pomo{\cc}u {\nj}ih se mogu izra{\cv}unati brojne vrednosti binarnog $\logtwo x=\ln x/\ln2$, odnosno, de\-kad\-nog 
 $\logten x=\ln x/\ln 10$ logaritma.
 
-\subsection{Veri{\zv}ni razlomak}
+\subsection{Veri{\zv}ni razlomak}\index{veri{\zv}ni ralomak}
 
 Brojna vrednost prirodnog logaritma mo{\zv}e se izra{\cv}unati i pomo{\cc}u {\sl veri{\zv}nog razlomka}
 \begin{equation}\label{eq:verige}
@@ -644,13 +643,13 @@ Brojna vrednost prirodnog logaritma mo{\zv}e se izra{\cv}unati i pomo{\cc}u {\sl
 \end{aligned}
 \end{equation}
 Poput simbola koji se koriste za sumu `$\rm\Sigma$' ili proizvod `$\rm\Pi$', 
-Gaus (Johann Carl Friedrich Gau\ss) je smislio, verovatno, najpogodniji na{\cv}in za predstav{\lj}a{\nj}e
+\idx{Gaus} (Johann Carl Friedrich Gau\ss) je smislio, verovatno, najpogodniji na{\cv}in za predstav{\lj}a{\nj}e
 veri{\zv}nih ({\sl lan\-{\cv}a\-nih\/}) razlomaka,
 gde simbol `K' poti{\cv}e od nema{\cv}ke re{\cv}i za {\sl prekinuti lanac\/} ({\sl Kettenbruch\/}). 
 Izraz iza ovog simbola pokazuje kako izgleda {\sl op{\sv}ti {\cv}lan\/} veri{\zv}nog razlomka.
 
 \def\ff#1/#2,{\frac{#1}{#2},}
-Ako pomo{\cc}u ove formule izra{\cv}unamo prvih 11 {\sl konvergenata\/} $\ln2$ kao $-\ln(1+x)$, 
+Ako pomo{\cc}u ove formule izra{\cv}unamo prvih 11 {\sl konvergenata\/}\index{konvergent} $\ln2$ kao $-\ln(1+x)$, 
 gde je $x=-1/2$,
 dobi{\cc}emo
 $$
@@ -660,9 +659,9 @@ $$
 gde je posled{\nj}i razlomak ta{\cv}an na 5 decimala.
 
 
-\subsection{Logaritamske tablice}
+\subsection{Logaritamske tablice}\index{tablice}
 
-Prve tablice logaritama je 1614.\ godine izra{\cv}unao {\sv}kotski matemati{\cv}ar Neper (John Napier of Merchiston),
+Prve tablice logaritama je 1614.\ godine izra{\cv}unao {\sv}kotski matemati{\cv}ar \idx{Neper} (John Napier of Merchiston),
 koje su prakti{\cv}no sadr{\zv}ale logaritam za osnaovu $1/\e$, sa ska\-li\-ra\-nim argumentom i rezultatom,
 iako sam Neper nije znao za konstantu $\e$.
 Savremenim zapisom bi ovaj logaritam bio definisan kao
@@ -670,12 +669,12 @@ $$
 \naplog (x) = 10^7\log_{1/\e}(x/10^7) = -10^7\ln(x/10^7).
 $$
 
-Nekoliko godina kasnije, 1617.\ i 1624,\ engleski matemati{\cv}ar Brigs (Henry Briggs) je izra{\cv}unao
+Nekoliko godina kasnije, 1617.\ i 1624,\ engleski matemati{\cv}ar \idx{Brigs} (Henry Briggs) je izra{\cv}unao
 tablice de\-kad\-nih logaritama sa 14 cifara ta{\cv}nosti, koje se uz dopune i ispravke
 koriste i danas pod imenom {\sl Brigsove tablice}.
 
 
-\subsection{Logaritmar}
+\subsection{Logaritmar}\index{logaritmar}
 
 \input siber
 
@@ -698,7 +697,7 @@ $$
 $$
 
 Tablice i logaritmari se i danas koriste u vojsci, kao rezerva u slu{\cv}aju otkaziva{\nj}a elektronike.
-Prvi kompjuter ENIAC (Electronic Numerical Integrator And Computer)
+Prvi kompjuter \idx{ENIAC} (Electronic Numerical Integrator And Computer)
 je naprav{\lj}en 1946.\ godine da bi izra{\cv}unao tablice za vojsku.
 
 
@@ -706,19 +705,19 @@ je naprav{\lj}en 1946.\ godine da bi izra{\cv}unao tablice za vojsku.
 
 \subsection{Kompleksni logaritam}
 
-Ako u kompleksnoj ravni imamo kompleksan broj $z\in{\mathbb C}$, 
+Ako u kompleksnoj ravni imamo \idx{kompleksan broj} $z\in{\mathbb C}$, 
 $$
 \slika{\includegraphics[]{log.2}}{Broj $z$ u kompleksnoj ravni.}
 $$
 koji mo{\zv}e biti predstav{\lj}ean kao
-\begin{alignat*}{3}
+\begin{alignat*}{3}\index{i@$i$}\index{polarni zapis}
 z 
 &= x + iy &&\qquad\text{pravougle koordinate}\\
 &= \rho\, (\cos\theta +i\sin\theta)&&\qquad\text{polarne koordinate}\\
 %&= \rho\mathbin{\rm cis}\theta&&\qquad\text{skra{\cc}eni polarni zapis}\\
 & = \rho\, \e^{i\theta} &&\qquad\text{Ojlerova formula}
 \end{alignat*}
-onda se, iz Ojlerove formule i jednakosti \eqref{eq:lnmul} i \eqref{eq:powb}, dobija
+onda se, iz Ojlerove formule\index{Ojlerova formula} i jednakosti \eqref{eq:lnmul} i \eqref{eq:powb}, dobija
 \begin{equation}
 \okvir{\ln z = \ln\rho + i\theta}.
 \label{eq:cln}
@@ -767,7 +766,7 @@ Ako je
 $$
 y=\ln x\sledi y'=\frac1x,
 $$
-odakle se, pomo{\cc}u jednakosti \eqref{eq:chgbase} i jednakosti za izvod slo{\zv}ene funkcije, mo{\zv}e dobiti
+odakle se, pomo{\cc}u jednakosti \eqref{eq:chgbase} i jednakosti za \idx{izvod} slo{\zv}ene funkcije, mo{\zv}e dobiti
 \begin{equation}
 \okvir{y=\logb(f(x))\sledi y'=\frac{f'(x)}{f(x)\ln b}}.
 \label{eq:izvod}
@@ -791,15 +790,15 @@ $$
 %   \int \logb x\,\dx 
 %   = x\left(\logb x - \frac{1}{\ln b}\right)+\const.
 % \end{equation}
-Neodre{\dj}eni integral prirodnog logaritma je
+Neodre{\dj}eni \idx{integral} prirodnog logaritma je
 \begin{equation}\label{eq:integral}
   \int \ln x\,\dx 
   = x \ln x - x \plusconst.
 \end{equation}
 
-\subsection{Limes}
+\subsection{Limes}\index{limes}
 
-Ojler je dokazao da je
+\idx{Ojler} je dokazao da je
 \begin{equation}\label{eq:limes}
   \ln x=\lim_{n\to\infty}n(\sqrt[n]x-1).
 \end{equation}
@@ -821,14 +820,14 @@ Ojler je dokazao da je
 Verovatno{\cc}a da {\sl po{\cv}etne cifre\/} neke matemati{\cv}ke ili fizi{\cv}ke konstante
 (kao i du{\zv}ine reke, visine planine, broja stanovnika, rastoja{\nj}a,
 sta{\nj}a na ra{\cv}unu, \dots), 
-budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl Benfordov zakon\/} (Frank Benford), i iznosi
+budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl \idx{Benfordov zakon}\/} (Frank Benford), i iznosi
 \begin{equation}\label{eq:benford}
   P(b,\ell)=\log_b \left(1+\frac1\ell\right).
 \end{equation}
 
-Na primer, u {\sl Fibona{\cv}ijevom  nizu\/} (Leonardo Bonacci): \fibonacci11{17},~\dots,
+Na primer, u {\sl Fibona{\cv}ijevom  nizu\/}\index{Fibona{\cv}ijev niz}\index{Fibona{\cv}i} (Leonardo Bonacci): \fibonacci11{17},~\dots,
 verovatno{\cc}a da prva cifra nekog broja bude $9$ iznosi $\logten(1+1/9)\approx4\.58\%$.
-Ovu zakonitost je prvi otkrio 1881.\ godine astronom {\Nj}ucom (Simon Newcomb), kada je primetio da su
+Ovu zakonitost je prvi otkrio 1881.\ godine astronom {\Nj}ucom\index{Njucom@{\Nj}ucom} (Simon Newcomb), kada je primetio da su
 listovi logaritamskih tablica koje je dugo koristio najpr{\lj}aviji
 na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 (Videti zadatak \ref{sssec:benford} na strani \pageref{sssec:benford}.)
@@ -1006,10 +1005,6 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \end{enumerate}
 
 
-\input index
-
-
-
 \input dayofweek
 
 \def\twodig#1{\ifnum#1>9\else0\fi\number#1}
@@ -1024,17 +1019,9 @@ zadataka za prijemni ispit}{Matematika}(2011)
 % \rightline{\eightssi--- Luka S. Ne{\sv}i{\cc},\enspace\eightss (\the\year)}
 \rightline{\eightssi--- \href{mailto:luka.s.nesic@gmail.com}{Luka S. Ne{\sv}i{\cc}},\enspace\eightss\DayOfWeek~\datum~\vreme}
 
-\iffalse
-\par\vfill
 
-$$
-\slika{\includegraphics[
-  % decodearray={0.5 1 0.5 1 0.5 1},
-  width=\textwidth]{mandel-log-spiral.jpg}}{%
-\href{https://en.wikipedia.org/wiki/Mandelbrot_set}{Mandelbrotov skup} --- 
-\href{https://en.wikipedia.org/wiki/Logarithmic_spiral}{logaritamske spirale}.}
-$$
-\fi
+\input index
+
 
 \iftrue
 \newpage
