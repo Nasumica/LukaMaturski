@@ -393,18 +393,18 @@ a uzev{\sv}i u obzir i jednakost \eqref{eq:recip} dobija se
 
 \font\manfnt=manfnt scaled 1200 % 1.2 * sqrt(1.2) * 1000
 \def\dbend{{\manfnt\char126\relax}}
-\def\danger#1\par{\begingroup\hangindent=\parindent 
+\def\danger{\hangindent=\parindent 
 \hangafter=-2 \noindent\leavevmode
 \smash{\hbox to 0pt{\kern-\hangindent\lower1.2pt\hbox{\dbend}\hss}}%
 % \smash{\hbox to 0pt{\kern-\hangindent\lower15.5pt\hbox{\takecare}\hss}}%
-\index{pozor}#1\par\endgroup}
+\index{pozor}}
 
 
 \danger\label{danger}%\textbf{Napomena:\/}
 Treba biti oprezan kod kori{\sv}{\cc}e{\nj}a svih ovih jednakosti, naro{\cv}ito kod ste\-pe\-no\-va{\nj}a, 
 i~uvek treba proveriti opseg u kome se ra{\cv}una.
 Na primer, iz jed\-na\-ko\-sti~\eqref{eq:bpow}, sledi $\log x^2=2\log x$, {\sv}to je ispravno za $x>0$,
-me{\dj}utim, $\log x^2=2\log|x|$ za bilo koje $x\ne0$. 
+me{\dj}utim, $\log x^2=2\log|x|$\index{apsolutna vrednost $\vert x\vert$} za bilo koje $x\ne0$. 
 % Ili, iz jednakosti~\eqref{eq:bpow} i~\eqref{eq:powbase}, $\log_{b^2}x^2 = \log_{|b|}|x|$,
 % i sli{\cv}ne varijacije.
 
@@ -664,7 +664,7 @@ gde je posled{\nj}i razlomak ta{\cv}an na 5 decimala.
 Prve tablice logaritama je 1614.\ godine izra{\cv}unao {\sv}kotski matemati{\cv}ar \idx{Neper} (John Napier of Merchiston),
 koje su prakti{\cv}no sadr{\zv}ale logaritam za osnaovu $1/\e$, sa ska\-li\-ra\-nim argumentom i rezultatom,
 iako sam Neper nije znao za konstantu $\e$.
-Savremenim zapisom bi ovaj logaritam bio definisan kao
+Savremenim zapisom bi logaritam iz Neperovih tablica bio definisan kao
 $$
 \naplog (x) = 10^7\log_{1/\e}(x/10^7) = -10^7\ln(x/10^7).
 $$
@@ -678,9 +678,9 @@ koriste i danas pod imenom {\sl Brigsove tablice}.
 
 \input siber
 
-Pre pojave digitrona, za pribli{\zv}no odre{\dj}iva{\nj}e
+Pre pojave digitrona\index{digitron}, za pribli{\zv}no odre{\dj}iva{\nj}e
 brojne vrednosti logaritma,
-koristila se je analogna mehani{\cv}ka sprava sa nekoliko le{\nj}ira zvana {\sl logaritmar}.
+koristila se je analogna mehani{\cv}ka sprava sa nekoliko le{\nj}ira zvana {\sl logaritmar}\index{sziber@{\sv}iber}.
 $$
 \slika{\includegraphics[width=0.90\textwidth]{siber2.jpg}}{{\Sv}iber.}
 $$
@@ -691,7 +691,7 @@ kliza{\cv}a i {\cv}ita{\nj}em vrednosti sa odgovaraju{\cc}e skale.
 (Videti za\-da\-tke~\ref{sssec:siberpower} i~\ref{sssec:sibersqrt}.)
 
 Postojale su i kru{\zv}ne varijante, pa i {\dz}epne, gde je
-{\dz}epni sat sa logaritmarom i kompasom  bio \navod{iPhone} XIX i prve polovine XX~veka.
+{\dz}epni sat sa logaritmarom i kompasom  bio \navod{\idx{iPhone}} XIX i prve polovine XX~veka.
 $$
 \slika{\includegraphics[width=50\mm]{sahat.jpg}}{{\Dz}epni logaritmar.}
 $$
@@ -722,7 +722,7 @@ onda se, iz Ojlerove formule\index{Ojlerova formula} i jednakosti \eqref{eq:lnmu
 \okvir{\ln z = \ln\rho + i\theta}.
 \label{eq:cln}
 \end{equation}
-Po{\sv}to je $\rho=|z|=\sqrt{x^2+y^2}\ge0$,
+Po{\sv}to je $\rho=|z|=\sqrt{x^2+y^2}\ge0$\index{apsolutna vrednost $\vert x\vert$},
 sledi da prirodni logaritam kompleksnog broja $z$ nije definisan samo za $z=0$, kada je $\ln z=\rsinfty$.
 Kako je $y/x=\tan\theta$, prirodni logaritam kompleksnog broja,
 pred\-stav\-{\lj}e\-nog pravouglim koordinatama, iz formule \eqref{eq:cln},
@@ -925,7 +925,7 @@ na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 % \input algebra
 
 
-\section{Reference}
+\section{Odrednice}
 
 \tolerance=10000
 
