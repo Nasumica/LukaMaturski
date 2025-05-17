@@ -698,7 +698,7 @@ $$
 
 Tablice i logaritmari se i danas koriste u vojsci, kao rezerva u slu{\cv}aju otkaziva{\nj}a elektronike.
 Prvi kompjuter \idx{ENIAC} (Electronic Numerical Integrator And Computer)
-je naprav{\lj}en 1946.\ godine da bi izra{\cv}unao tablice za vojsku.
+je naprav{\lj}en 1946.\ godine sa jednom namenom: {da izra{\cv}una tablice za vojsku}.
 
 
 \section{Razno}
@@ -732,12 +732,14 @@ mo{\zv}e se izra{\cv}unati
 \okvir{\ln(x+iy)={\frac12}\ln(x^2+y^2)+i\arctan\left(\frac yx\right)}.
 \label{eq:clncart}
 \end{equation}
+Kako je $\e^{x+iy}=\e^x\cdot\e^{iy}$, a $\e^{iy}=\cos y+i\sin y$, sledi da je i
+\begin{equation}\index{exp@$\exp$}
+  \okvir{\exp(x+iy)=\e^x\,(\cos y+i\sin y)}.
+\end{equation}
 
 I za kompleksne brojeve va{\zv}i jednakost promene osnove \eqref{eq:chgbase}, tako da za dva komp\-leks\-na
 broja $z$ i $w$, gde je $z\ne0$, $w\ne0$ i $w\ne1$, sledi
-$$
-\log_w z=\frac{\ln z}{\ln w},
-$$
+$\log_w z=\ln z/\ln w$,
 gde se $\ln z$ i $\ln w$ ra{\cv}unaju pomo{\cc}u formule \eqref{eq:cln}, odnosno, \eqref{eq:clncart}.
 Na primer,
 $$
@@ -833,7 +835,7 @@ listovi logaritamskih tablica koje je dugo koristio najpr{\lj}aviji
 na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 (Videti zadatak \ref{sssec:benford} na strani \pageref{sssec:benford}.)
 
-% \input pnt
+\input pnt
 
 \section{Zadaci i re{\sv}e{\nj}a}\label{sec:zadaci}
 
