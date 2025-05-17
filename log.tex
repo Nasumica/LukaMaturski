@@ -465,7 +465,7 @@ ili pH
 % ${\rm pH}=-\log[{\rm H}^+]$ 
 vrednosti.
 
-\subsection{Osnova 2}\index{2}\index{log2@$\logtwo$}\index{binarni logaritam}
+\subsection{Osnova 2}\index{2}\index{log2@$\log_2$}\index{binarni logaritam}
 
 \def\lb{\mathop{\rm lb}}
 \def\bits{{\it bits}}
@@ -516,7 +516,7 @@ ako je $\mant>0$, ina{\cv}e je nedefinisan.
 \smallskip
 
 Binarni logaritam se koristi i u atomskoj fizici.
-Vreme {\sl poluraspada\/} $\th$\index{poluraspad} je vreme potrebno da se raspadne polovina jezgara atoma neke materije. 
+Vreme {\sl poluraspada\/} $\th$\index{poluraspad ($\th$)} je vreme potrebno da se raspadne polovina jezgara atoma neke materije. 
 Ako imamo po{\cv}etan broj jezgara $N_0$ i broj jezgara $N_t$ nakon vremena $t$, njihov odnos
 se mo{\zv}e pred\-sta\-vi\-ti formulom
 \begin{equation}
@@ -534,7 +534,7 @@ Ovu logaritamsku osnovu je otkrio Jakob \idx{Bernuli} (Jacob Bernoulli) kada je
 prou{\cv}avao {\sl slo{\zv}enu kamatu\/} i dokazao da {\sl kontinualna\/} slo{\zv}ena kamata
 te{\zv}i konstanti
 $$
-\e=\lim_{n\to\infty}\left(1+\frac1n\right)^{\!n}\!,
+\e=\lim_{n\to\infty}\left(1+\frac1n\right)^{\!n}\!,\index{limes}
 $$
 ali je tek \idx{Ojler} (Leonhard Euler)
 odredio {\nj}enu ta{\cv}nu vrednosti i dao joj ime.
@@ -548,7 +548,7 @@ $$
 \def\rf#1!{\frac1{\hphantom{!}#1!}}
 Antilogaritam je {\sl eksponencijalna\/} funkcija\index{eksponencijalna funkcija} $\e^x=\exp(x)$\index{exp@$\exp$}, koja je poznata po tome {\sv}to je to 
 jedina funkcija {\cv}iji je prvi izvod jednak samoj funkciji: $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
-izra{\cv}unati formulom
+izra{\cv}unati formulom\index{faktorijel $(n"!)$}
 % \footnote{Kako je iz formule $\e^0=0^0/0!=1$, sledi da je $0^0=0!=1$, kao {\sv}to i tvrde 
 % neki od najpoznatijih svetskih matemati{\cv}ara Conway, Knuth, Coxeter, Tao, \dots}
 \begin{equation}
@@ -717,13 +717,14 @@ z
 %&= \rho\mathbin{\rm cis}\theta&&\qquad\text{skra{\cc}eni polarni zapis}\\
 & = \rho\, \e^{i\theta} &&\qquad\text{Ojlerova formula}
 \end{alignat*}
-onda se, iz Ojlerove formule\index{Ojlerova formula} i jednakosti \eqref{eq:lnmul} i \eqref{eq:powb}, dobija
+onda se, iz Ojlerove formule\index{Ojlerova formula} i jednakosti \eqref{eq:lnmul} i \eqref{eq:powb}, dobija\index{ln@$\ln$}
 \begin{equation}
 \okvir{\ln z = \ln\rho + i\theta}.
 \label{eq:cln}
 \end{equation}
 Po{\sv}to je $\rho=|z|=\sqrt{x^2+y^2}\ge0$\index{apsolutna vrednost $\vert x\vert$},
-sledi da prirodni logaritam kompleksnog broja $z$ nije definisan samo za $z=0$, kada je $\ln z=\rsinfty$.
+sledi da prirodni logaritam kompleksnog broja $z$ nije definisan samo za $z=0$, kada je
+ $\ln z=\rsinfty$.\index{kompleksna beskona{\cv}nost $(\rsinfty)$}
 Kako je $y/x=\tan\theta$, prirodni logaritam kompleksnog broja,
 pred\-stav\-{\lj}e\-nog pravouglim koordinatama, iz formule \eqref{eq:cln},
 mo{\zv}e se izra{\cv}unati
@@ -755,7 +756,7 @@ u kojoj je upotreb{\lj}eno 5 najva{\zv}nijih matemati{\cv}kih konstatnti
 \end{equation}
 gde, ako prebacimo 1 na desnu stranu i {\sl logaritmujemo}, dobijamo zanim{\lj}ivu jednakost
 $$
-\frac{\ln(-1)}{\sqrt{-1}}=\pi.
+\frac{\ln(-1)}{\sqrt{-1}}=\pi\index{pi $(\pi)$}.
 $$
 
 \input quaternions
@@ -779,7 +780,7 @@ Povr{\sv}ina figure ispod funkcije $y=1/x$ do $x$-ose, u opsegu od 1~do~$x$ izno
 $\ln x$.\penalty-1000
 Matemati{\cv}ki zapisano: $\int_1^x\dx/x=\ln x$. 
 $$
-\slika{\includegraphics[]{log.3}}{Geometrijsko zna{\cv}e{\nj}e $\ln x$.}
+\slika{\includegraphics[]{log.3}}{Geometrijsko zna{\cv}e{\nj}e $\ln x$.\index{grafik}}
 $$
 (Na slici je $x=\e$, tako da je povr{\sv}ina osen{\cv}ane figure jednaka 1.)
 
@@ -826,7 +827,7 @@ budu $\ell$ za brojnu osnovu $b$, prati takozvani {\sl \idx{Benfordov zakon}\/} 
 \end{equation}
 
 Na primer, u {\sl Fibona{\cv}ijevom  nizu\/}\index{Fibona{\cv}ijev niz}\index{Fibona{\cv}i} (Leonardo Bonacci): \fibonacci11{17},~\dots,
-verovatno{\cc}a da prva cifra nekog broja bude $9$ iznosi $\logten(1+1/9)\approx4\.58\%$.
+\idx{verovatno{\cc}a} da prva cifra nekog broja bude $9$ iznosi $\logten(1+1/9)\approx4\.58\%$.
 Ovu zakonitost je prvi otkrio 1881.\ godine astronom {\Nj}ucom\index{Njucom@{\Nj}ucom} (Simon Newcomb), kada je primetio da su
 listovi logaritamskih tablica koje je dugo koristio najpr{\lj}aviji
 na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
