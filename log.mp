@@ -204,6 +204,36 @@ beginfig(4);
 	fi
 endfig;
 
+beginfig(5);
+    numeric a; a = 1.34934;
+    numeric b; b = 2.04249;
+    numeric c; c = 2.44795;
+    numeric u; u = 8cm / c;
+    numeric s; s = (a + b + c)/2;
+    numeric P; P = u * (b*b + c*c - a*a) / 2;
+	numeric Q; Q = 2u * sqrt((s-a)*(s-b)*(s-c)*s);
+    pair A; A = (0, 0);
+    pair B; B = (c * u, 0);
+    pair C; C = (P/c, Q/c) + A;
+    pair G; G = (A + B + C)/3;
+    pair mA; mA = 1/2[B, C];
+    pair mB; mB = 1/2[A, C];
+    pair mC; mC = 1/2[A, B];
+    numeric aA; aA = angle(C-A);
+    numeric aB; aB = aA - 90;
+    pair o; o = (0, 3mm);
+    label(btex $\ln(2x)$ etex rotated aA, mB + (o rotated aA));
+    label(btex $\ln(x)$ etex rotated aB, mA + (o rotated aB));
+    label(btex $\ln(3x)$ etex, mC - o);
+    o := (3mm, 0);
+    label(btex $A$ etex, A - (o rotated 1/2aA));
+    label(btex $B$ etex, B + (o rotated 1/2aB));
+    label(btex $C$ etex, C + (o rotated (1/2aA+45)));
+    pickup pencircle scaled 0.4pt;
+    draw unitsquare  rotated (aA + 180) scaled 3mm shifted C;
+    pickup pencircle scaled 0.3mm;
+    draw A--B--C--cycle;
+endfig;
 
 
 end.
