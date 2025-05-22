@@ -230,7 +230,7 @@ beginfig(5);
     label(btex $B$ etex, B + (o rotated 1/2aB));
     label(btex $C$ etex, C + (o rotated (1/2aA+45)));
     pickup pencircle scaled 0.4pt;
-    draw unitsquare  rotated (aA + 180) scaled 3mm shifted C;
+    draw (right -- right+up -- up) rotated (aA + 180) scaled 3mm shifted C;
     pickup pencircle scaled 0.3mm;
     draw A--B--C--cycle;
 endfig;
