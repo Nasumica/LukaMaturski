@@ -156,7 +156,7 @@ level=\section     % numbered section in article class
 \def\th{t_{1/2}}
 \def\um#1{\,{\rm#1}}
 \newdimen\mm \mm=1truemm
-\def\cis{\mathbin{\rm cis}}
+\def\cis{\mathop{\rm cis}}
 
 \def\marg#1{\raise1pt\hbox{\colorbox{Aquamarine}{\color{white}\hbox to 1em{\hss\eightss#1\/\hss}}}}
 \def\ram#1{\,\fcolorbox{black}{white}{$\,\displaystyle{\mathstrut #1}\,$}\,}
@@ -712,12 +712,17 @@ $$
 koji mo{\zv}e biti predstav{\lj}ean kao
 \begin{alignat*}{3}\index{i@$i$}\index{polarni zapis}
 z 
-&= x + iy &&\qquad\text{pravougle koordinate}\\
-&= \rho\, (\cos\theta +i\sin\theta)&&\qquad\text{polarne koordinate}\\
-%&= \rho\mathbin{\rm cis}\theta&&\qquad\text{skra{\cc}eni polarni zapis}\\
-& = \rho\, \e^{i\theta} &&\qquad\text{Ojlerova formula}
+&= x + iy &&\qquad\text{pravougle koordinate},\\
+&= \rho\, (\cos\theta +i\sin\theta)&&\qquad\text{polarne koordinate},
 \end{alignat*}
-onda se, iz Ojlerove formule\index{Ojlerova formula} i jednakosti \eqref{eq:lnmul} i \eqref{eq:powb}, dobija\index{ln@$\ln$}
+a kako je Ojlerova formula\index{Ojlerova formula}
+\begin{equation}\label{eq:euler}
+  \okvir{\e^{i\theta} = \cos\theta + i\sin\theta 
+  % = \exp(i\theta) = \cis\theta
+  }
+  ,
+\end{equation} 
+onda se iz {\nj}e i iz jednakosti \eqref{eq:lnmul} i \eqref{eq:powb} dobija\index{ln@$\ln$}
 \begin{equation}
 \okvir{\ln z = \ln\rho + i\theta}.
 \label{eq:cln}
@@ -742,7 +747,7 @@ $$
 \log_{2+i}(3+4i)=2, \qquad \log_i\e=\frac{2}{i\pi}.
 $$
 
-Iz Ojlerove formule sledi i
+Iz Ojlerove formule \eqref{eq:euler} sledi i
 \begin{equation}\index{exp@$\exp$}
   \okvir{\exp(x+iy)=\e^x\,(\cos y+i\sin y)}.
 \end{equation}
@@ -755,7 +760,7 @@ u kojoj je upotreb{\lj}eno 5 najva{\zv}nijih matemati{\cv}kih konstatnti
   \okvir{\e^{i\pi}+1=0},
   \label{eq:zeuler}
 \end{equation}
-gde, ako prebacimo 1 na desnu stranu i {\sl logaritmujemo}, dobijamo zanim{\lj}ivu jednakost
+gde, ako prebacimo 1 na desnu stranu i {\sl logaritmujemo}\index{logaritmova{\nj}e}, dobijamo zanim{\lj}ivu jednakost
 $$
 \frac{\ln(-1)}{\sqrt{-1}}=\pi\index{pi $(\pi)$}.
 $$
