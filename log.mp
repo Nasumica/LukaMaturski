@@ -1,16 +1,15 @@
-verbatimtex
-%&latex
-\documentclass[12pt]{article}
-\begin{document}
-etex
-
-
 prologues := 3;
 %outputtemplate := "%j-%c.eps";
 
 input TEX;
 
 randomseed := 2006.0908;
+
+defaultscale := 1.2;
+
+verbatimtex
+\magnification=1200
+etex
 
 color gridmm; gridmm=5/8[blue, white];
 color gridcm; gridcm=3/8[blue, white];
