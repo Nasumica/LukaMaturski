@@ -207,7 +207,7 @@ endfig;
 beginfig(5);
     numeric a; a = 1.34934;
     numeric b; b = 2.04249;
-    numeric c; c = 2.44795;
+    numeric c; c = a ++ b;
     numeric u; u = 3cm;
     numeric s; s = (a + b + c)/2;
     numeric P; P = u * (b*b + c*c - a*a) / 2;

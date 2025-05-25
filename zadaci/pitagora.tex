@@ -6,42 +6,39 @@ $$
 $$
 (Zadatak sa {Tik-Toka\index{TikTok@Tik-Tok}}.)
 
-\resenje
-Kako je $a=\ln x$, $b=\ln(2x)=a+\ln2$ i $c=\ln(3x)=a+\ln3$, iz {\sl Pitagorine teoreme\/}\index{Pitagorina teorema} 
+\resenje Na{\dj}imo prvo re{\sv}e{\nj}e op{\sv}teg slu{\cv}aja
+$$
+a=\ln(px),\quad b=\ln(qx),\quad c=\ln(rx). 
+$$
+Zbog lak{\sv}eg pisa{\nj}a izvr{\sv}imo smenu $t=\ln x$, $u=\ln p$, $v=\ln q$ i $w=\ln r$,
+odakle je $a=t+u$, $b=t+v$ i $c=t+w$.
+Iz {\sl Pitagorine teoreme\/}\index{Pitagorina teorema} 
 $a^2 + b^2 = c^2$, sledi da je
 \begin{align*}
-    a^2+(a+\ln2)^2 &= (a+\ln3)^2.
-\intertext{Kada izvr{\sv}imo smenu $u=\ln2$ i $v=\ln3$, mo{\zv}emo pisati}
-    a^2 + a^2 + 2au + u^2 &= a^2 +2av +v^2,
+(t+u)^2 + (t+v)^2 &=(t+w)^2\\
+t^2 +2tu + u^2 + t^2 + 2tv + v^2 &= t^2 + 2tw + w^2
 \end{align*}
-gde posle sre{\dj}iva{\nj}a, dobijamo kvadratnu jedna{\cv}inu\index{kvadratna jedna{\cv}ina}
+gde, nakon sre{\dj}iva{\nj}a, dobijamo kvadratnu jedna{\cv}inu\index{kvadratna jedna{\cv}ina}
 $$
-a^2+2(u-v)a+(u^2-v^2)=0,
+t^2 + 2(u+v-w)t + (u^2 + v^2 - w^2)=0,
 $$
-koja ima dva re{\sv}e{\nj}a
+{\cv}ija su re{\sv}e{\nj}a
 \begin{align*}
-a_{1,2}&= (v - u) \pm \sqrt{2v(v-u)},
-\intertext{ali nas zanima samo pozitivno. Kako je $v-u=\ln3-\ln2=\ln(3/2)$, dobijamo}
-a&=\ln\left(\frac32\right) + \sqrt{2\ln(3)\ln\left(\frac32\right)}.
-\end{align*}
-Odavde je
-$$
-x=\e^a=\ram{\frac32\, \e^{\sqrt{2\ln(3)\ln(3/2)}}}
+t_{1,2} &=
+w-u-v \pm \sqrt{2(w-u)(w-v)},
+\intertext{ali nas zanima samo pozitivno, odakle je, kada vratimo smenu}
+\ln x &=
+\ln\left(\frac{r}{p q}\right) + \sqrt{2\ln\left(\frac rp\right) \ln\left(\frac rq\right)},
+\intertext{odnosno,}
+x &= \frac{r}{p q}\cdot\e^{\sqrt{2\ln(r/p)\ln(r/q)}}.
+\intertext{\indent Kada stavimo vrednosti sa slike, $p=1$, $q=2$ i $r=3$, dobijamo da je}
+x &= \ram{\frac32\, \e^{\sqrt{2\ln(3)\ln(3/2)}}}
 \approx 3\.85488,
-$$
+\end{align*}
 a stranice trougla su pribli{\zv}no
 $$
 a\approx 1\.34934, \quad b\approx 2\.04249, \quad c\approx 2\.44795.
 $$
-(Na slici su stranice skalirane sa 
-$
-% \hbox{`$\vcenter{\hbox{\rule{3truecm}{0.4truept}}}$'}=
-3\um{cm}$.)
-
-\dodatak Uop{\sv}teno, pravougli trougao kod koga je $a=\ln(p\cdot x)$, $b=\ln(q\cdot x)$ i $c=\ln(r\cdot x)$, 
-ima re{\sv}e{\nj}e
-$$
-\ln x =
-\ln\left(\frac{r}{p \cdot q}\right) + \sqrt{2\ln\left(\frac rp\right) \ln\left(\frac rq\right)},
-$$
-uz uslove $a>0$, $b>0$, $c>0$, $a+b>c$ i $|a-b|<c$. 
+(Na slici je
+$1=
+\hbox{`$\vcenter{\hbox{\rule{3truecm}{0.4truept}}}$'}$.)
