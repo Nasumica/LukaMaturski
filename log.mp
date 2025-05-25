@@ -1,3 +1,10 @@
+verbatimtex
+%&latex
+\documentclass[12pt]{article}
+\begin{document}
+etex
+
+
 prologues := 3;
 %outputtemplate := "%j-%c.eps";
 
@@ -205,25 +212,24 @@ beginfig(4);
 endfig;
 
 beginfig(5);
+    numeric u; u = 3cm;
     numeric a; a = 1.34934;
     numeric b; b = 2.04249;
     numeric c; c = a ++ b;
-    numeric u; u = 3cm;
     numeric s; s = (a + b + c)/2;
     numeric P; P = u * (b*b + c*c - a*a) / 2;
 	numeric Q; Q = 2u * sqrt((s-a)*(s-b)*(s-c)*s);
-    pair A; A = (0, 0);
-    pair B; B = (c * u, 0);
+    pair A; A = origin;
+    pair B; B = (c * u, 0) + A;
     pair C; C = (P/c, Q/c) + A;
-    pair G; G = (A + B + C)/3;
     pair mA; mA = 1/2[B, C];
     pair mB; mB = 1/2[A, C];
     pair mC; mC = 1/2[A, B];
     numeric aA; aA = angle(C-A);
     numeric aB; aB = aA - 90;
     pair o; o = (0, 3mm);
-    label(btex $\ln(2x)$ etex rotated aA, mB + (o rotated aA));
     label(btex $\ln(x)$ etex rotated aB, mA + (o rotated aB));
+    label(btex $\ln(2x)$ etex rotated aA, mB + (o rotated aA));
     label(btex $\ln(3x)$ etex, mC - o);
     o := (3mm, 0);
     label(btex $A$ etex, A - (o rotated 1/2aA));
