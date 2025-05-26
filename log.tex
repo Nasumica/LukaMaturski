@@ -28,10 +28,7 @@
 
 \usepackage{imakeidx}
 
-\makeindex[columns=2, 
-title=Indeks, 
-%intoc,             % disable option "intoc"
-]
+\makeindex[columns=2, title=Indeks]
 
 \indexsetup{        % if unspecified, "level" defaults to \chapter* or \section*
 %level=\chapter      % numbered chapter in book class
@@ -177,6 +174,9 @@ level=\section     % numbered section in article class
   \raise\signdp\llap{$\blacktriangleright\>$}\zabox{Re{\sv}e{\nj}e:}}
 \def\dodatak{\par\medskip\noindent\leavevmode
   \raise\signdp\llap{$\vcenter{\hbox{$\scriptstyle\bigstar\,$}}\>$}\zabox{Dodatak:}}
+
+\let\oldfoot=\footnote
+\def\footnote#1{\index{fusnota}\oldfoot{#1}}
 
 %\def\dodatak{\par\medskip\noindent\zabox{Dodatak:}}
 \newcommand{\rsinfty}{{\,\widetilde{\!\infty\!}\,}}
@@ -848,6 +848,7 @@ na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 \newdimen\sirina \sirina=60truemm
 
 \def\jed{Jedna{\cv}ina~}
+\def\queq{\index{kvadratna jedna{\cv}ina}}
 
 \input zadaci/fit-prijemni
 \input zadaci/jed2
@@ -1042,7 +1043,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
 
 \begin{center}
 \def\QR{\GitHubRaw log.pdf}
-\qrcode{\QR}
+\qrcode{\QR}\index{QR}
 \end{center}
 
 \fi
