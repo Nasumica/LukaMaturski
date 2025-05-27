@@ -134,6 +134,7 @@ level=\section     % numbered section in article class
 \def\Nset{\nset N}
 \def\Rset{\nset R}
 \def\Hset{\nset H}
+\def\Zset{\nset Z}
 
 \newbox\qqbox
 \def\navod#1{\leavevmode\setbox\qqbox\hbox{``}\hbox to \wd\qqbox{,\hss,}#1\hbox to \wd\qqbox{`\hss`}}
@@ -234,7 +235,7 @@ ili kra{\cc}e \navod{$y$ je logaritam $b$ od $x$}.)
 \def\slika#1#2{\stepcounter{figno}\displaylines{
   \hbox{#1}\cr\hbox{{\bf Slika \thefigno:\/~}#2}}}
 
-Funkcija je u skupu realnih brojeva ${\mathbb R}$ definisana za $x>0$ i $b>0\land b\ne1$.
+Funkcija je u skupu realnih brojeva $\Rset$ definisana za $x>0$ i $b>0\land b\ne1$.
 Funkcija je {\sl monotona\/}: za $b>1$ funkcija je {\sl rastu{\cc}a}, dok za $b<1$ funkcija je {\sl opadaju{\cc}a}.
 Zbog toga va{\zv}i {\sl bijekcija\/}: $\logb u=\logb v \Leftrightarrow u=v$.
 Funkcija ima jednu {\sl nulu}, uvek za $x=1$.
@@ -705,7 +706,7 @@ je naprav{\lj}en 1946.\ godine sa jednom namenom: {da izra{\cv}una tablice za vo
 
 \subsection{Kompleksni logaritam}
 
-Ako u kompleksnoj ravni imamo \idx{kompleksan broj} $z\in{\mathbb C}$, 
+Ako u kompleksnoj ravni imamo \idx{kompleksan broj} $z\in\Cset$, 
 $$
 \slika{\includegraphics[]{log.2}}{Broj $z$ u kompleksnoj ravni.}
 $$
