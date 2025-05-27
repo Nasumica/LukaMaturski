@@ -138,6 +138,8 @@ level=\section     % numbered section in article class
 
 \newbox\qqbox
 \def\navod#1{\leavevmode\setbox\qqbox\hbox{``}\hbox to \wd\qqbox{,\hss,}#1\hbox to \wd\qqbox{`\hss`}}
+\def\oneline{\hbox to \textwidth\relax}
+\def\centerline#1{\oneline{\hss#1\hss}}
 
 \def\logten{\log_{10}}
 \def\logtwo{\log_2}
@@ -714,23 +716,20 @@ Ako u kompleksnoj ravni imamo \idx{kompleksan broj} $z\in\Cset$,
 $$
 \slika{\includegraphics[]{log.2}}{Broj $z$ u kompleksnoj ravni.}
 $$
-koji mo{\zv}e biti predstav{\lj}en kao
+on mo{\zv}e biti predstav{\lj}en kao
 \begin{alignat*}{3}\index{i@$i$}\index{polarni zapis}
 z 
 &= x + iy &&\qquad\text{pravougle koordinate},\\
-&= \rho\, (\cos\theta +i\sin\theta)&&\qquad\text{polarne koordinate},
+&= \rho\, (\cos\theta +i\sin\theta)&&\qquad\text{polarne koordinate}.
 \end{alignat*}
-a kako je Ojlerova formula\index{Ojlerova formula}
+Iz Ojlerove formule\index{Ojlerova formula}
 \begin{equation}\label{eq:euler}
-  \okvir{\e^{i\theta} = \cos\theta + i\sin\theta 
-  % = \exp(i\theta) = \cis\theta
-  }
-  ,
+  \okvir{\e^{i\theta} = \cos\theta + i\sin\theta}
 \end{equation} 
-onda se iz {\nj}e i iz jednakosti \eqref{eq:lnmul} i \eqref{eq:powb} dobija\index{ln@$\ln$}
-\begin{equation}
-\okvir{\ln z = \ln\rho + i\theta}.
-\label{eq:cln}
+i iz jednakosti \eqref{eq:lnmul} i \eqref{eq:powb} se dobija\index{ln@$\ln$}
+\begin{equation}\index{ln@$\ln$}
+  \okvir{\ln z = \ln\rho + i\theta}.
+  \label{eq:cln}
 \end{equation}
 Po{\sv}to je $\rho=|z|=\sqrt{x^2+y^2}\ge0$\index{apsolutna vrednost $\vert x\vert$},
 sledi da prirodni logaritam kompleksnog broja $z$ nije definisan samo za $z=0$, kada je
@@ -739,9 +738,15 @@ Kako je $y/x=\tan\theta$, prirodni logaritam kompleksnog broja,
 pred\-stav\-{\lj}e\-nog pravouglim koordinatama, iz formule \eqref{eq:cln},
 mo{\zv}e se izra{\cv}unati
 \begin{equation}
-\okvir{\ln(x+iy)={\frac12}\ln(x^2+y^2)+i\arctan\left(\frac yx\right)}.
+\okvir{\ln(x+iy)={\frac12}\ln(x^2+y^2)+i\arctan\left(\frac yx\right)},
 \label{eq:clncart}
 \end{equation}
+kao i
+\begin{equation}\index{exp@$\exp$}
+  \okvir{\exp(x+iy)=\e^x\,(\cos y+i\sin y)}.
+  \label{eq:cexp}
+\end{equation}
+
 
 I za kompleksne brojeve va{\zv}i jednakost promene osnove \eqref{eq:chgbase}, tako da za dva komp\-leks\-na
 broja $z$ i $w$, gde je $z\ne0$, $w\ne0$ i $w\ne1$, sledi
@@ -751,11 +756,6 @@ Na primer,
 $$
 \log_{2+i}(3+4i)=2, \qquad \log_i\e=\frac{2}{i\pi}.
 $$
-
-Iz Ojlerove formule \eqref{eq:euler} sledi i
-\begin{equation}\index{exp@$\exp$}
-  \okvir{\exp(x+iy)=\e^x\,(\cos y+i\sin y)}.
-\end{equation}
 
 Iz Ojlerove formule se, tako{\dj}e,  mo{\zv}e dobiti
 {\sl najlep{\sv}a formula u istoriji ma\-te\-ma\-ti\-ke},
@@ -953,7 +953,7 @@ na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 \begin{enumerate}[parsep=0cm]
 \lit{Larousse}{Matematika}{Op{\sv}ta enciklopedija}(1967)
 \lit{Neboj{\sv}a Ikodinovi{\cc}, Sla{\dj}ana Dimitrijevi{\cc}, Suzana Aleksi{\cc}}{U{\dz}benik sa
-zbir\-kom zadataka za 2. razred gimnazije}{Matematika 2}(2019)
+zbir\-kom zadataka za 2.\ razred gimnazije}{Matematika 2}(2019)
 \lit{Vene Bogoslavov}{Zbirka re\sv enih zadataka iz matematike 2}{}(2008--2011)
 \lit{Marjan M. Mateji\cc, Lidija V. Stefanovi\cc, Branislav M. Ran\dj elovi\cc, Igor \Zv. Milo\-va\-novi\cc}{Kom\-ple\-ti
 zadataka za prijemni ispit}{Matematika}(2011)
