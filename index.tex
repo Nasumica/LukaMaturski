@@ -6,8 +6,9 @@ Naravno, nisu prikazane sve strane, ve{\cc} samo gde se nalazi definicija tog po
 Za verziju dokumenta u elektronskom obliku, kao i za sve prethodne odrednice, radi {\sl hyperlink\/} do navedene strane.}
 
 \begingroup
+\newcount\n
 \footnotesize
 \let\hp=\hyperpage
-\def\hyperpage#1{{\sl\hp{#1}}}
+\def\hyperpage#1{\ifx0#1\hyperref[titlepage]{\dots}\else{\sl\hp{#1}}\fi}
 \printindex
 \endgroup

@@ -23,6 +23,7 @@
 \usepackage{rotating}
 \usepackage{enumitem}
 \usepackage{bclogo}
+% \usepackage{fontawesome}
 
 % \usepackage[symbol]{footmisc}
 
@@ -152,9 +153,9 @@ level=\section     % numbered section in article class
 \def\e{{\bf e}}
 %\def\naplog{\mathop{\mathop{\rm Log}\limits^{\rm Nap}}\nolimits}
 \def\naplog{\mathop{\rm NapLog}\nolimits}
-\def\qed{\ensuremath{\qquad\square}}
-% \def\QED{\qed\index{quod erat demonstrandum $(\square)$}}
-\def\QED{\qed}
+\def\qed{\square}
+\def\QED{\ensuremath{\qquad\qed}}
+\def\QEDidx{\index{QED $(\qed)$}}
 \def\th{t_{1/2}}
 \def\um#1{\,{\rm#1}}
 \newdimen\mm \mm=1truemm
@@ -437,7 +438,7 @@ Ako je neki in{\zv}e{\nj}erski tekst u pita{\nj}u, najverovatnije se misli na os
 
 Dekadni logaritam je pogodan i kada se koristi, takozvani {\sl nau{\cv}ni\/} ili {\sl in{\zv}e{\nj}erski\/}
 zapis broja.
-Na primer, {\sl Plankova konstanta\/} (Max Planck) iznosi
+Na primer, {\sl Plankova konstanta\/} (Max Planck)\index{Plank} iznosi
 $$
 h=6\.62607015\puta 10^{-34}\um{J/Hz}
 $$
@@ -495,7 +496,7 @@ Ako se zna da {\cc}e u me\-mo\-ri\-ju biti upisivani celi brojevi od 0 do $n$, o
 \begin{equation}\label{eq:bits}
   \bits = \lfloor\logtwo(n)\rfloor+1
 \end{equation}
-bitova memorije, gde $\lfloor x\rfloor$ predstav{\lj}a {\sl najve{\cc}i ceo broj koji je ma{\nj}i ili jednak} $x$
+bitova memorije, gde $\lfloor x\rfloor$\index{floor $\lfloor x\rfloor$} predstav{\lj}a {\sl najve{\cc}i ceo broj koji je ma{\nj}i ili jednak} $x$
 (izgovara se \navod{najve{\cc}e celo od $x$}). 
 Na primer, ako {\cc}e u odre{\dj}enoj memoriji najve{\cc}i 
 broj biti milion, onda je za to potrebno rezevisati
@@ -554,7 +555,7 @@ $$
 \def\ep{\hphantom{!}}
 \def\rf#1!{\frac1{\hphantom{!}#1!}}
 Antilogaritam je {\sl eksponencijalna\/} funkcija\index{eksponencijalna funkcija} $\e^x=\exp(x)$\index{exp@$\exp$}, koja je poznata po tome {\sv}to je to 
-jedina funkcija {\cv}iji je prvi izvod jednak samoj funkciji: $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
+jedina funkcija {\cv}iji je prvi \idx{izvod} jednak samoj funkciji: $\exp'(x)=\exp(x)$. Brojna vrednost se mo{\zv}e
 izra{\cv}unati formulom\index{faktorijel $(n"!)$}
 % \footnote{Kako je iz formule $\e^0=0^0/0!=1$, sledi da je $0^0=0!=1$, kao {\sv}to i tvrde 
 % neki od najpoznatijih svetskih matemati{\cv}ara Conway, Knuth, Coxeter, Tao, \dots}
@@ -974,7 +975,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \newdimen\down \down=0.03\godim \advance\godim2\down
 \def\pl{programming language}
 \begin{enumerate}[parsep=0cm]
-  \item Mathematica --- Wolfram Research
+  \item \idx{Mathematica} --- Wolfram Research
   \item {\sf Visual Studio Code} (Integrated Development Environment) --- Microsoft
   \item {\ZXBASIC} (\pl) --- Sinclair Research Ltd.
   \item \textbf{Pascal} (\pl) --- Niklaus Wirth
@@ -982,7 +983,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
   \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GOc.png}} (\pl) --- Google
   \item \textbf{Python} (\pl) --- Python Software Foundation
   \item \MP\ (PostScript \pl)--- John D. Hobby
-  \item \TeX\ (typesetting system) --- Donald E. Knuth
+  \item \TeX\index{TeX@\TeX} (typesetting system) --- Donald E. Knuth
   \item \LaTeX\ (\TeX\ macros) --- Leslie Lamport
   \item \AmS-\TeX\ (\TeX\ macros) --- American Mathematical Society
 \end{enumerate}
@@ -992,14 +993,19 @@ zadataka za prijemni ispit}{Matematika}(2011)
 
 \subsection{Linkovi}
 
-\def\WA{{\sc WikipediA}}
-\def\YT{{\sf YouTube}}
+\def\WAlogo{{\sc WikipediA}}
+\def\WA{\WAlogo\index{Wikipedia@\WAlogo}}
+
+\def\YTlogo{{\sf YouTube}}
+\def\YT{\YTlogo\index{YouTube@\YTlogo}}
+
+\def\WMW{\idx{Wolfram MathWorld}}
 
 \begin{enumerate}[parsep=0cm]
 \link{\GitHubRaw log.pdf}{{\sf GitHub} --- Luka S. Ne{\sv}i{\cc} --- Maturski rad --- Logaritam}
 \link{https://en.wikipedia.org/wiki/Logarithm}{\WA\ --- Logarithm}
-\link{https://mathworld.wolfram.com/Logarithm.html}{Wolfram MathWorld --- Logarithm}
-\link{https://mathworld.wolfram.com/Antilogarithm.html}{Wolfram MathWorld --- Antiogarithm}
+\link{https://mathworld.wolfram.com/Logarithm.html}{\WMW\ --- Logarithm}
+\link{https://mathworld.wolfram.com/Antilogarithm.html}{\WMW\ --- Antiogarithm}
 \link{https://reference.wolfram.com/language/ref/Log.html}{Wolfram Language \& System Documentation Center --- Logarithm}
 \link{https://www.wolframalpha.com/}{{\sf WolframAlpha} --- Computational Intelligence}
 \link{https://inria.hal.science/inria-00543939/PDF/briggs1624doc.pdf}{A reconstruction of the tables of Briggs' {\sl Arithmetica logarithmica\/} (1624)}
