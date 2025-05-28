@@ -9,6 +9,6 @@ Za verziju dokumenta u elektronskom obliku, kao i za sve prethodne odrednice, ra
 \newcount\n
 \footnotesize
 \let\hp=\hyperpage
-\def\hyperpage#1{\ifx0#1\hyperref[titlepage]{\faHome}\else{\sl\hp{#1}}\fi}
+\def\hyperpage#1{\ifx0#1\hyperref[titlepage]{\lower2pt\hbox{\scalebox{0.5}\bcbook}}\else{\sl\hp{#1}}\fi}
 \printindex
 \endgroup
