@@ -562,7 +562,7 @@ izra{\cv}unati formulom\index{faktorijel $(n"!)$}
 \begin{equation}
 \label{eq:exp}\index{formula}
 \okvir{\e^x=\exp(x)=\sum_{n=0}^\infty\frac{x^n}{n!}}.
-\end{equation}
+\end{equation}\index{Meklorenov red}
 Ako stavimo da je $x=1$,
 \idx{brojna vrednost} osnove prirodnog logaritma $\e$ se mo{\zv}e odrediti
 \begin{equation}\label{eq:e}
@@ -725,7 +725,8 @@ z
 \end{alignat*}
 Iz Ojlerove formule\index{Ojlerova formula}\footnote{Ojlerova formula
 se lako dokazuje pomo{\cc}u formule \eqref{eq:exp} i sli{\cv}nih formula
-za $\sin x$ i $\cos x$, koje se do\-bi\-ja\-ju iz Meklorenovog\index{Mekloren} (Cailean MacLabhruinn) reda:
+za $\sin x$ i $\cos x$, koje se do\-bi\-ja\-ju iz {\sl Meklorenovog\index{Mekloren} reda\/}\index{Meklorenov red}
+(Cailean MacLabhruinn):
 $f(x)=\sum_{n=0}^\infty\, f^{(n)}(0)\,(x^n/n!)$, gde $f^{(n)}$ predstav{\lj}a $n$-ti izvod funkcije $f$.}
 \begin{equation}\label{eq:euler}
   \okvir{\e^{i\theta} = \cos\theta + i\sin\theta},
@@ -805,7 +806,7 @@ $$
 Neodre{\dj}eni \idx{integral} prirodnog logaritma je
 \begin{equation}\label{eq:integral}
   \int \ln x\,\dx 
-  = x (\ln x - 1) \plusconst.
+  = x \ln x - x \plusconst.
 \end{equation}
 
 \subsection{Limes}\index{limes}
@@ -844,7 +845,8 @@ listovi logaritamskih tablica koje je dugo koristio najpr{\lj}aviji
 na po{\cv}etku: \smash{\hbox{\includegraphics{log.4}}}.
 (Videti zadatak \ref{sssec:benford} na strani \pageref{sssec:benford}.)
 
-% \input pnt
+\newif\ifpnt \pntfalse
+\ifpnt\input pnt\fi
 
 \newpage
 
@@ -983,7 +985,6 @@ zadataka za prijemni ispit}{Matematika}(2011)
   \item {\sf Visual Studio Code} (Integrated Development Environment) --- Microsoft
   \item {\ZXBASIC} (\pl) --- Sinclair Research Ltd.
   \item \textbf{Pascal} (\pl) --- Niklaus Wirth
-  % \item \textbf{Delphi} (\pl) --- Borland, Embarcadero
   \item \leavevmode\kern-5pt\raise-\down\hbox{\includegraphics[height=\godim]{GOc.png}} (\pl) --- Google
   \item \textbf{Python} (\pl) --- Python Software Foundation
   \item \MP\ (PostScript \pl)--- John D. Hobby
@@ -1015,7 +1016,7 @@ zadataka za prijemni ispit}{Matematika}(2011)
 \link{https://inria.hal.science/inria-00543939/PDF/briggs1624doc.pdf}{A reconstruction of the tables of Briggs' {\sl Arithmetica logarithmica\/} (1624)}
 \link{https://en.wikipedia.org/wiki/Benford's_law}{\WA\ --- Benford's law}
 \link{https://www.imdb.com/title/tt2140479/}{{\sf IMDb} --- The Accountant (2016)}
-\link{https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2975232/fulltext.pdf}{Newman's Short Proof of the Prime Number Theorem}
+\ifpnt\link{https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2975232/fulltext.pdf}{Newman's Short Proof of the Prime Number Theorem}\fi
 \link{https://en.wikipedia.org/wiki/Quaternion}{\WA\ --- Quaternion}
 \link{https://reference.wolfram.com/language/Quaternions/tutorial/Quaternions.html}{Wolfram Language \& System Documentation Center --- Quaternions Package}
 \link{https://www.youtube.com/watch?v=VRzH4xB0GdM}{\YT\ --- Log Tables --- Numberphile}
